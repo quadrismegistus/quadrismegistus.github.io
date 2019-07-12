@@ -15,6 +15,10 @@ avatar: https://avatars2.githubusercontent.com/u/733853?s=460&v=4
 # Flags below are optional
 #
 
+#remote_theme: gildasio/clyell
+theme: jekyll-theme-hacker
+
+
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
@@ -84,7 +88,3 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
-
-
-#remote_theme: gildasio/clyell
-theme: jekyll-theme-hacker
