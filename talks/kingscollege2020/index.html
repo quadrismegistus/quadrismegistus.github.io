@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56798055-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-56798055-1');
+    </script>
+
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Abstraction: A Literary History</title>
+    <meta name="description" content="Scrollama: Sticky Side Example" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel="stylesheet" href="../style.css" /> -->
+    <style>
+			* {
+			  box-sizing: border-box;
+			}
+
+			html,
+			body {
+			  margin: 0;
+			  padding: 0;
+			}
+
+			body {
+			  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+			    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+			  min-height: 1280px;
+			  color: #3b3b3b;
+			  font-size: 24px;
+			}
+
+			p,
+			h1,
+			h2,
+			h3,
+			h4,
+			a {
+			  margin: 0;
+			  font-weight: 400;
+			}
+
+      p {line-height: 1.5rem;}
+
+			a,
+			a:visited,
+			a:hover {
+			  color: teal;
+			  text-decoration: none;
+			  border-bottom: 2px solid currentColor;
+			}
+
+			nav {
+			  display: -webkit-box;
+			  display: -ms-flexbox;
+			  display: flex;
+			  -webkit-box-align: baseline;
+			  -ms-flex-align: baseline;
+			  align-items: baseline;
+			  -webkit-box-pack: justify;
+			  -ms-flex-pack: justify;
+			  justify-content: space-between;
+			  background: #f3f3f3;
+			  padding: 1rem;
+			  /* padding-right: 5rem; */
+			  -ms-flex-wrap: wrap;
+			  flex-wrap: wrap;
+        font-size: 20px;
+			}
+
+			.nav__examples {
+			  display: -webkit-box;
+			  display: -ms-flexbox;
+			  display: flex;
+			  -webkit-box-align: baseline;
+			  -ms-flex-align: baseline;
+			  align-items: baseline;
+			  -ms-flex-wrap: wrap;
+			  flex-wrap: wrap;
+			  margin-top: 1rem;
+			}
+
+			.nav__examples > * {
+			  margin-right: 0.5rem;
+			}
+
+			#intro {
+			  max-width: 40rem;
+			  margin: 1rem auto;
+			  text-align: center;
+			}
+
+			.intro__hed {
+			  font-size: 2em;
+			  margin: 2rem auto 0.5rem auto;
+			}
+
+			.intro__dek {
+			  color: #8a8a8a;
+        line-height: 1.66rem;
+			}
+
+			.github-corner:hover .octo-arm {
+			  animation: octocat-wave 560ms ease-in-out;
+			}
+
+			@keyframes octocat-wave {
+			  0%,
+			  100% {
+			    transform: rotate(0);
+			  }
+
+			  20%,
+			  60% {
+			    transform: rotate(-25deg);
+			  }
+
+			  40%,
+			  80% {
+			    transform: rotate(10deg);
+			  }
+			}
+
+			@media (max-width: 500px) {
+			  .github-corner:hover .octo-arm {
+			    animation: none;
+			  }
+
+			  .github-corner .octo-arm {
+			    animation: octocat-wave 560ms ease-in-out;
+			  }
+			}
+
+			#intro {
+			  margin-bottom: 100px;
+			}
+
+			#outro {
+			  height: 640px;
+			}
+
+			@media (min-width: 840px) {
+			  .nav__examples {
+			    margin-top: 0;
+			    margin-left: 2rem;
+			  }
+			}
+
+
+
+			body {
+				font-family: "Baskerville","Georgia","serif";
+			}
+      #scrolly {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        /* background-color: #f3f3f3; */
+        padding: 1rem;
+      }
+
+      #scrolly > * {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+      }
+
+      article {
+        position: relative;
+        padding: 0 1rem;
+        max-width: 25rem;
+				/* font-size: 14px; */
+      }
+
+      figure {
+        position: -webkit-sticky;
+        position: sticky;
+        width: 100%;
+        margin: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        /* background-color: #8a8a8a; */
+        z-index: 0;
+      }
+
+			figure img {
+				border: 1px solid black;
+			}
+
+      figure p {
+        text-align: center;
+        padding: 1rem;
+				margin-top: 29px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -moz-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-size: 8rem;
+        font-weight: 900;
+        color: #fff;
+      }
+
+      .step {
+        margin: 0 auto 2rem auto;
+        /* background-color: #3b3b3b; */
+        /* color: #fff; */
+				border: 1px dotted white;
+      }
+
+      .step:last-child {
+        margin-bottom: 0;
+      }
+
+      .step.is-active {
+        /* background-color: goldenrod; */
+        /* color: #3b3b3b; */
+				/* background-color: silver; */
+				border: 1px solid black;
+      }
+
+      .step p {
+        text-align: left;
+        padding: 1rem;
+        font-size: 1.25rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <a
+  href="https://ryanheuser.org"
+  target="_blank"
+  class="github-corner"
+  aria-label="Back to main page"
+  ><svg
+    width="80"
+    height="80"
+    viewBox="0 0 250 250"
+    style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;"
+    aria-hidden="true"
+  >
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+    <path
+      d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+      fill="currentColor"
+      style="transform-origin: 130px 106px;"
+      class="octo-arm"
+    ></path>
+    <path
+      d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+      fill="currentColor"
+      class="octo-body"
+    ></path></svg
+></a> -->
+<main>
+  <nav>
+    <a href="https://ryanheuser.org" target="_blank">← Ryan Heuser</a>
+
+    <div class="nav__examples">
+    <!--  <p>Examples:</p>
+      <a href="https://russellgoldenberg.github.io/scrollama/basic"
+        >Basic</a
+      >
+      <a href="https://russellgoldenberg.github.io/scrollama/progress"
+        >Progress</a
+      >
+      <a href="https://russellgoldenberg.github.io/scrollama/sticky-side"
+        >Sticky Side</a
+      >
+      <a href="https://russellgoldenberg.github.io/scrollama/sticky-overlay"
+        >Sticky Overlay</a
+      >
+      <a href="https://russellgoldenberg.github.io/scrollama/mobile-pattern"
+        >Mobile Pattern</a
+      > -->
+      <!-- <a href="https://ryanheuser.org">Ryan Heuser</a> -->
+    </div>
+  </nav>
+
+
+    <main>
+      <section id="intro">
+        <h1 class="intro__hed">Abstraction: A Literary History</h1>
+        <p class="intro__dek">
+          Talk given to King's College, Cambridge on February 18th, 2020, meant to introduce my work to the College and explain how it addresses the concept of “immateriality,” the official topic of my Junior Research Fellowship. The talk is a summary of my dissertation work on abstract language and the novel.
+        </p>
+      </section>
+
+      <section id="scrolly">
+        <article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="step" data-step="1">
+          <p class="p1"><b>1. Immateriality vs. abstraction</b></p>
+          <p class="p2">Thanks for coming. In this talk I’ll give a general overview of my research project on “abstraction,” which focuses specifically on the history of abstract language in literature, and especially the novel.</p>
+          <p class="p2">But I thought I’d address at the outset what may at first appear strange: that my Junior Research Fellowship is in the topic of “immateriality,” which might sound as if I were studying ghosts or incorporeal beings.<b> </b>I want to note that this possible confusion is precisely why I prefer the related but distinct concept of abstraction. As a word, the “im-materiality” is constructed as a simple negation of the material; while the word “abstraction,” which means literally “to drag away,” imagines a <i>process</i> by which something general, conceptual, or immaterial is separated or pulled away from its material embodiment.</p>
+          <p class="p2">In fact, the whole concept of “abstraction” first emerges in philosophy as part of Aristotle’s rejection of Plato’s “immaterial Forms.”</p>
+          </div>
+
+          <div class="step" data-step="2">
+          <p>For instance, rather than the idea of “hollowness” having an independent immaterial existence, Aristotle argues that we simply abstract or separate the concept of hollowness from materially hollow things. If we were to think of a nose “<i>qua </i>hollow,” in his odd example, we would simply “think of it without the flesh in which it is embodied.” Abstraction, on this view, is an empiricist, even materialist philosophy, explaining how immateriality is in fact <i>produced</i> rather than found to exist independently.</p>
+          <p class="p2">Of course, “abstraction” is itself an abstract and ambiguous concept, appearing in different forms within art, linguistics, psychology, finance, computer programming, critical theory, and philosophy. But at the same time, the concept of abstraction shares across all of these domains a similar logic: in each case, it explains how something more generalized is separated from the<span class="Apple-converted-space">  </span>more specific, or how something <i>non</i>-sensuous is separated from the sensuous.</p>
+          </div>
+
+          <div class="step" data-step="3">
+          <p>In art, for example, abstraction refers to the process whereby aspects of color, figure, and form are separated from their inclusion in more realistic representations of the the material world.</p>
+          </div>
+
+          <div class="step" data-step="4">
+          <p>Similarly, in computer programming, abstraction is the process by which increasingly generalized representations of “software” are separated from the underlying 0s and 1s of its hardware. Or, in Marxism and critical theory, abstraction is in fact a material process through which the qualitative, physical differences between concrete things disappear through the quantitative commensurations which are played out through the activity of exchange.<span class="Apple-converted-space"> </span></p>
+          <p class="p2">In fact, even my own work in the “digital humanities” is made possible by a process of abstraction. By designing algorithms to extract data from thousands of texts across centuries of literary history, my work abstracts away what is singular and unique about individual texts in order to isolate the larger-scale historical patterns which they collectively form.</p>
+          </div>
+
+          <div class="step" data-step="5">
+          <p>So for example, I’ve worked with linguists and metrical phonologists to design ways to measure the rhythmic irregularity of verse and prose—a project which may seem to violate the lyrical sanctity and complexity of individual poems—in order to drag out from thousands of poems a broader history of their rhythm.<i> </i></p>
+          </div>
+
+          <div class="step" data-step="6">
+          <p>Or, in the data I will be focusing on in this talk, I’ve worked to chart the usage of abstract and concrete words across the history of prose fiction, measuring the extent to which stories are told with abstractions like “sincerity” and “resentment,” or with concrete, physical words like “piano,” “barometer,” and “chair.”</p>
+          <p class="p2">Sometimes called “distant reading,” this zoomed-out perspective on literary history and textual form stands in stark opposition to the more normative focus in literary studies on the close reading of specific texts and contexts, on the materiality of books, and on specific archival findings. While I believe that these more traditional projects make a worthy and necessary component of our discipline, I also worry that their continued focus on materiality and specificity can offer a mode of escapism to humanists and leftists living in a world in which a culture of abstraction—digital, financial, and institutional—is thickening all around us. Although, of course, data, computers, the internet, and digital communication infrastructures have a material basis—involving even thick wires laid at the bottom of the world’s oceans—this material infrastructure has made possible a growing ‘dematerialization’ of work and social life, in which physical distances are abstracted away and in which social relations once rooted in local communities and physical structures are reoriented along digital, immaterial lines. In this situation, is it perhaps not at least a little fetishistic to write, as some book historians have, about the smell of books in the archive?</p>
+          <p class="p2">There is, then, a “meta” or self-reflexive dimension to my project on abstraction. Tracing the history of abstract language in literature may help us uncover the history of literary criticism’s own resistance to abstraction.</p>
+          </div>
+
+          <div class="step" data-step="7">
+          <p>After all, not only fiction, but also poetry, drama, and other literary discourses have tended to slide into a more concrete diction, specializing in the sensuous and the physical, while leaving to non-fictional discourses the project of speaking explicitly in concepts and abstractions. Could retracing a literary history of abstraction, then—broad as it is—help us to understand the historicity of own contemporary culture of abstraction? This, at least, is the question which originally inspired this research project.</p>
+
+
+          <p class="p1"><b>2. Measuring abstraction</b></p>
+          <p class="p2">But in order to uncover the literary history of abstract and concrete language, we first need to design some way to identify abstract and concrete words—and ideally in an historically-responsive and contextualized way. For me, computational semantics has offered the most fruitful solution to this problem.</p>
+          <p class="p2">Of course, computation brings its own problems. How can the meanings of words, notoriously so ambiguous and complex, possibly be quantified or computed? This is in fact an old question. At its root is a linguistic hypothesis about meaning first advanced by Zellig Harris in 1954. “Difference of meaning,” Harris argued, “correlates with difference of distribution,” where “the distribution of an element [or word] will be understood as the sum of all its environments.” In other words, the extent to which two words appear in similar textual environments—that is, surrounded by similar words—correlates to the similarity in their meaning. Without reducing meaning to statistics, then, Harris galvanized computational semantics by providing a theory of meaning which explained its relationship to quantifiable elements of language use.</p>
+          </div>
+
+          <div class="step" data-step="8">
+          <p>For example, we might look at all the instances of the word “book” in a given corpus of texts, as well as the words which surround it. Words similar in meaning to “book,” according to Harris, would be surrounded by similar sets of words.</p>
+          <p class="p2">More recently, a popular class of linguistic models called “word embedding models,” a variant of “vector space semantics,” can make statistics drawn from these word “environments” especially tractable for analysis. Word embedding models “embed” the words which appear in similar environments in similar positions within some high-dimensional virtual space.</p>
+          </div>
+
+          <div class="step" data-step="9">
+          <p>Here, for instance, is a compressed 2-dimensional summary of one such virtual space, which shows how words similar in meaning are “embedded” in similar spatial positions. In addition, it turns out that this virtual space develops, almost as a byproduct, larger semantic properties.</p>
+          </div>
+
+          <div class="step" data-step="10">
+          <p>Here, for instance, are the positions of the most frequent 1,000 nouns in a model trained on a large corpus of eighteenth-century texts.</p>
+          </div>
+
+          <div class="step" data-step="11">
+          <p>If I happen to<b> </b>color in orange the words which participants in a psychology study indicated were were concrete, or “perceptible to the senses,” it turns out that they tend to cluster on one side of the virtual space.</p>
+          </div>
+
+          <div class="step" data-step="12">
+          <p>If I color in blue the words which they indicated were abstract, or “imperceptible to the senses,” we can see that they cluster elsewhere in the space. Of note here is how these clusterings emerged accidentally from a naïvely empiricist model created solely from statistics about word usage; the model ‘knew’ nothing about this study, nor indeed what an ‘abstract’ or ‘concrete’ word is.</p>
+          <p class="p2">More interesting still, we can then use these clustered positions to create our own measurement of linguistic abstractness, one built on top of the model’s statistical representation of the corpus.</p>
+          </div>
+
+          <div class="step" data-step="13">
+          <p>To simplify this process: if I find the mid-point of the concrete words in the virtual space,</p>
+          </div>
+
+          <div class="step" data-step="14">
+          <p>and then the mid-point of the abstract words,</p>
+          </div>
+
+          <div class="step" data-step="15">
+          <p>I can then draw a vector from the concrete to the abstract mid-points. Subsequently, any word in the corpus can then be laid along this vector from the concrete to the abstract clusters—including words not originally included in those clusters, or in the underlying psychology study from which they came.</p>
+          </div>
+
+          <div class="step" data-step="16">
+          <p>Here, for instance, are the top 1,000 nouns in the corpus, this time excluding all the words which were marked by the participants as abstract or concrete. Still, according to this measure, the further up the y-axis, the more “abstract” the word is; the further down, the more “concrete.” On the top, for instance, we see words like “ability,” “belief,” “consequences,” and “wisdom”; and on the bottom, words like “coat,” “stone,” “wall,” and “wood.” Finally, in the middle are words which somehow mediate between these extremes: words like “country,” which is both a physical place and a national idea, or a word like “eyes,” which is a physical body part, but one often invoked to express an abstract emotion—as we say, “the eyes are the window to the soul.”</p>
+          <p class="p2">However, one weakness of this approach is that it requires that we “seed” the measurement with words which we <i>already</i> consider abstract or concrete. But because this vector-based measurement reflects the usage patterns from a given, historical corpus, the results often push back against their own original input.</p>
+          </div>
+
+          <div class="step" data-step="17">
+          <p>For example, if we keep here on the y-axis our vector-based measure of abstractness, but now place on the x-axis the average abstractness score given by the study participants; then words above this regression line are <i>more</i> abstract in the model of eighteenth-century language than they were to the contemporary test subjects; while words below the regression line were more <i>concrete</i> in the historical model.</p>
+          </div>
+
+          <div class="step" data-step="18">
+          <p>Take the word “human,” for instance, which was identified as maximally concrete by the study participants. True, a “human” can be experienced through the senses; but the fact that, in our model of eighteenth-century language use, it shows up as almost maximally abstract reveals that in this period the word “human” operates more similarly to abstract words than it does to concrete ones—invoked, perhaps, less in its concrete sens as <i>a </i>human, than in its abstract sense human-<i>ness</i>, humanity or human nature.</p>
+          <p class="p2">The real virtue of this methodology, then, is that it allows us to measure, contextualize, and even <i>historicize</i> the relative abstractness of any given word. In new work that I’m exploring now, both on my own and in concert with the “Keydata Project” research group which I’ve recently started up in King’s with Pete de Bolla, I’m examining how and why certain words become more or less abstract over time.</p>
+          </div>
+
+          <div class="step" data-step="19">
+          <p>Two trivial examples are the word “trials,” which between 1750 and 1850 develops its metaphorical sense of “suffering”; or the word “station,” whose predominant use transforms from a word for social status to a word for a train station.</p>
+          </div>
+
+          <div class="step" data-step="20">
+          <p>But two more interesting examples are the word “interest,” whose meaning developed from a legal or economic title to a feeling of concern; as well as the word “value,” a word which was used as roughly as a synonym for price, before developing more abstract senses in phrases like “literary value,” “aesthetic value,” “moral value,” and so on.</p>
+          <p class="p2">In sum, these methods of computational semantics help us to construct an historically-grounded understanding of how abstract and concrete words emerge and operate in a given discourse at a given time.</p>
+          <p class="p3"><br></p>
+          <p class="p3"><br></p>
+
+
+          <p class="p1"><b>3. Rise and fall of abstract language</b></p>
+          <p class="p2">With this linguistic measure of abstraction in place, I’d like to return now to the question of the literary history of abstract and concrete language. I think just two short passages can show the advantages of such a measurement for even the close reading of the language of fiction. <span class="Apple-converted-space"> </span></p>
+          <p class="p2"></p>
+          </div>
+
+          <div class="step" data-step="21">
+          <p>Here, for instance, is how Jane Austen introduces “Willoughby,” a flirtatious and charming man in her 1811 novel, <i>Sense and Sensibility</i>. The bluer the word, the more “abstract” it is on our vector-based measurement; the more orange, the more concrete; while the more muddled colors represent words between these extremes. Austen introduces Willoughby as someone “uncommonly handsome,” whose “manly beauty and more than common gracefulness were instantly the theme of general admiration.”</p>
+          </div>
+
+          <div class="step" data-step="22">
+          <p>Now compare this passage to how Rachel Cusk introduces a similarly flirtatious and charming character, in her 2014 novel, <i>Outline</i>. “He had large white teeth which he kept always a little bared and a loose body poised somewhere between muscle and fat, but his head was small and narrow, with sparse, almost colourless hair.” The contrast could not be more striking: in Austen, Willoughby’s appearance is in fact never concretely described, but is given to us only through abstract judgments of his “manly beauty” and “frank” and “graceful” manner. Cusk, on the other hand, seems ready to break out the calipers, measuring the shape of her character’s head, describing the size of his teeth, and even estimating his body mass index.</p>
+          <p class="p2">Of course, we already knew that the language of fiction undergoes radical change from the early nineteenth to the early twenty-first centuries. Even my students, for instance, more familiar with contemporary novelistic language, often complain when reading Austen that they don’t know what the characters “look like.” But what <i>is </i>new with this data is a way of embedding these intuitions about fictional language within a continuous, graphical representation of their history.</p>
+          </div>
+
+          <div class="step" data-step="23">
+          <p>Highlighted here are Austen and Cusk on a graph showing a gradual transformation in the linguistic texture of fiction across the last four and a half centuries. The y-axis represents the median ratio of abstract to concrete words across all of the texts in a wide variety and authors and genres. A general historical pattern emerges, one which (it should be noted) is quite robust, appearing in a similar form no matter the finer differences in the sets of abstract and concrete words that are used. That historical pattern, to sum it up, is a slight rise in the abstractness of fictional language from the middle of the seventeenth century to the late eighteenth century; followed by a dramatic fall into a predominantly concrete language throughout the nineteenth and twentieth centuries.</p>
+          <p class="p2">Of course, a centuries-long literary trend as dramatic as this couldn’t possibly pass by unnoticed by centuries of literary criticism, and I don’t at all mean to suggest that it was. Histories of the novel, for instance, have often explained its origin in a gradual transformation of the language of fiction from the generalities and idealizations of its predecessor genre—that is, the seventeenth-century romance, with all its knights and princesses of virtue and fidelity—developing instead a newly vivid, concrete, and sensuous mode of characterization, narration, and description.</p>
+          </div>
+
+          <div class="step" data-step="24">
+          <p>This classic account of the novel’s history is found in Ian Watt’s book, <i>The Rise of the Novel </i>(1957), which influentially argued that the novel not only brought the content of fiction down from the aristocratic heights of the romance to the “middle-class” register of everyday life; it also developed a new “formal realism,” a new style of story-telling predicated on the representation of life in all its “concrete particularity.” Such a mode of representation, Watt argues, arose as a kind of literary analogue to philosophical empiricism, which, in a “vast transformation of Western civilisation,” gradually inverted the medieval and Renaissance view that “universals, classes, or abstractions, ... are the true realities ... and not the particular, concrete objects of sense-perception.” Although Watt’s classic text has been picked apart for decades, critics have arguably left intact the idea that fictional realism is generated through concrete detail.</p>
+          </div>
+
+          <div class="step" data-step="25">
+          <p>More recently, for example, in his 2013 book <i>The Antinomies of Realism</i>, Fredric Jameson describes the history of realism as the gradual turn from the medieval universals, from “named emotions” like “jealousy” and “pride,” to the immediacy of sensory detail, and the concreteness and opacity of the body.</p>
+          <p class="p2"></p>
+          </div>
+
+          <div class="step" data-step="26">
+          <p>However, these received accounts of the history of the novel would lead us to expect a more straightforward, linear trend in the novel’s linguistic history, gradually falling from the seventeenth century to (at least) the nineteenth century. But the data presented here wrinkle this story. Statistically, at least, many eighteenth-century novels are in fact <i>more</i> saturated with abstract words like “virtue” and “fidelity” than are seventeenth-century romances. The classic history of the novel, therefore, suddenly seems much too linear, unable to account for the possibility that the novel may have separated from the romance not by developing a newly concrete language—but a newly abstract one.</p>
+          <p class="p2"></p>
+          </div>
+
+          <div class="step" data-step="27">
+          <p>In what follows, I want to briefly examine three moments along this trajectory, offering a view of the novel’s history from 10,000 feet; and along the way, close-reading a few passages in order to highlight the distinctive ways in which fiction of particular periods deploys the language of abstraction.</p>
+
+
+          <p class="p1"><b>4. Abstraction in the romance</b></p>
+          <p class="p2">As we’ve seen, histories of the novel often explain its origin as a departure from “the romance.” However, as Tomas Pavel and other critics have shown, the romance is a more variegated genre than we often admit. In the late sixteenth and seventeenth centuries, for example, interest in the Arthurian romances, like Thomas Malory’s <i>Morte d’Arthur,</i> was giving way to newer variants of the genre, often imported and translated from the Continent: Spanish chivalric romances like <i>Amadis of Gaul</i>, French heroic romances like <i>Polexandre</i>, English pastoral romances like Sidney’s <i>Arcadia</i>, political-allegorical romances like <i>Panthalia</i>, as well as the satirical “anti-romances” like Cervantes’ <i>Don Quixote.</i> In addition, the romance competed for attention with a number of other genres, such as the picaresque and the imaginary voyages, as well as translations and imitations of the classical Greek novels.</p>
+          <p class="p2">But despite critical commonplaces about the abstractness and idealizations inherent to these seventeenth-century fictions, the body and concrete language in fact play a central role in nearly all of these genres.</p>
+          </div>
+
+          <div class="step" data-step="28">
+          <p>In the picaresque this is the least surprising, as characters there, often drawn from the lower strata of society, wander from town to town, struggling, cheating, and tricking their way for shelter and food.</p>
+          </div>
+
+          <div class="step" data-step="29">
+          <p>The popular Spanish picaresque, <i>Lazarillo de Tormes</i>, for example, is saturated with concrete language as it minutely details that wandering servant’s travels from place to place, his encounters with strangers, and his ingenious plans to trick and steal from his various masters. Concrete language in the picaresque therefore often emerges from what I am calling “inter-social spaces,” places like the road which lie <i>between</i> recognizable social spaces like the domestic interior, and on which characters encounter as strangers, bodies, and physical appearances.</p>
+          <p class="p2"></p>
+          </div>
+
+          <div class="step" data-step="30">
+          <p>Opposite, in some sense, to what one critic has called the “worm’s eye view” of the picaresque is what might be called the “king’s eye view” of the romance.</p>
+          </div>
+
+          <div class="step" data-step="31">
+          <p>Characters here, often princes and princesses and star-crossed lovers, are impossibly idealized, lavished with rarified adjectives and high-minded abstractions about their noble character. In <i>Cassandra, </i>for instance, a popular French romance—which Samuel Pepys records in his diary as having read with his wife—we are told how a handsome stranger had “something so Martial, so sparkling, and so Majestick, as might in all hearts make an impression of Love, Fear, and Respect.” At the same time, concrete words play a crucial role in this genre as well. In the first place, the description of characters often idealizes their physique, and not only their reputation and moral qualities: here, for instance, we also learn that the character is tall, sunburnt, and seemed to be about 26 or 27 years old—already more physical information than Austen gave us about Willoughby.</p>
+          </div>
+
+          <div class="step" data-step="32">
+          <p>But quantitatively speaking, perhaps the most prominent way in which concrete words enter into the romance is through its interest in physical action, adventure, combat, and the navigation of strange new places, all of which are vividly rendered in concrete language. Already in the first few pages of <i>Cassandra, </i>marauders rush out of nowhere and slay the horse of an unknown knight clad in black; <i>Amadis of Gaul</i> begins with a hunt in which a lion suddenly begins to claw, tear, and devour the deer which the king was chasing.</p>
+          <p class="p2"></p>
+          </div>
+
+          <div class="step" data-step="33">
+          <p>But the inclusion here of a lion, a creature often symbolic of kingship, points also to a subtler logic of concrete language in the romance: namely, the logic of allegory. In allegorical writing, concrete things symbolize or “betoken” abstract or hidden meanings.</p>
+          </div>
+
+          <div class="step" data-step="34">
+          <p>This logic can appear in passing phrases,as “hoary white hairs” betoken a “speedy death”; or a face which acts as an “almanac of future qualities.”</p>
+          </div>
+
+          <div class="step" data-step="35">
+          <p>Or<b> </b>they can appear in more extended allegories: as, for example, a woman suddenly announcing that she herself <i>is </i>Virtue.</p>
+          </div>
+
+          <div class="step" data-step="36">
+          <p>Or it can appear in a particularly concentrated form, in a locution which directly conjoins a concrete object with its abstract meaning: phrases like “flower of magnanimity,” “rock of resolution,” “palace of folly,” or “imps of iniquity.”</p>
+          </div>
+
+          <div class="step" data-step="37">
+          <p>This locution is even more prevalent in Bunyan’s <i>Pilgrim’s Progress</i>, in which Christian treks from the “City of Destruction,” through the “Slough of Despondency,” up the “Hill Difficulty,” and through the “Valley of Humiliation.” Such expressions concentrate in a few words the relationship implicit in the allegorical symbol, which unites within itself a thing and an idea, a concrete embodiment and an abstract expression. If, then, if the romance is saturated with abstractions and idealizations, it also, in its allegorical logic, embeds these abstractions in concrete objects, rooting them like flowers in the earth.</p>
+
+
+          <p class="p1"><b>5. “Abstract realism”</b></p>
+          <p class="p2"></p>
+          </div>
+
+          <div class="step" data-step="38">
+          <p>Now compare all of this to the eighteenth-century novel. Gone are the knights and princesses of the romance, replaced by what is sometimes anachronistically called the “middle class” of England: the gentry, townspeople, and members of the professional classes who, generally speaking, formed the readership of the early novel. In turn, the novel related the kinds of circumstances and events which would be familiar to that readership from their daily lives. But, if that is the case, then why do we see a slight <i>increase</i> in the level of linguistic abstraction during this transition from the idealizing, aristocratic romance to the mundane, middle-class novel?</p>
+          <p class="p2">One answer is the disappearance of the “inter-social spaces” which we saw in the picaresque.</p>
+          </div>
+
+          <div class="step" data-step="39">
+          <p>Novels like Haywood’s <i>The Masqueraders</i>, the most linguistically abstract in the corpus,<i> </i></p>
+          </div>
+
+          <div class="step" data-step="40">
+          <p>take place entirely within domestic interiors or other recognizable social spaces; consequently, there is no longer any need for concrete language to render the movement <i>between</i> spaces, as in the picaresque, or to portray fantastic or unfamiliar spaces, as in the romance. For Haywood, only a few words are needed to change the scene: “two chairs are called,” she writes, to bring us from the scene of the masquerade to that of Dalinda’s house, itself a space described only in abstract terms as “handsome” and “well-furnished.”</p>
+          <p class="p2"><span class="Apple-converted-space"> </span></p>
+          </div>
+
+          <div class="step" data-step="41">
+          <p>In fact, Haywood’s novel is narrated almost entirely in abstract language, framing even specific actions and emotional experiences in general terms. For instance, rather than actually <i>showing</i> the seductive conversation between the two clandestine lovers, we are simply <i>told</i> of their having had a “Conversation”—and one in which, we are again told in general terms, Dorimenus “pressed ... those soft undoing Insinuations ... which few Men [lack] Artifice enough” to have. This locution, “those Insinuations,” is telling: the use here of an abstract noun transforms what might have been a specific verbal action, “Dorimenus <i>insinuated</i>,” into the generalized, disembodied action of “Insinuation.” Such nominalizations—like Insinua-<i>tion</i>, Tender-<i>nesses</i>—tend to transform private action into a kind of public property, converting individual events into generalized phenomena with which (it is assumed) we are all familiar—<i>so</i> familiar, in fact, that we might point to them with a simple demonstrative word like “those.” In this sense, abstractions drawn from social generalizations such as these both invoke and construct a shared sense of social reality. In this way, abstract language can create its own form of realism: what I am calling an “abstract realism.”</p>
+          <p class="p2">Importantly, such a realism of abstraction is socially constituted, a fact which separates it from the metaphysical realism of the romance and the early modern period.</p>
+          </div>
+
+          <div class="step" data-step="42">
+          <p>In the romance, abstractions are given transcendentally, true in the eyes of God;<b> </b>but in the novel, they are derived inductively from social experiences, and so become true only in the eyes of the community. For example, Austen even jokes about this fact when she first introduces Mr Darcy in <i>Pride and Prejudice</i>.</p>
+          </div>
+
+          <div class="step" data-step="43">
+          <p>When Darcy appears at the ball, he is first described as “a fine, tall person, [with] handsome features, [and a]s noble mien.” But when his manners before the community are shortly afterward discovered to be “proud” and rude, a new consensus or “social fact” takes hold, one which overrides even the physical facts of his appearance: now, we are told, “all his large estate in Derbyshire couldn’t save him from having a most forbidding, disagreeable countenance.” Unlike the romance, then, abstract qualities are here not grounded allegorically in concrete things and appearances. Rather, they are grounded in social relations, in communities, in the reputations, opinions, and judgments formed in society by humans in (what these novels often call) “the world.”</p>
+          <p class="p2">Of course, “the world” in this usage is much smaller than the planet: it really means a narrow, insular community of which the characters are all a mutual part.</p>
+          </div>
+
+          <div class="step" data-step="44">
+          <p>Although the word is used earnestly throughout the period, its parochial meaning is memorably satirized in Sterne’s <i>Tristram Shandy</i>. “By which word ‘world’,” Sterne writes, “I would be understood to mean no more of it, than a small circle... of four English miles diameter, or thereabouts, of which the cottage where the good old woman lived, is supposed to be the centre.”</p>
+          </div>
+
+          <div class="step" data-step="45">
+          <p>Raymond Williams calls these delimited social spaces “knowable communities,” communities so structured that the personal history, social status, and moral reputation of each of its members and families is both knowable and known. Of course, as Williams points out, this mode of knowability is predicated on a form of social exclusivity: “Neighbours in Jane Austen,” he writes,<span class="Apple-converted-space">  </span>“are not the people actually living nearby; they are the people living a little less nearby who, in social recognition, can be visited.” Haywood’s novel makes this still more clear: set in London, a city of already 630,000 people by the time of its publication in 1725, her novel nevertheless portrays a small, knowable community made up only of the fashionable party-goers of the masquerade.</p>
+          <p class="p2">Critics have made much of these social exclusions as a count, in some sense, against their realism. At the same time, as we will see in a comparison with their nineteenth-century successors, these novels’ heavy usage of abstract language works to establish a distinct form of “realism” which is predicated on the objectivity and force of social relations, on the dangerous reality of reputation, opinion, judgment, and social practices—a mode of realism that is committed, down to its linguistic structure, in the objectivity of the social and not only the physical world.</p>
+
+
+          <p class="p1"><b>6. Nineteenth-century fall</b></p>
+          <p class="p2"></p>
+          </div>
+
+          <div class="step" data-step="46">
+          <p>Finally, on our last stop in this flyover tour of the novel, we come to the most dramatic question posed by the graph: why did the language of fiction plummet into concreteness so suddenly and irrevocably in the early nineteenth century?</p>
+          </div>
+
+          <div class="step" data-step="47">
+          <p>The contrast between Austen and Dickens is indicative here. From the former to the latter, the novel relocates from the countryside communities of the gentry to the complex urban metropolises of London and Coketown, cities which teem with people and bodies and houses and neighborhoods across all strata of society. And as it does so, as its social scope expands, so too does its use of concrete language. Why?</p>
+          <p class="p2"></p>
+          </div>
+
+          <div class="step" data-step="48">
+          <p>In part, this is because the urban novel brings back the inter-social spaces we saw in the picaresque: the roads and streets which lie <i>between</i> domestic or familiar spaces. City streets and roads and buildings confront us with strange sights and sounds which must be rendered concretely, as happens here to Oliver Twist. Along the crowded city streets, people and animals and objects are all bumping into each other and encountering each other as strangers. After all, this experience of the chaos and disorientation of the city was not only a literary one, but became increasingly common across the late eighteenth and nineteenth centuries, as rural tenants and laborers dislocated by land enclosures and rising industrialization flocked to the cities for work. By 1800, about 17% of the English population lived in cities; by 1850, nearly half, with the population of London alone nearly tripling during that time.</p>
+          </div>
+
+          <div class="step" data-step="49">
+          <p>This experience of urban disorientation is memorably recorded in William Wordsworth’s autobiographical poem, <i>The Prelude </i>(1805): upon moving to London, Wordsworth was shocked to encounter so many “faces”—the streets “overflowing” with faces, with concrete <i>appearances</i> of people, while their inner personhood, their character and social meaning, was left a “mystery.” The city, for Wordsworth, is an unreadable, unknowable throng, likened to a “black storm” and a “huge fermenting mass.” Poignantly, it’s not until he encounters a beggar with a written note on his chest that “explain[ed] his story, whence he came, and who he was” that Wordsworth feels comforted, finally able to restore the knowability of a person in the city.</p>
+          <p class="p2">But characters and narrators in nineteenth-century fiction cannot wait for written notes stuck to each other’s chests, and must learn instead to “read” each other’s bodies and physical appearances in other ways.</p>
+          </div>
+
+          <div class="step" data-step="50">
+          <p>Dickens both performs and satirizes this practice throughout his fiction. “What an excellent example of the power of dress young Oliver Twist was,” he writes. When first born, no one could “fix his station in society,” but once wrapped in in “old calico robes, ... he was badged and ticketed, and fell into his place at once.”</p>
+          </div>
+
+          <div class="step" data-step="51">
+          <p>Although here bemoaning the practice, Dickens’ own narration relies on it in order to signal to the reader crucial aspects of his characters’ social standing and meaning. When we first encounter Mr Jingle in Dickens’ <i>Pickwick Papers</i>, we are meant to infer from his “soiled and faded sleeves [which] scarcely reached to his wrists” that he is poor, and perhaps a drifter.</p>
+          <p class="p2">These concretized presentations of character are nows a far cry from Austen’s explicit judgments and abstraction-laced commentary. Something has changed quite dramatically in the form of the novel—a change which<span class="Apple-converted-space">  </span>Charlotte Brontë directly commented on and dramatized in her own novel, <i>Jane Eyre</i>.</p>
+          </div>
+
+          <div class="step" data-step="52">
+          <p>Before meeting Mr. Rochester, Jane, curious, asks Mrs. Fairfax about his “character,” but quickly gets frustrated with her too-abstract answers: that he is “considered a just and liberal landlord” and “his character is unimpeachable.” “There are people who seem to have no notion of sketching a character,” Jane huffs afterward.</p>
+          </div>
+
+          <div class="step" data-step="53">
+          <p>It’s not until she finally meets Mr. Rochester herself that we get, according to her, a <i>proper</i> sketch of his character: one which narrates the meaning of his body. “I knew my traveller with his broad and jetty eyebrows... I recognized his <i>decisive</i> nose... his full nostrils, <i>denoting</i>... choler... his <i>grim</i> mouth, chin, and jaw.”</p>
+          <p class="p2">These locutions may sound familiar. Nostrils <i>denoting</i> choler? A <i>decisive</i> nose, and a <i>grim</i> mouth? Here, concrete appearances again “bespeak” abstract qualities, and we find ourselves back at the allegorical mode of relating concrete and abstract language which we saw deployed in the allegories and romances of the seventeenth century. Now, the idea that early nineteenth-century fiction has an allegorical or symbolic dimension is nothing new.</p>
+          </div>
+
+          <div class="step" data-step="54">
+          <p>For Barthes, Jameson, and others, the distinctive mark of Balzac’s realism, for instance, is precisely this allegorical dimension: in Balzac, Jameson writes, “everything that <i>looks </i>like a physical sensation ... is a sign or allegory of the social or moral status of a given character.”</p>
+          </div>
+
+          <div class="step" data-step="55">
+          <p>But what <i>is</i> new here in these data is the finding that this allegorical fictional mode brings together along an historical continuum the nineteenth-century novel and the seventeenth-century romance, unintuitively drawing these genres closer to each other than either is to the eighteenth-century novel—the period in which, as all critics agree, the novel first emerged. On this reading, nineteenth-century fiction stages a <i>return</i> of an allegory of the concrete—but with a crucial difference, that the allegorical “things” which signify are no longer rocks, flowers, lions, deer, and other metaphorical or conventional objects, but instead clothes, furniture, houses, <i>commodities</i> and other everyday objects and appearances. We find here, in other words, not an allegory of the symbol, so much as an <i>allegory of the commodity.</i></p>
+
+
+          <p class="p1"><b>7. Reification</b></p>
+          <p class="p2">These data therefore help us refine Williams’ hypothesis of the knowable community. It is not so much that community becomes “unknowable” in the transition from the provincial to the metropolitan novel, so much as knowable by different means. The characters of Haywood, Richardson, Austen, and other eighteenth-century novelists “know” and judge one another through face-to-face meetings; they accrue reputations—for being proud or sensible, dull or lively—which “precede them” and their physical appearance. But in the newly anonymized urban experience, such direct knowing of reputation becomes impossible, or at least more difficult, and instead social knowing is rerouted from abstract qualities to concrete things. We may not know Oliver’s personhood, but we know what it means to wear old and yellowed calico robes; we may not know who Mr Jingle is, what his reputation or personality may be, but from his “soiled and faded sleeves” we can already begin to make something about him out. In this new, urbanized experience, then, community is known, not so much through interpersonal knowledge, as through the objects and appearances which that community produces and through which it communicates its social ideas to itself.</p>
+          <p class="p2"></p>
+          </div>
+
+          <div class="step" data-step="56">
+          <p>We are now, then, in a position to make a final, broader interpretive claim about the decline of fictional language into the language of concreteness. I argue that we might understand this linguistic and literary process of concretization as part of a broader social and material process which Lukacs called <i>reification</i>: that is, the concretization of social relations into objects and their physical appearances.<b> </b>A variant on Marx’s commodity fetishism, reification transforms, in Marx’s words, “direct social relations between individuals” into the appearance of “material relations between persons and social relations between things.” A new kind of ‘objectivity’ develops, replacing the social objectivity of abstract words—“Insinuations,” “Tendernesses,” pride and prejudice, which are each socially constituted—with a newly physicalized notion objectivity that manifests, in the novel, through its newly concrete language.</p>
+          <p class="p2"><span class="Apple-converted-space"> </span></p>
+          </div>
+
+          <div class="step" data-step="57">
+          <p>Speculatively, such a transformation in the notion of fictional objectivity may be bound up in related changes in the natural sciences, such as those which Loraine Daston and Peter Gallison have documented.<b> </b>“‘Let nature speak for itself’ became the watchword of a new brand of scientific objectivity,” they write, as scientists increasingly disavowed the task of generalization and abstraction, and instead turned to<b> </b>mechanical techniques of reproducing, as exactly as possible, the particularistic, concrete nature of their phenomena.</p>
+          </div>
+
+          <div class="step" data-step="58">
+          <p>Now, whatever the merits and origin of nature “speaking for itself” in scientific work, it is certainly remarkable that such calls were echoed in literary criticism not long after—with writers and critics like Henry James, Percy Lubbock, Ford Madox Ford, and others calling for novelists to let “the story tell itself.” More often than not, such a plea called for writers to “show” their narrative in concrete language, rather than to “tell” it in generalizations and abstractions. To advocate that <i>things</i> speak for themselves in fictional realism—a genre defined by René Wellek as the “objective representation of social reality”—takes a strong position on the nature of such a “social reality.”</p>
+          </div>
+
+          <div class="step" data-step="59">
+          <p>Indeed, that things might actually “speak” rhetorical one of the dark rhetorical game Marx plays in <i>Capital</i> when he imagines what, if a commodity might speak, it would say to us. He answers: It would lie; it would whisper to us that it contains in its material form, and not the social nature of its production, the secret of its value.</p>
+          <p class="p2">To return, then, to the question posed at the beginning of this talk: what does the literary history of abstract language have to teach us about the culture of abstraction surrounding us today? Strange as it may sound, I believe the answer lies in the eighteenth century—that temporary moment in the history of fiction, lying between seventeenth-century allegories of the symbol and nineteenth-century allegories of the commodity. The history of linguistic reification traced here points, I believe, to this fragile period in literary history—one which, was committed to the modern, secular project of representing social reality objectively, but was nevertheless able to do these apprehend social relations in their fundamentally abstract, inductive, and collective nature, and not only through the reified and commodified nature of its productions. Abstraction, in this sense, may work to de-fetishize the commodity, to de-reify social relations, making them once again visible in their nakedly abstract and social form.</p>
+          <p class="p2">Returning to our contemporary culture of abstraction, saturated as we are with incomprehensibly abstract algorithms and financial instruments, we are perhaps in danger of a new form of fetishism which naturalizes not the material but the immaterial products of our labor, our data and digital behavior sold back to us as a mystified, independent force.<span class="Apple-converted-space">  </span>In such a situation, critical theories and methods which are able to expose and visualize both the history and the forms of abstraction may help to ward off what Adorno called abstraction’s “spell,” keeping us alert to the social practices which make seemingly natural, inevitable, and material, the life and things we make and share together.</p>
+          <p class="p2">Thank you.</p>
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </article>
+
+        <figure>
+          <p><img src="slides/Slide001.png" /></p>
+        </figure>
+      </section>
+
+      <section id="outro"></section>
+    </main>
+
+    <!-- <div class='debug'></div> -->
+    <script src="../d3.min.js"></script>
+    <script src="../intersection-observer.js"></script>
+    <script src="../stickyfill.min.js"></script>
+    <script src="../scrollama.min.js"></script>
+    <script>
+      // using d3 for convenience
+      var main = d3.select("main");
+      var scrolly = main.select("#scrolly");
+      var figure = scrolly.select("figure");
+      var article = scrolly.select("article");
+      var step = article.selectAll(".step");
+
+      // initialize the scrollama
+      var scroller = scrollama();
+
+      // generic window resize listener event
+      function handleResize() {
+        // 1. update height of step elements
+        // var stepH = Math.floor(window.innerHeight * 0.75);
+        // step.style("height", stepH + "px");
+
+        var figureHeight = window.innerHeight / 2;
+        var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+
+        figure
+          .style("height", figureHeight + "px")
+          .style("top", figureMarginTop + "px");
+
+        // 3. tell scrollama to update new element dimensions
+        scroller.resize();
+      }
+
+			function pad(num, size){ return ('000000000' + num).substr(-size); }
+
+      function preload_images(num_slides) {
+        var images = [];
+
+        for (var i = 0; i < num_slides; i++) {
+            index_int = i + 1
+            index_str = pad(index_int, 3)
+            imgsrc='slides/Slide' + index_str + '.png'
+
+            images[i] = new Image();
+            images[i].src = imgsrc;
+            console.log('loaded image: '+imgsrc)
+        }
+
+
+      }
+
+      // scrollama event handlers
+      function handleStepEnter(response) {
+        console.log(response);
+        // response = { element, direction, index }
+
+        // add color to current step only
+        step.classed("is-active", function(d, i) {
+          return i === response.index;
+        });
+
+        // update graphic based on step
+        //figure.select("p").text(response.index + 1);
+				index_int = parseInt(response.index) + 1
+				index_str = pad(index_int, 3)
+				imgcode='<img src="slides/Slide' + index_str + '.png" />'
+				console.log(imgcode)
+				figure.select("p").html(imgcode);
+      }
+
+      function setupStickyfill() {
+        d3.selectAll(".sticky").each(function() {
+          Stickyfill.add(this);
+        });
+      }
+
+      function init() {
+
+        setupStickyfill();
+
+        // 1. force a resize on load to ensure proper dimensions are sent to scrollama
+        handleResize();
+
+        // 2. setup the scroller passing options
+        // 		this will also initialize trigger observations
+        // 3. bind scrollama event handlers (this can be chained like below)
+        scroller
+          .setup({
+            step: "#scrolly article .step",
+            offset: 0.33,
+            debug: false
+          })
+          .onStepEnter(handleStepEnter);
+
+        // setup resize event
+        window.addEventListener("resize", handleResize);
+
+        // preload
+        preload_images(59);
+      }
+
+      // kick things off
+      init();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,755 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Viral Medium</title><link href='https://fonts.loli.net/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+/* meyer reset -- http://meyerweb.com/eric/tools/css/reset/ , v2.0 | 20110126 | License: none (public domain) */
+
+@include-when-export url(https://fonts.loli.net/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext);
+
+/* =========== */
+
+/* pt-serif-regular - latin */
+/* pt-serif-italic - latin */
+/* pt-serif-700 - latin */
+/* pt-serif-700italic - latin */
+:root {
+	--active-file-bg-color: #dadada;
+	--active-file-bg-color: rgba(32, 43, 51, 0.63);
+	--active-file-text-color: white;
+	--bg-color: #f3f2ee;
+	--text-color: #1f0909;
+	--control-text-color: #444;
+	--rawblock-edit-panel-bd: #e5e5e5;
+
+	--select-text-bg-color: rgba(32, 43, 51, 0.63);
+  --select-text-font-color: white;
+}
+
+pre {
+	--select-text-bg-color: #36284e;
+	--select-text-font-color: #fff;
+}
+
+html {
+	font-size: 16px;
+}
+
+html, body {
+	background-color: #f3f2ee;
+	font-family: "PT Serif", 'Times New Roman', Times, serif;
+	color: #1f0909;
+	line-height: 1.5em;
+}
+
+/*#write {
+	overflow-x: auto;
+    max-width: initial;
+	padding-left: calc(50% - 17em);
+    padding-right: calc(50% - 17em);
+}
+
+@media (max-width: 36em) {
+ 	#write {
+ 		padding-left: 1em;
+    	padding-right: 1em;
+ 	}
+}*/
+
+#write {
+	max-width: 40em;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+			max-width: 914px;
+	}
+}
+
+ol li {
+	list-style-type: decimal;
+	list-style-position: outside;
+}
+ul li {
+	list-style-type: disc;
+	list-style-position: outside;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* styles */
+
+/* ====== */
+
+/* headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+}
+h1 {
+	font-size: 1.875em;
+	/*30 / 16*/
+	line-height: 1.6em;
+	/* 48 / 30*/
+	margin-top: 2em;
+}
+h2,
+h3 {
+	font-size: 1.3125em;
+	/*21 / 16*/
+	line-height: 1.15;
+	/*24 / 21*/
+	margin-top: 2.285714em;
+	/*48 / 21*/
+	margin-bottom: 1.15em;
+	/*24 / 21*/
+}
+h3 {
+	font-weight: normal;
+}
+h4 {
+	font-size: 1.125em;
+	/*18 / 16*/
+	margin-top: 2.67em;
+	/*48 / 18*/
+}
+h5,
+h6 {
+	font-size: 1em;
+	/*16*/
+}
+h1 {
+	border-bottom: 1px solid;
+	margin-bottom: 1.875em;
+	padding-bottom: 0.8125em;
+}
+/* links */
+
+a {
+	text-decoration: none;
+	color: #065588;
+}
+a:hover,
+a:active {
+	text-decoration: underline;
+}
+/* block spacing */
+
+p,
+blockquote,
+.md-fences {
+	margin-bottom: 1.5em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 1.5em;
+}
+/* blockquote */
+
+blockquote {
+	font-style: italic;
+	border-left: 5px solid;
+	margin-left: 2em;
+	padding-left: 1em;
+}
+/* lists */
+
+ul,
+ol {
+	margin: 0 0 1.5em 1.5em;
+}
+/* tables */
+.md-meta,.md-before, .md-after {
+	color:#999;
+}
+
+table {
+	margin-bottom: 1.5em;
+	/*24 / 16*/
+	font-size: 1em;
+	/* width: 100%; */
+}
+thead th,
+tfoot th {
+	padding: .25em .25em .25em .4em;
+	text-transform: uppercase;
+}
+th {
+	text-align: left;
+}
+td {
+	vertical-align: top;
+	padding: .25em .25em .25em .4em;
+}
+
+code,
+.md-fences {
+	background-color: #dadada;
+}
+
+code {
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.md-fences {
+	margin-left: 2em;
+	margin-bottom: 3em;
+	padding-left: 1ch;
+	padding-right: 1ch;
+}
+
+pre,
+code,
+tt {
+	font-size: .875em;
+	line-height: 1.714285em;
+}
+/* some fixes */
+
+h1 {
+	line-height: 1.3em;
+	font-weight: normal;
+	margin-bottom: 0.5em;
+}
+
+p + ul,
+p + ol{
+	margin-top: .5em;
+}
+
+h3 + ul,
+h4 + ul,
+h5 + ul,
+h6 + ul,
+h3 + ol,
+h4 + ol,
+h5 + ol,
+h6 + ol {
+	margin-top: .5em;
+}
+
+li > ul,
+li > ol {
+	margin-top: inherit;
+	margin-bottom: 0;
+}
+
+li ol>li {
+	list-style-type: lower-alpha;
+}
+
+li li ol>li{
+	list-style-type: lower-roman;
+}
+
+h2,
+h3 {
+	margin-bottom: .75em;
+}
+hr {
+	border-top: none;
+	border-right: none;
+	border-bottom: 1px solid;
+	border-left: none;
+}
+h1 {
+	border-color: #c5c5c5;
+}
+blockquote {
+	border-color: #bababa;
+	color: #656565;
+}
+
+blockquote ul,
+blockquote ol {
+	margin-left:0;
+}
+
+.ty-table-edit {
+	background-color: transparent;
+}
+thead {
+	background-color: #dadada;
+}
+tr:nth-child(even) {
+	background: #e8e7e7;
+}
+hr {
+	border-color: #c5c5c5;
+}
+.task-list{
+	padding-left: 1rem;
+}
+
+.md-task-list-item {
+	padding-left: 1.5rem;
+	list-style-type: none;
+}
+
+.md-task-list-item > input:before {
+	content: '\221A';
+	display: inline-block;
+	width: 1.25rem;
+  	height: 1.6rem;
+	vertical-align: middle;
+	text-align: center;
+	color: #ddd;
+	background-color: #F3F2EE;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	color: inherit;
+}
+
+#write pre.md-meta-block {
+	min-height: 1.875rem;
+	color: #555;
+	border: 0px;
+	background: transparent;
+	margin-top: -4px;
+	margin-left: 1em;
+	margin-top: 1em;
+}
+
+.md-image>.md-meta {
+	color: #9B5146;
+}
+
+.md-image>.md-meta{
+	font-family: Menlo, 'Ubuntu Mono', Consolas, 'Courier New', 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', serif;
+}
+
+
+#write>h3.md-focus:before{
+	left: -1.5rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h4.md-focus:before{
+	left: -1.5rem;
+	top: .25rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h5.md-focus:before{
+	left: -1.5rem;
+	top: .0.3125rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h6.md-focus:before{
+	left: -1.5rem;
+	top: 0.3125rem;
+	color:#999;
+	border-color:#999;
+}
+
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
+}
+
+.md-toc-content:empty:before{
+	color: #065588;
+}
+.md-toc-item {
+	color: #065588;
+}
+#write div.md-toc-tooltip {
+	background-color: #f3f2ee;
+}
+
+#typora-sidebar {
+	background-color: #f3f2ee;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.375);
+  	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.375);
+}
+
+.pin-outline #typora-sidebar {
+	background: inherit;
+	box-shadow: none;
+	border-right: 1px dashed;
+}
+
+.pin-outline #typora-sidebar:hover .outline-title-wrapper {
+	border-left:1px dashed;
+}
+
+.outline-item:hover {
+  background-color: #dadada;
+  border-left: 28px solid #dadada;
+  border-right: 18px solid #dadada;
+}
+
+.typora-node .outline-item:hover {
+  	border-right: 28px solid #dadada;
+}
+
+.outline-expander:before {
+  content: "\f0da";
+  font-family: FontAwesome;
+  font-size:14px;
+  top: 1px;
+}
+
+.outline-expander:hover:before,
+.outline-item-open>.outline-item>.outline-expander:before {
+  content: "\f0d7";
+}
+
+.modal-content {
+	background-color: #f3f2ee;
+}
+
+.auto-suggest-container ul li {
+	list-style-type: none;
+}
+
+/** UI for electron */
+
+.megamenu-menu,
+#top-titlebar, #top-titlebar *,
+.megamenu-content {
+	background: #f3f2ee;
+	color: #1f0909;
+}
+
+.megamenu-menu-header {
+	border-bottom: 1px dashed #202B33;
+}
+
+.megamenu-menu {
+	box-shadow: none;
+	border-right: 1px dashed;
+}
+
+header, .context-menu, .megamenu-content, footer {
+	font-family: "PT Serif", 'Times New Roman', Times, serif;
+    color: #1f0909;
+}
+
+#megamenu-back-btn {
+	color: #1f0909;
+	border-color: #1f0909;
+}
+
+.megamenu-menu-header #megamenu-menu-header-title:before {
+	color: #1f0909;
+}
+
+.megamenu-menu-list li a:hover, .megamenu-menu-list li a.active {
+	color: inherit;
+	background-color: #e8e7df;
+}
+
+.long-btn:hover {
+	background-color: #e8e7df;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+	background-color: #D2D1D1;
+}
+
+.btn-default {
+	background-color: transparent;
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+.ty-show-word-count #footer-word-count {
+	background: #c7c5c5;
+}
+
+#typora-quick-open {
+    background-color: inherit;
+}
+
+.md-diagram-panel {
+	margin-top: 8px;
+}
+
+.file-list-item-file-name {
+	font-weight: initial;
+}
+
+.file-list-item-summary {
+	opacity: 1;
+}
+
+.file-list-item {
+	color: #777;
+}
+
+.file-list-item.active {
+	background-color: inherit;
+	color: black;
+}
+
+.ty-side-sort-btn.active {
+	background-color: inherit;
+}
+
+.file-list-item.active .file-list-item-file-name  {
+	font-weight: bold;
+}
+
+.file-list-item{
+    opacity:1 !important;
+}
+
+.file-library-node.active>.file-node-background{
+	background-color: rgba(32, 43, 51, 0.63);
+	background-color: var(--active-file-bg-color);
+}
+
+.file-tree-node.active>.file-node-content{
+	color: white;
+	color: var(--active-file-text-color);
+}
+
+.md-task-list-item>input {
+	margin-left: -1.7em;
+	margin-top: calc(1rem - 12px);
+}
+
+input {
+	border: 1px solid #aaa;
+}
+
+.megamenu-menu-header #megamenu-menu-header-title,
+.megamenu-menu-header:hover, 
+.megamenu-menu-header:focus {
+	color: inherit;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+}
+
+/* https://github.com/typora/typora-issues/issues/2046 */
+.os-windows-7 strong,
+.os-windows-7 strong  {
+	font-weight: 760;
+}
+
+.ty-preferences .btn-default {
+	background: transparent;
+}
+
+.ty-preferences .window-header {
+	border-bottom: 1px dashed #202B33;
+	box-shadow: none;
+}
+
+#sidebar-loading-template, #sidebar-loading-template.file-list-item {
+	color: #777;
+}
+
+.searchpanel-search-option-btn.active {
+	background: #777;
+	color: white;
+}
+
+
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write'  class = ''><h1><a name="the-viral-medium" class="md-header-anchor"></a><span>The Viral Medium</span></h1><p><em><span>8 May 2020, Cambridge; edited 18 July</span></em></p><h2><a name="1-immaterially-stuck" class="md-header-anchor"></a><span>1. Immaterially stuck</span></h2><p><span>I am writing these paragraphs while stuck in my apartment; presumably you are reading them while stuck in yours. This literal sense of being ‘stuck’, of physically being unable to move, is probably not the one intended in the upcoming </span><a href='https://reenlightening.org/rex8/'><span>Re:Enlightenment exchange on ‘Getting Unstuck’</span></a><span>. In the statements already gathered here, ‘stuckness’ is theorized more abstractly, as a condition of knowledge (</span><a href='https://reenlightening.org/rex8/?p=963'><span>Siskin</span></a><span>), our conceptual architectures (</span><a href='https://reenlightening.org/rex8/?p=832'><span>de Bolla</span></a><span>), our ideas about free speech (</span><a href='https://reenlightening.org/rex8/?p=998'><span>Warner</span></a><span>), social-scientific instrumentalization (</span><a href='https://reenlightening.org/rex8/?p=932'><span>Drucker</span></a><span>) or epistemic bubbles (</span><a href='https://reenlightening.org/rex8/?p=978'><span>Rudy</span></a><span>). To get unstuck, then, involves re-designing (also a theme of the event) those abstract forms: concepts, ideas, models of human behavior. At the same time, it seems worth adding to these reflections on epistemological or disciplinary stuckness our more basic, immediate, tangible experience of being stuck, of being unable to move outside our homes, congregate, meet, or touch. This situation is, as we know, historically unprecedented. One third of the world’s population (a staggering 2.5 billion people) lives under some form of lockdown, compelled to remain indoors, immobilized and isolated—in a word, stuck.</span></p><p><span>But what kind of stuckness is this? Is it different from the stuckness of knowledge or ideas? As a word, ‘stuckness’ succeeds in part through its plainness, elevating an old, rough, Anglo-Saxon word to the level of a modern abstraction. From the Old English, the adjective referred to a ‘stuck’ or ‘sticked’ pig with ‘a knife thrust into its neck’; not until 1865 does it mean tangibly ‘held fast or trapped,’ and not until 1913 ‘unable to progress or develop’.</span><sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup><span>It is interesting to note that stuckness, the keyword with which we investigate such abstract concerns as progress and knowledge, originated in something so sinewy and tangible as the stabbing of a pig. This semantic tension, in fact, between a visceral concreteness with an analytic abstractness, may be what makes stuckness a particularly useful keyword with which to examine a broad network of restraints and blockages in our social and material lives—and not only in our academic ones.</span></p><p><span>After all, an entangled </span><em><span>totality</span></em><span> of blockages seems to be what we are experiencing at the moment. If we are now stuck in our homes, for example, what really has us ‘held fast’? No mere ‘mugger’, as in Boris Johnson’s bizarre metaphor for the waves of mass death coursing through the UK and the world. Rather, we face a more distant and intangible restraint—and not only the so-called ‘invisible enemy’ of the virus. The true invisible threat is not the virus itself but the global networks of exchange, circulation, and accumulation through which the virus grows and spreads at exponential speeds. Like a runaway train without a driver, the virus is just a mindless machine barreling down the tracks it’s given; and it’s currently screeching its way along the weary, broken infrastructure of a world long rewired and globalized by the invisible, abstract logic of capital.</span></p><p><span>What has us all stuck like a pig is not so much the virus, in other words, as this </span><em><span>viral medium</span></em><span>: not the train but the railway system, the entire social and material organization which is the true ‘body’ of the virus and the real medium through which it spreads. The virus began, let us not forget, as a commodity on the (‘wet’) market: in the bats, pangolins, and other wild animals dislocated from their habitats and sold together in tight spaces congregating bacterial and viral matter from around the world. In this sense, the biological processes which gave birth to the coronavirus cannot be separated from the spatial and economic processes which brought together its viral ingredients. Like a bio-luminescent fluid swallowed to light up the inside of an organ, the virus reveals, as it spreads, the inner shape and contours of the global system. What it shows is less merely interconnectedness of local and global scales than a total collapse of scale itself, as if local conditions were less the distant, downstream effect of the global economy than its direct, physical embodiment, and capitalism itself were coughing through our lungs. </span></p><p><span>Our being tangibly stuck in our homes is therefore not only related to more distant and abstract forms of stuckness (even in our knowledge or ideas) but dialectically inseparable from them. Our stuckness in epistemic bubbles is inseparable from our stuckness in a digitalized capitalism powered by machine learning algorithms; our stuckness in an instrumental or over-dissective (</span><a href='https://reenlightening.org/rex8/?p=985'><span>Bowker</span></a><span>) research framework is inseparable from the broader forces of rationalization which have evolved historically with the world capitalist system. What the virus may show us in the Re:Enlightenment in particular, then, is that we may need a more </span><em><span>Gestalt</span></em><span> approach to stuckness, one which examines it as a condition of the social totality and not only as an independent blockage of certain academic or intellectual systems.</span></p><h2><a name="2-we-the-cognitariat" class="md-header-anchor"></a><span>2. We the cognitariat</span></h2><p><span>But stuckness, at the moment, is a privilege. Which of us now is even able to be stuck, to stay indoors and avoid exposure to this deadly and contagious disease? Primarily, besides those unfortunate enough to be furloughed or unemployed, that class of workers who can ‘work from home’: the rest we cynically call ‘key’ or ‘essential’ workers and thrust outside into harm’s way. At the moment, in near-total lockdown, with nearly all businesses shuttered to the public and the streets uncannily empty, we may as well call the brave delivery workers the ‘stalkers’ of our age, after of course the unnamed protagonist of Tarkovsky’s 1979 film who makes a living guiding members of the wealthier professional classes (in the named simply ‘Writer’ and ‘Professor’) through the deserted overgrown urban wasteland called ‘The Zone.’ The world outside our homes has, for now, become a kind of ‘Zone’, revealing an already existing class of stalkers, the elite paratroopers of an otherwise the gig economy, carrying Deliveroo and Uber Eats orders on their backs through the irradiated near-empty streets.</span></p><p><span>But what of these workers who work from home? What exactly do they do? What kind of labor is able to undergo this spatial dislocation? To answer that question we can turn to a body of literature that has been thinking through changes in the labor process since the 1970s toward the ‘postindustrial’ economy: changes which, by their account, have elevated the so-called ‘immaterial’ or ‘cognitive’ components of labor. Much of this literature (Maurizio Lazzarato, Yann Moulier Boutang, Ursula Huws, Dick Dyer-Witheford, Christian Fuchs, Mackenzie Wark) is influenced by the Italian ‘workerism’ (</span><em><span>operaismo</span></em><span>) movement of the 1950s, itself inspired by Marx’s remarks, in the ‘Fragment on Machines’ in the </span><em><span>Grundrisse</span></em><span>, on the ‘general intellect’ of the workers (their knowledge and know-how) as somehow embodied in their machines and itself valued component of the labor process. What, these writers ask, is this intellective or cognitive content of labor, and what is its history over the last several decades?</span></p><p><span>In </span><em><span>Cognitive Capitalism</span></em><span>, for instance, Boutang (following Lazzarato) proposes that since the 1970s a new regime of ‘immaterial’ labor has consolidated: a ‘cognitive’ labor performed by the new ‘cognitariat.’ Such a class includes everyone from call center workers to computer programmers, casualized culture workers, educators and academics: everyone whose labor depends mainly on a ‘brain … equipped and extended by networked computers.’</span><sup class='md-footnote'><a href='#dfref-footnote-2' name='ref-footnote-2'>2</a></sup><span>The ‘collective cognitive labor power’ such a network of cognitiariats forms is, for Boutang, sufficiently distinct from the ‘muscle-power consumed by machines’ of the proletariat that it constitutes a new mode of production and form of labor. Even, for example, in the oldest, ‘primary,’ prototypically manual-labor industry of the economy, agriculture, the cognitive dimensions of labor have risen in importance and value, with the industry’s heavy investments in chemical fertilizer research, genetic engineering, automation, patents, and complex advertising and certification processes. ‘The increasingly immaterial character of capitalism’ can be seen in these developments, writes Razmig Keucheyan: ‘the importance of knowledge-value is in this sense increasing and that of labour-value as traditionally conceived – measured by labour time – is tending to decline.’</span><sup class='md-footnote'><a href='#dfref-footnote-3' name='ref-footnote-3'>3</a></sup></p><p><span>Of course, such theories of a new immaterial labor face a predictable materialist critique: that all forms of labor, however digital or cognitive, are ineluctably material, ultimately grounded in material things and practices. On a theoretical level, however, such a critique fails to understand that the point of isolating an ‘immaterial’ component of labor is precisely in order to build a materialism adequate to the digital and postindustrial age. We need, in a nice turn of phrase from Boutang, to bring our Marx from Manchester to California. A materialist analysis of the internet, for instance, cannot simply ‘expose’ the thingly basis of its infrastructure, pointing to the thick wires it travels through at the bottom of the world’s oceans; it must also contend with the fact that the speed and shape of such wires have nevertheless effectively ‘dematerialized’ our work and social life, abstracting away our physical distances and disembedding and rerouting our social relations.</span></p><p><span>But never mind all that. The virus has, in a way, already nullified these theoretical questions, providing a brutally qualitative measurement of the relative ‘immateriality’ of one’s labor: either it requires you to expose your material body to the world, risking infection from a fatal virus, or it doesn’t, in which case it allows you to work from the comfort and safety of your own home, sipping coffee and lightly typing on your laptop. Sure, ‘Zoomable’ was not exactly what Lazzarato meant by ‘immaterial’ labor, nor ‘worker from home’ what Boutang meant by the cognitariat. We can and should debate the vagaries of meaning in these concepts, and of how they relate to others (precariat, information worker, and so on). But whatever we call these apparently new forms of labor and class divisions, the important point is that such divisions in the structure of labor were neither created by nor imposed on us by the virus, but have rather been developing for decades through a set of related ‘dematerializing’ transformations in the postindustrial economy.</span></p><p><span>Take, for example, the post-70s turn from the tangible to the intangible asset. In 1975, ‘tangible assets’ like land, property, machinery and equipment made up 83% of the total market value of the S&amp;P 500; by 2015, the reverse was true, with 84% of market value taken up by ‘intangible assets’ like data, software, and intellectual property.</span><sup class='md-footnote'><a href='#dfref-footnote-4' name='ref-footnote-4'>4</a></sup><span> In 2004, Allen Greenspan remarked that this ‘shift of emphasis from physical materials to ideas as the core of value creation appears to have accelerated in recent decades.’</span><sup class='md-footnote'><a href='#dfref-footnote-5' name='ref-footnote-5'>5</a></sup><span> Talk of a ‘cognitive capitalism’ is meant to mark out these fundamental changes in economy, and theorize how a new ‘object of accumulation’ which ‘consists mainly of </span><em><span>knowledge</span></em><span>, which becomes the basic source of value, as well as the principal location of the process of valorisation.’</span><sup class='md-footnote'><a href='#dfref-footnote-6' name='ref-footnote-6'>6</a></sup></p><p><span>But these changes in the ‘tangibility’ of assets on the commodities market do not even include the rise of newly abstract financial instruments: finance being, as Fredric Jameson puts it, a ‘second-level abstraction’ to the first-order one of money, prices, or exchange-value.</span><sup class='md-footnote'><a href='#dfref-footnote-7' name='ref-footnote-7'>7</a></sup><span> Derivatives, for instance, which are effectively bets on the future prices of assets, and so also ‘dematerialized’ to the extent that they ‘are totally shorn of the characteristics of the assets concerned’, ballooned over this period: negligible in total value in the early 1970s, they skyrocketed in value to $865 billion in 1987 and $685 trillion in the 2000s, orders of magnitude more than than the entire U.S. GDP.</span><sup class='md-footnote'><a href='#dfref-footnote-8' name='ref-footnote-8'>8</a></sup><span> For Cédric Durand, from whom I take these numbers, such changes constitute a new regime of ‘</span><em><span>fictitious</span></em><span> capital,’ or ‘incarnation of that capital which tends to free itself from the process of valorisation-through-production’: production, of </span><em><span>any</span></em><span> kind, however tangible or intangible.</span><sup class='md-footnote'><a href='#dfref-footnote-9' name='ref-footnote-9'>9</a></sup></p><p><span>(c) Alongside this financialization came the so-called ‘deindustrialization’ of nations like the United States: 1 in 4 jobs were based in manufacturing in 1960, 1 in 12 in 2009. As Boutang and Giovanni Arrighi note, however, the process of deindustrialization can more accurately be called a </span><em><span>‘reterritorialization’</span></em><span> of global industrial space into Mexico, China, and the Global South (what in the US we call ‘overseas’)—largely at the behest of the new multinational corporations which fought the ever-falling rate of profit by cashing in on cheaper labor costs elsewhere, subordination physical distances and geographic space to a ‘deterriorial’ logic of profit. For Arrighi, this ‘deterritorialization’ of global space is can in fact be seen intensifying throughout the successive series of cycles of accumulation which make up the history of modern capitalism—a long, uneven, dialectical, codependent struggle between ‘territorialist’ forces concentrated in the state and ‘deterritorial’ forces concentrated in capital.[</span><a href='https://reenlightening.org/rex8/?p=1056#_ftn4'><span>4</span><span>]</span></a><span> Contemporary globalization, then, may marks only the latest stage of the deterritorialization of social and material space, a centuries-long rearrangement and subordination of concrete logics of proximity and locality to abstract logics of capital and profit.</span></p><p><span>(d) Lastly, which I include last to avoid a techno-determinism, the ‘dematerialization’ of the labor process was of course largely mediated by new technological developments in networked computing: the advent of business computing in the 1970s, the personal computer in the 1980s, and the construction of the instantaneous worldwide communication infrastructure of the internet in the 1990s. We must always keep in mind that these technological developments were themselves driven by, rather than the drivers of, the forces of dematerialization in the global economy listed above. At the same time, it cannot be denied that the rise of networked computing and the transformation of all information into digital form constitutes perhaps the most direct effect on the dematerialization of labor over the last few decades. As the materials and outputs of one’s labor are all digitalized, and so instantaneously communicable from anywhere in the world through globally networked computers, then the long-standing constraints of time and space to the labor process are effectively annihilated. The means of production have become increasingly abstracted or distanced from the place of production.</span></p><p><span>Our new ‘virtual turn,’ then, to Zoom, online teaching, working from home (‘WFH’), is not a new event forced on us by the virus but the final triumph of a long ‘dematerialization’ of value and the labor process. It is not a mere novelty, then, an experience of the ‘latest technology,’ to teach bored students over Zoom: we have been preparing, and many of us already occupying, the subject position of the disembodied laborer for decades. Nor, for that matter, is it now a novelty to use Zoom for everything from online classes to online happy hours (or even, according to Twitter, to orgies): isn’t that just the expression, at the level of our software use, of the decades-long dissolution of the boundary between ‘work’ and ‘life’ within ‘cognitive capitalism’?</span></p><p><span>On a personal note, many folks I know say things haven’t really changed for them: they already work from home, they already prefer a quiet social life, etc. In a way I’m no different, a pampered postdoc, working from home. At the same time, I have to confess that I feel a little disturbed by my and everyone’s capacity, though maybe especially us academics, to keep calm and carry on in our cognitariat grunt work as hundreds of thousands of people die around us and tens of millions lose their jobs in an economic crisis worse than the Great Depression. In the midst, many of us are still worried about our productivity levels. Perhaps, in the end, the most shocking fact of this crisis will be how </span><em><span>little</span></em><span> it changes. Not even a global pandemic scouring the entire surface of the globe is sufficient to change the work habits of the cognitariat or the labor process of the new cognitive capitalism. And if that’s not proof of the new regime of immaterial labor, what is?</span></p><p><em><span>[3. Back to the virtual?]</span></em></p><p><span>Does this mean we are stuck? Are we now ‘stuck’ in cyberspace: the online world, Zoom, online teaching? For one thing, suddenly the concept of ‘stuckness’ doesn’t seem to make as much sense, as if cyberspace has too many dimensions to get stuck ‘in’ or ‘out’ of it. In that sense, what may be least productive as a response to the present situation is to slam on the reverse, to try to get un-stuck by turning around, forcing our way out. There may be no ‘reverse.’ Like the lockdown protesters, we want to get unstuck from the quarantine; unfortunately, though, the only way to get unstuck may be to stick it out even longer. If, for instance, we as humanists fail to articulate what it is that our students miss in an online education beside the usual, already tired arguments about the importance of the humanities and liberal arts—if all, in other words, we can offer is antithesis and attempts at rhetorical persuasion, holding just a candle of opposition to the inexorable forces of the last few decades, then are we really any better than the lockdown protestors? Are we offering anything but a death-cult conservatism?</span></p><p><span>The challenge we face now is like that of a patient of Carl Jung’s who described a dream in which she was drowning as Jung happened to walk by, but rather than help her, he pushed her further underwater with his cane, saying: ‘not out, but through.’ What if to get unstuck we need to get </span><em><span>more</span></em><span> stuck? What would it mean, for instance, to </span><em><span>embrace</span></em><span> or even accelerate our virtual fate together? How, in our jaded, post-truth, alt-right era of online culture, can we learn to love the internet again, to get excited about its ‘virtual’ possibilities, like we did in the cyberpunk ’90s or the Wikipedian 2000s? Without succumbing to nostalgia, how might we rewind the clock on computational culture just long enough to remember the historical framework within which the ‘virtual’ was first apprehended and theorized, and which might allow us to re-imagine (re-design, re-enlighten) our present ‘stuckness’ in cyberspace?</span></p><p><span>Somehow, in the 80s and 90s, things may have been clearer. The ethics of virtuality were darker but subtler then than our current cheerful neoliberal abandon. In </span><em><span>Blade Runner</span></em><span> (1982), </span><em><span>Neuromancer</span></em><span> (1984), </span><em><span>Ghost in the Shell</span></em><span> (1995), or </span><em><span>The Matrix</span></em><span> (1999), one can always feel, in one and same moment, the potential transcendence of the virtual as well as the dark realization that any such transcendence would be mediated by the very globalized, multinational forces of informatic control from which one is trying to escape. Although for us the social spaces and flows of internet life have long since normalized, the ’80s and ’90s were somehow better able to remember and sustain this underlying contradictions: that a liberatory, cybernetic sublime (like Donna Haraway’s feminist </span><em><span>Cyborg Manifesto</span></em><span> or Mackenzie Wark’s </span><em><span>Hacker Manifesto</span></em><span>) might somehow nevertheless be built on the bathetic, material basis of that infrastructure in globalized capitalism.</span></p><p><span>As we now wonder for how long may be ‘stuck’ in the virtual world, what the early, ‘cyberpunk’ formation of digital culture may have most to offer us is its insistence on imagining that virtual ‘world’ </span><em><span>as a world</span></em><span>: not as a form of ‘media’ like social media, nor as a VR simulacrum of a physical space, but instead as a wholly new kind of space itself, an abstract, digital space which has its own properties and distinctive phenomenology. The archetypal example of this concept is of course William Gibson’s invention of ‘cyberspace’ in the 1984 Ur-text of cyberpunk fiction, </span><em><span>Neuromancer.</span></em><span> When for example its hacker-protagonist Case, the foundational ‘console cowboy’ of the genre, is finally able to ‘jack’ into the matrix once more, he feels a euphoric rush as the ‘dead meat’ of his body slides away, and he enters</span></p><blockquote><p><span>Cyberspace. A consensual hallucination experienced daily by billions of legitimate operators, in every nation, by children being taught mathematical concepts … A graphic representation of data abstracted from the banks of every computer in the human system. Unthinkable complexity. Lines of light ranged in the non-space of the mind, clusters and constellations of data.</span></p></blockquote><p><span>The experience of this cyberspace is equally sensual, ecstatic, and psychedelic as it is cold, digital, and abstract. It is a space into which both children and banks enter as ‘legitimate operators.’ Cinematically, grids and ‘lines of light’, architecture and ‘constellations of data’, and ‘constellations of data’ call to mind the film </span><em><span>Tron</span></em><span> (1982) of the same era.</span></p><p><img src="https://i0.wp.com/reenlightening.org/rex8/wp-content/uploads/2020/05/tron-figure.png?fit=1024%2C463&amp;ssl=1" referrerpolicy="no-referrer" alt="img"><span>Still from </span><em><span>Tron</span></em><span> (1982), directed by Donald Kushner</span></p><p><span>In contrast to the massive, ‘realistic’ but fantastic monstrosities of the superhero genre dominant over the last two decades, </span><em><span>Tron</span></em><span> uses digital cinematic magic to render an abstract, colorless, lifeless, dematerialized, space—a difference which cannot be explained by mere technological improvements. What, then, encourages such an abstract cyberspace to emerge aesthetically at this time?</span></p><p><span>Indeed, cyberspace is a peculiar kind of space. ‘It is not really visual,’ as Jameson notes, but abstract: ‘it is as it were the architectural </span><em><span>plan</span></em><span> of a city rather than the city itself; … it is already an abstraction, and as it were the very specific language or code of an abstraction, just as numbers and mathematical symbols are another such code.’ It is even, like finance, an ‘an abstraction to the second power’: ‘The initial metaphor of a city for an information network is a first-level abstraction; then the representation </span><em><span>of</span></em><span> that city by the abstractions of the architects raises it to a second power.’ The invention of cyberspace, then, and its rendering of a non-visual, abstract and non-physical spatiality, would seem to acknowledge the arrival of the new regime of abstraction and dematerialization which, as we also saw seen above, consolidated over the last several decades within our social, economic, and cultural life. As Jameson notes, the arrival of cyberspace coincides with that of financialization, which also brought with it new speculative spaces defined entirely by data, numbers, and values dislocated from any underlying material nature.</span></p><p><span>But somewhere in the 2000s or 2010s we seem to have stopped imagining this spatiality to internet and the virtual ‘world’. Gone or fading are its spatial metaphors like ‘surfing’ the ‘web,’ the ‘net’, ‘the ‘information superhighway’, the ‘matrix’, not to mention ‘cyberspace’ itself. After all, it all turned out so much more mundane. We’re not hacking away at the protective ICE of the global system; we just ‘scroll,’ endlessly scroll, on 1-5 websites which are maintained by 1-3 of the world’s largest corporations. Perhaps the truth is that we’ve so interfused with the matrix that it becomes impossible to imagine a dialing or ‘jacking’ into it, to imagine a true spatial transfer between ‘in’ and ‘out’. But this may now be changing, which is partly why a return to theories of virtual </span><em><span>space</span></em><span> may be newly relevant: I’ve now ‘been,’ for example, to Club Quarantäne ‘in’ Berlin, which streams DJs from their apartments for 36 hours but does so in a corny, abstract simulacrum of a Berlin club, allowing you to move between ‘rooms’, including a bar (offering the sale of charity donations) and a bathroom, which is a chatroom that may be having an A/S/L-style dirty conversation.</span></p><p><span>But in general, if we can’t or don’t anymore imagine an ‘inside’ to the virtual, does this then preclude the possibility of our hacking </span><em><span>into</span></em><span> it, and changing it from the inside? For Gibson and the cyberpunks, the abstract dimensions of cyberspace made possible a new kind of subversive agency which would allow human agency to respatialize and confront the abstract agency of corporations and systems on their own terms. But is this subversive potential of the ‘virtual’ still possible any longer? Is it still possible to imagine, as the ’90s did, not scorning or abandoning the matrix, but re-entering it with a new, focused, creative self-awareness, and rebuilding within it the world we want to see?</span></p><p><span>Maybe not. On the other hand, perhaps we need a new concept of ‘cyberspace’ to do so, one a bit less retro and with a bit less an emphasis on computing. Things are just more complicated now. The prevalence of 5G conspiracy theories alleging the coronavirus spread like data over the internet should show us that notions of computer and human viruses have already too deeply interfused, just as have the notions of cyber- and social space. ‘Virality,’ after all, is now a well-understood and even mundane phenomenon in our social media lives, a fact which made all the more puzzling how incapable the West was in early March to comprehend how exponentially the virus would spread. Virality, as we can see now, is a condition of nearly every aspect of our social and economic lives. Tweets, posts, fake news, computer viruses, human viruses, coronaviruses, commodities, financial transactions, data—all are whisked across a vast, globalized web of multifaceted relationships so quickly and so thoroughly as to become, in effect, an instantaneous whole and a kind of viral ‘space’ to its own. Indeed, perhaps the notion of cyberspace we need is precisely this </span><em><span>viral-space,</span></em><span> this multidimensional, interconnected, dialectically inseparable mass of social, material, digital, biological, and intellectual relations: a new concept of the ‘totality,’ perhaps, redesigned for the viral age. Are we stuck here? Maybe. If so, and this is a sincere question: should we try to get ‘out’, or should we try to move ‘through’?</span></p><hr /><p>&nbsp;</p><p>&nbsp;</p><div class='footnotes-area'  ><hr/>
+<div class='footnote-line'><span class='md-fn-count'>1</span> <span>In this sense, the word may offer a modernization of inherited protocols for Liberty in the eighteenth century and Progress in the nineteenth—a semantic history which, as Rachael King points out in </span><a href='https://reenlightening.org/rex8/?p=1007'><span>her statement</span></a><span>, is intersected by the rise of ‘improvement’ in the eighteenth century and its eventual individualization into ‘self-improvement’ in the twentieth.</span> <a name='dfref-footnote-1' href='#ref-footnote-1' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>2</span> <span>Yann Moulier Boutang, </span><em><span>Cognitive Capitalism</span></em><span> (Cambridge: Polity, 2011 [2008]), 36-37.</span> <a name='dfref-footnote-2' href='#ref-footnote-2' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>3</span> <span>Razmig Keucheyan, </span><em><span>The Left Hemisphere: Mapping Critical Theory Today</span></em><span> (London: Verso, 2014), 92.</span> <a name='dfref-footnote-3' href='#ref-footnote-3' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>4</span> <span>‘Intangible Asset Market Value Study’, </span><em><span>Ocean Tomo</span></em><span>, 2019 </span><span>&lt;</span><a href='https://www.oceantomo.com/intangible-asset-market-value-study/' target='_blank' class='url'>https://www.oceantomo.com/intangible-asset-market-value-study/</a><span>&gt;</span><span> [accessed 21 July 2020].</span> <a name='dfref-footnote-4' href='#ref-footnote-4' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>5</span> <span>Alan Greenspan, ‘FRB: Speech, Greenspan--Intellectual Property Rights--February 27, 2004’, </span><em><span>U.S. Federal Reserve</span></em><span>, 2004 </span><span>&lt;</span><a href='https://www.federalreserve.gov/boarddocs/speeches/2004/200402272/' target='_blank' class='url'>https://www.federalreserve.gov/boarddocs/speeches/2004/200402272/</a><span>&gt;</span><span> [accessed 8 May 2020].</span> <a name='dfref-footnote-5' href='#ref-footnote-5' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>6</span> <span>Boutang, 57.</span> <a name='dfref-footnote-6' href='#ref-footnote-6' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>7</span> <span>Fredric Jameson, ‘A Global Neuromancer’, </span><em><span>Public Books</span></em><span>, 2015 </span><span>&lt;</span><a href='https://www.publicbooks.org/a-global-neuromancer/' target='_blank' class='url'>https://www.publicbooks.org/a-global-neuromancer/</a><span>&gt;</span><span> [accessed 8 May 2020]. See also Jameson, </span><em><span>The Cultural Turn: Selected Writings on the Postmodern</span></em><span> (London: Verso, 1998), 136-61.</span> <a name='dfref-footnote-7' href='#ref-footnote-7' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>8</span> <span>Cédric Durand, </span><em><span>Fictitious Capital: How Finance Is Appropriating Our Future</span></em><span> (London: Verso, 2017 [2014]), 19.</span> <a name='dfref-footnote-8' href='#ref-footnote-8' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>9</span> <span>Durand, 55.</span> <a name='dfref-footnote-9' href='#ref-footnote-9' title='back to document' class='reversefootnote' >↩</a></div></div></div>
+</body>
+</html>

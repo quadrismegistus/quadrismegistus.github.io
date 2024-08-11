@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Presentation</title>
+    <meta charset="utf-8">
+    
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Baskerville);
+
+      body { font-family: 'Baskerville'; margin:0; padding:0;}
+      h1, h2, h3 {
+        font-weight: normal; 
+      }
+      .remark-slide-content { background-size: contain;   background-position: center bottom; padding:1em; }
+      .remark-slide-content h1 { font-size:1.5em; margin-bottom:0em; margin-top:0; padding-top: 0; padding-bottom:0; }
+      .remark-slide-content p { font-size:1em; line-height:1.333em; margin-top:0.25em }
+      .remark-slide-content img { height:500px; }
+      .cols {
+        display: flex;
+        margin-top: 1em;
+      }
+      
+      .fifty {
+        flex: 50%;
+      }
+      .forty {
+        flex: 40%;
+      }
+      .thirty {
+        flex: 30%;
+        font-size:0.9em;
+      }
+      .sixty {
+        flex: 60%;
+      }
+      .seventy {
+        flex: 70%;
+        text-align:center;
+        margin:0 auto;
+      }
+
+      .thirty ul, .thirty ol {
+        margin: 0;padding:0; margin-left:0.5em;
+      }
+      .thirty ol li {
+        margin-bottom:0.5em;
+      }
+
+
+    </style>
+  </head>
+  
+  
+  <body>
+    <script src="remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create({
+        sourceUrl:'./pres.md',
+        slideNumberFormat: '%current%'
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56798055-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-56798055-1');
+
+      var SLIDES = ["slides/camera_obscu_27919_lg.gif", "slides/mech-24-lg.gif", "slides/p4.png", "slides/abval.png", "slides/hardseed.png", "slides/Fields-to-Vectors-All-words2-nocolor.png", "slides/Fields-to-Vectors-All-words2.png", "slides/Fields-to-Vectors-Hard-Seed22.png", "slides/Fields-to-Vectors-Abstract-Values-no-caption.png", "slides/MoralValSocRestraint-focus-anno.png", "slides/Fields-to-Vectors-All-words2.png", "slides/Fields-to-Vectors-All-words2-spectrum.png", "slides/fig-abstract-1.jpg", "slides/centroids-abval-hs21.png", "slides/centroids-abval-hs31.png", "slides/fig-abstract-2.jpg", "slides/fig-abstract-2-discovered.jpg", "slides/fig-abstract-2-human.jpg", "slides/neteg-21.png"];
+    </script>
+
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Abstraction: A Literary History</title>
+    <meta name="description" content="Scrollama: Sticky Side Example" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/assets/story.css" />
+    <style>
+	
+    </style>
+  </head>
+
+  <body>
+<main>
+  <nav>
+    <a href="/">← Ryan Heuser</a>
+  </nav>
+
+
+    <main>
+      <section id="intro">
+        <h1 class="intro__hed">From Fields to Vectors</h1>
+        <p class="intro__dek">
+          The third episode of Word Vectors in the Eighteenth Century.
+        </p>
+      </section>
+
+      <section id="scrolly">
+        <article>
+            <div class="step" data-step="1">
+                <div class="item_title">0. Preface</div>
+                <p class="item_content"><excerpt:encoded><p class="p1">Unlike the <a href="http://ryanheuser.org/word-vectors-1/" target="_blank">previous</a> <a href="http://ryanheuser.org/word-vectors-2/" target="_blank">two</a> posts in the series, this post is presented in slideshow form. It's an attempt to reign in my hobby-horse of verbosity; to accommodate our shrinking attention spans; and (more somberly) to experiment with DH-inspired forms of visual rhetoric. To advance, push the right arrow key, or click the right arrow that appears when you hover over this text. To expand an image, click the title of the slide, which should appear in blue.</p> <p class="p1">In any case: ahoy! ...</p></excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="2">
+                <div class="item_title">1. Introduction</div>
+                <p class="item_content"><excerpt:encoded><p class="p1"><span class="s1"><a href="http://ryanheuser.org/word-vectors-2/">Last time</a></span> on <i>Word Vectors in the Eighteenth Century</i>, we looked at how word vectors work under the hood. And <a href="http://ryanheuser.org/word-vectors-1/"><span class="s1">before that</span></a>, we close-read how word vectors might model Edward Young's influential analogy that "riches are to virtue as learning is to genus."</p>
+<p class="p1">But how can we <i>distant</i>-read word vectors? Surprisingly, this is not an easy question. Unlike topic modeling and other unsupervised methods, it's not immediately clear how to use word vectors for large-scale text analysis. All word vectors give us is a multidimensional semantic space, into there's no one particular or privileged way to enter. The matrix, as it were, won't tell us what questions to ask it.</p></excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="3">
+                <div class="item_title">2A. Back to semantic fields</div>
+                <p class="item_content"><excerpt:encoded>Anyway, I didn't know where to begin. So I thought I'd piggy-back on <a href="http://litlab.stanford.edu/LiteraryLabPamphlet4.pdf"><span class="s1">work that Long Le-Khac and I have done in the past</span></a> on semantic fields, or "cohorts."
+<p class="p1">For us, a semantic cohort is a group of words that are both semantically similar (i.e. a semantic <i>field</i>); and historically similar, in that they rise or fall together across time (i.e. an historical <i>cohort</i>). I won't go here into how we made these semantic fields/cohorts, but if you're interested, check out the pamphlet.</p>
+<p class="p1">Instead, this post asks the questions: How do semantic <i>fields</i> relate to semantic <i>vectors</i>? Do vector-based approaches to semantics corroborate field-based approaches? More importantly, how can vectors help us think in new ways about semantics in DH?</p></excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="4">
+                <div class="item_title">2B. Semantic cohort #1: “Abstract Values”</div>
+                <p class="item_content"><excerpt:encoded>Long and I believe we discovered two large semantic cohorts. The first we called the "abstract values." It contained words like the following, categorized into sub-fields:
+<p class="p1"><i>-- Moral Valuation: </i>character, honour, conduct, respect, worthy …
+<i>-- Social Restraint: </i>gentle, pride, proud, proper, agreeable, …
+<i>-- Sentiment: </i>heart, feeling, passion, bosom, emotion, …
+<i>-- Partiality: </i>correct, prejudice, partial, disinterested, …</p>
+<p class="p1">Note that most of these words are Latinate abstractions, and that as a cohort they fall in frequency across the nineteenth century.</p>
+<p class="p1"><i>Click the blue title above to see the graph more clearly.</i></p></excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="5">
+                <div class="item_title">2C. Semantic cohort #2: “Hard Seed”</div>
+                <p class="item_content"><excerpt:encoded>Our second semantic cohort we called “hard seed,” after its seed word, "hard." It contained words like the following, categorized into sub-fields:
+<p class="p1"><i>-- Action Verbs: </i>see, come, go, came, look, let, looked, …
+<i>-- Body Parts: </i>eyes, hand, face, head, hands, eye, arms, …
+<i>-- Physical Adjectives: </i>round, hard, low, clear, heavy, hot, straight, …
+<i>-- Colors: </i>white, black, red, blue, green, gold, grey, …
+<i>-- Locative Prepositions: </i>out, up, over, down, away, back, through, …
+<i>-- Numbers: </i>two, three, ten, thousand, four, five, hundred, …</p>
+<p class="p1">Note that most of these words are concrete and Anglo-Saxon, and that they rise in frequency across the nineteenth century.</p></excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="6">
+                <div class="item_title">3A. Semantic fields in vector space</div>
+                <p class="item_content"><excerpt:encoded>So, what would happen if we located each semantic field's words in the vector space? Would words from the same field appear closer to each other than to words from other fields?</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="7">
+                <div class="item_title">3B. Semantic fields in vector space: All fields</div>
+                <p class="item_content"><excerpt:encoded>It appears so. Words here are colored by their semantic field. If they are closer together in this image, then they are closer together in the vector space. The image is made by a <i>t-sne </i>dimensionality reduction of the cosine distances between each word (where the distances come from the ECCO-TCP word2vec model). In effect, <i>t-sne</i> tries to flatten the multidimensional geography of the data onto two dimensions with as little information loss as possible.</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="8">
+                <div class="item_title">3C. Semantic fields in vector space: Hard Seed</div>
+                <p class="item_content"><excerpt:encoded>The separation between the semantic fields is even more obvious if we look only at the words in each large field separately: displayed here is only the "hard seed" field. As a whole, "hard seed" tends to occupy the southwestern quadrant of the graph, and not to occupy the northeastern. Moreover, its sub-fields occupy their own distinct regions of the vector space: Action Verbs in purple, Body Parts in brown, Colors in pink, Numbers in gray, Physical Adjectives in yellow, and Locative Prepositions in light blue.</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="9">
+                <div class="item_title">3D. Semantic cohorts in vector space: Abstract Values</div>
+                <p class="item_content"><excerpt:encoded>Conversely, almost all of the "abstract values" occupy the northeastern quadrant of the graph. Its sub-fields, however, are less tightly organized than in "hard seed": Social Restraint (red) and Moral Valuation (blue) are stretched together across the northeast, intermixing also with the Sentiment field (green).</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="10">
+                <div class="item_title">3E. Semantic cohorts in vector space: Abstract Values [Zoom]</div>
+                <p class="item_content"><excerpt:encoded>positively valued (faultless, refined, admiration) and the westerly ones <em>negatively</em> valued (vulgar, sinful, reckless). This reorganization is one reason the fields look mixed-up: the distinction between abstractions of social vs. moral behavior has been subordinated to the distinction between positive vs. negative abstractions.</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="11">
+                <div class="item_title">4A. From fields…</div>
+                <p class="item_content"><excerpt:encoded>So, semantic vectors corroborate semantic fields, while also nuancing them. Within a vector space of semantics, words from the same "semantic field"—made from a totally different and independent process—cluster together in meaningful ways.
+<p class="p1">But corroboration is a bittersweet moment in DH: impressive, empowering even, but unsatisfying, boring. How, then, can word vectors allow us to approach these semantic questions differently? How can they help us ask <i>new </i>questions?</p>
+<p class="p1">Perhaps we could think less in terms of <i>discrete</i> semantic units, like semantic fields or cohorts...</p></excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="12">
+                <div class="item_title">4B. To vectors</div>
+                <p class="item_content"><excerpt:encoded>...and instead, we could think more in terms of <i>vectors </i>or <i>axes </i>of meaning.
+<p class="p1">For example, instead of thinking of concrete and abstract words as belonging to distinct semantic fields, we could think of them as lying at the extreme ends of a semantic spectrum—a <i>vector—</i>that points from one to the other, or from the semantics of concreteness to the semantics of abstractness.</p>
+<p class="p1">Vectors make it easy to define this new kind of semantic unit: the semantic vector, <i>V(Abstract-Concrete)</i>. But how?</p></excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="13">
+                <div class="item_title">5A. Measuring abstractness everywhere</div>
+                <p class="item_content"><excerpt:encoded>Our vector of concreteness-vs.-abstractness, V(Abstract-Concrete), affords a whole range of interesting distant readings. For instance, now we can measure the relative abstractness of any word by taking the cosine similarity between its vector and V(Abstract-Concrete). If above 0, the word points toward abstractness; if below, it points toward concreteness; and if around 0, it points orthogonally, neutral with respect to the contrast. Here are the most frequent 1,000 words in the corpus by part-of-speech. That there are more abstract than concrete adjectives, and more concrete than abstract verbs, is not an artifact of our vector, but reappears in contemporary measures of linguistic abstractness.</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="14">
+                <div class="item_title">4C. Defining V(Abstract) and V(Concrete)</div>
+                <p class="item_content"><excerpt:encoded>One way would be to build on the abstract and concrete semantic fields we've been looking at.
+<p class="p1">We could define a generalized abstract word, V(Abstract), as the <i>centroid </i>of the vector positions for all words in the "abstract values" field. Because what words in this field most share is their abstractness, we would expect an artificial word vector pointing there [i.e. V(Abstract)] to primarily capture the semantics of abstractness.</p>
+<p class="p1">Likewise, we can define a generalized concrete word, V(Concrete), as the centroid of the vector positions for all words in the "hard seed" fields, since what these words most share is their concreteness.</p></excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="15">
+                <div class="item_title">4D. Defining V(Abstract-Concrete)</div>
+                <p class="item_content"><excerpt:encoded>Finally, we can define a semantic vector pointing from the concrete to the abstract as <i>V(Abstract-Concrete). </i>This is the vector subtraction of V(Concrete) from V(Abstract). By the logic of subtraction, this vector points from the semantics only concrete words have to the semantics only abstract words have.
+<p class="p1">In effect, V(Abstract-Concrete) expresses the difference between concrete and abstract words, not as two distinct semantic <i>fields</i>, but rather as a single <i>semantic axis of difference</i>: that is, as a vector.</p></excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="16">
+                <div class="item_title">5B. Comparing to contemporary measures of abstractness</div>
+                <p class="item_content"><excerpt:encoded>We can also compare V(Abstract-Concrete), our measure of abstractness specific to eighteenth-century semantics, with contemporary measures of abstractness. The y-axis here is V(Abstract-Concrete). Along the x-axis here is a contemporary measure of <i>concreteness</i>, drawn from a Mechanical Turk study (Brysbaert et al). As we expect, they negatively correlate: the linear regression explains about a third of the data (R^2 = 32%). But the variations from the norm are even more interesting...</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="17">
+                <div class="item_title">5C. Concrete words can sublimate</div>
+                <p class="item_content"><excerpt:encoded>Take the word "discovered." The word is more abstract today, and more concrete in the eighteenth century, than we would expect from the linear model. Why is this? This may have a simple historical-linguistic explanation. The concrete usage of "discover" (to un-cover and make visible to the eye), now marked "rare" by the OED, was common in the 18C. As a random example, from Burney's <i>Evelina </i>(1778): "Just then our attention was attracted by a pine-apple; which, suddenly opening, <i>discovered</i> a nest of birds, which immediately began to sing."</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="18">
+                <div class="item_title">5D. Abstract words can ossify</div>
+                <p class="item_content"><excerpt:encoded>Conversely, the word "human" is highly concrete today (almost maximally), but was highly <i>abstract</i> in the 18C—both much more so than we would expect. Why? My guess is that today we think of <i>a </i>human more than <i>the </i>human: I'm a human, you're a human, this human, that human: it's human with an indefinite article, it's plural, it's concrete. But in the 18C, "human" operated as a sacred, top-level abstraction: as in <i>human nature</i>, or the contrast between the human and animal worlds, or between the human and the divine.
+<p class="p1">Is "human" an abstraction, then? In the 18C, yes; in the 21C, no. Results such as these provoke further questions. For example, is abstraction best understood along a timeline? Just as metaphors "die", hardening into a new literal meaning, perhaps abstractions also pass away, drifting into concrete meanings.</p></excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="19">
+                <div class="item_title">6. Conclusion</div>
+                <p class="item_content"><excerpt:encoded>In sum, we saw how semantic fields appear clustered together in a semantic vector-space in interesting ways: and so vector-based approaches to semantics corroborate, even nuance, field-based ones. But they also build on and reframe them: by redefining the relationship between abstract and concrete words as the semantic <i>vector</i> between them, we can measure the relative abstractness of any given word. With this measure, we can do any number of things. Here, we compared it with a contemporary measure of concreteness, and interpreted a couple outliers.
+<p class="p1">Next time, on <i>Word Vectors in the Eighteenth Century</i>, we’ll make use of this vector-based measure of abstractness to construct “semantic transportation networks” between abstract nouns. Until then, … stay tuned!</p></excerpt:encoded></p>
+            </div>
+        </article>
+
+        <figure>
+          <p><img src="slides/camera_obscu_27919_lg.gif" /></p>
+        </figure>
+      </section>
+
+      <section id="outro"></section>
+    </main>
+
+    <!-- <div class='debug'></div> -->
+    <script src="/assets/jquery-3.4.1.min.js"></script>
+    <script src="/assets/d3.min.js"></script>
+    <script src="/assets/intersection-observer.js"></script>
+    <script src="/assets/stickyfill.min.js"></script>
+    <script src="/assets/scrollama.min.js"></script>
+    <script src="/assets/story.js"></script>
+
+  </body>
+</html>

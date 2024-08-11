@@ -1,120 +1,144 @@
-> March, 2016: If you're on an old version of Jekyll Now and run into a) build warnings or b) syntax highlighting issues caused by [Jekyll 3 and GitHub Pages updates](https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0), just :sparkles:[update your _config.yml](https://github.com/barryclark/jekyll-now/pull/445/files):sparkles: and you'll be set!
+# Dr. Ryan Heuser
 
-# Jekyll Now
+Hello
 
-**Jekyll** is a static site generator that's perfect for GitHub hosted blogs ([Jekyll Repository](https://github.com/jekyll/jekyll))
+<img src="assets/blueshirtpic-small.jpg" width="200" height="200" style="border:1px solid black" />
 
-**Jekyll Now** makes it easier to create your Jekyll blog, by eliminating a lot of the up front setup.
+* email: [ryan.heuser@princeton.edu](mailto:ryan.heuser@princeton.edu)
+* mail: B-9H-9 Firestone Library, Princeton University, Princeton, NJ 08544
+* profiles: [twitter](https://twitter.com/quadrismegistus); [github](https://github.com/quadrismegistus); [google scholar](https://scholar.google.com/citations?user=EEy82P4AAAAJ)
 
-- You don't need to touch the command line
-- You don't need to install/configure ruby, rvm/rbenv, ruby gems :relaxed:
-- You don't need to install runtime dependencies like markdown processors, Pygments, etc
-- If you're on Windows, this will make setting up Jekyll a lot easier
-- It's easy to try out, you can just delete your forked repository if you don't like it
+## About me
+As of September 2022, I am Research Software Engineer in Princeton's [Center for Digital Humanities](https://cdh.princeton.edu/) (CDH). As part of that position I collaborate with faculty on longer-term research projects supported by the CDH, as well as advise faculty, graduate and undergraduate students on other research projects involving digital methods.
 
-In a few minutes you'll be set up with a minimal, responsive blog like the one below giving you more time to spend on writing epic blog posts!
+My research brings computational methods of text analysis to the study of literature and its history. I work on changes in literary language across the modern period; on historical semantics; computational poetics; literary geography; and the theory and methods of the digital humanities more broadly. 
 
-![Jekyll Now Theme Screenshot](/images/jekyll-now-theme-screenshot.jpg "Jekyll Now Theme Screenshot")
+From 2019-2022 I was Junior Research Fellow in in King's College, Cambridge; I received my PhD in English from Stanford University in 2019, where I was a founding member of the Stanford Literary Lab and its Associate Research Director from 2011 to 2015.
 
-## Quick Start
+You can also find me on [Twitter](http://twitter.com/quadrismegistus); [Github](http://github.com/quadrismegistus); [Google Scholar](https://scholar.google.com/citations?user=EEy82P4AAAAJ); or by email at [rj416@cam.ac.uk](mailto:rj416@cam.ac.uk).
 
-### Step 1) Fork Jekyll Now to your User Repository
+## Book projects
 
-Fork this repo, then rename the repository to yourgithubusername.github.io.
+### *Abstraction: A Literary History*
 
-Your Jekyll blog will often be viewable immediately at <https://yourgithubusername.github.io> (if it's not, you can often force it to build by completing step 2)
+My first book project, *Abstraction: A Literary History*, traces a slow-moving rise and fall in abstract language across centuries of literary history. Mixing close and distant reading, the book uncovers how these changes in literary semantics mediate changes in social organization. I focus on three literary forms of abstract language: 'abstract style', in the syntactic symmetries and semantic formulae of the periodical essay; 'abstract persons', in the personified abstractions of the mid-century ode; and 'abstract realism', in the "tell, don't show" narration of the early realist novel. Through this history and framework, the book also aims to recuperate abstraction as both a method and an object of literary study.
 
-![Step 1](/images/step1.gif "Step 1")
+  * 2020-02-18: ["Abstract Realism"](talks/kingscollege2020) (visual summary of the chapter on fiction)
 
-### Step 2) Customize and view your site
 
-Enter your site name, description, avatar and many other options by editing the _config.yml file. You can easily turn on Google Analytics tracking, Disqus commenting and social icons here too.
+## Collaborations
 
-Making a change to _config.yml (or any file in your repository) will force GitHub Pages to rebuild your site with jekyll. Your rebuilt site will be viewable a few seconds later at <https://yourgithubusername.github.io> - if not, give it ten minutes as GitHub suggests and it'll appear soon
+### Antimetricality
+I am working with Arto Anttila and Paul Kiparsky, metrical phonologists at Stanford, to design tools to evaluate the 'antimetricality' of a text: the degree to which its stress patterns depart from any known metrical pattern. Such measurements of metrical 'tension' or 'ambiguity' have a history: prose most distances itself rhythmically from verse at the height of the eighteenth century. We have a pre-print of a paper available [here](https://web.stanford.edu/~kiparsky/Papers/Antimetricality-Draft-2018-04-20.pdf). 
 
-> There are 3 different ways that you can make changes to your blog's files:
+  * 2018-04-20: ["The Rise and Fall of Antimetricality"](https://web.stanford.edu/~kiparsky/Papers/Antimetricality-Draft-2018-04-20.pdf)
 
-> 1. Edit files within your new username.github.io repository in the browser at GitHub.com (shown below).
-> 2. Use a third party GitHub content editor, like [Prose by Development Seed](http://prose.io). It's optimized for use with Jekyll making markdown editing, writing drafts, and uploading images really easy.
-> 3. Clone down your repository and make updates locally, then push them to your GitHub repository.
+  * Code: [Prosodic](http://github.com/quadrismegistus/prosodic) ([web demo](http://prosodic.stanford.edu))
 
-![_config.yml](/images/config.png "_config.yml")
 
-### Step 3) Publish your first blog post
+## Other writing
 
-Edit `/_posts/2014-3-3-Hello-World.md` to publish your first blog post. This [Markdown Cheatsheet](http://www.jekyllnow.com/Markdown-Style-Guide/) might come in handy.
+### Word Vectors in the Eighteenth Century
+This page is meant as a set of links and resources related to my work using word vectors to study eighteenth-century literature. This work asks the question: how can new vector-based models of semantics reveal the historicity of specific configurations of meaning in eighteenth-century literature? Most of this work is published serially as blog posts, linked below. The later of these are "slideshow essays"-experiments with the forms of visual rhetoric that work so well in the digital humanities-rather than traditional blog posts. There is also a video of a talk I've given about this work. Lastly, I've uploaded several word2vec models I'm using, trained on a corpus of eighteenth-century literature; and linked to some relevant code (more code will be coming soon).
 
-![First Post](/images/first-post.png "First Post")
+  * 2016-04-14: [Part 1. Concepts](word-vectors-1)
 
-> You can add additional posts in the browser on GitHub.com too! Just hit the + icon in `/_posts/` to create new content. Just make sure to include the [front-matter](http://jekyllrb.com/docs/frontmatter/) block at the top of each new blog post and make sure the post's filename is in this format: year-month-day-title.md
+  * 2016-06-01: [Part 2. Methods](word-vectors-2)
 
-## Local Development
+  * 2016-09-10: [Part 3. From Fields to Vectors](word-vectors-3)
 
-1. Install Jekyll and plug-ins in one fell swoop. `gem install github-pages` This mirrors the plug-ins used by GitHub Pages on your local machine including Jekyll, Sass, etc.
-2. Clone down your fork `git clone https://github.com/yourusername/yourusername.github.io.git`
-3. Serve the site and watch for markup/sass changes `jekyll serve`
-4. View your website at http://127.0.0.1:4000/
-5. Commit any changes and push everything to the master branch of your GitHub user repository. GitHub Pages will then rebuild and serve your website.
+  * 2016-09-25: [Part 4. Semantic Networks](word-vectors-4) 
 
-## Moar!
+  * [Other resources, appendices, and models](word-vectors)
 
-I've created a more detailed walkthrough, [**Build A Blog With Jekyll And GitHub Pages**](http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/) over at the Smashing Magazine website. Check it out if you'd like a more detailed walkthrough and some background on Jekyll. :metal:
 
-It covers:
+### Miscellaneous
 
-- A more detailed walkthrough of setting up your Jekyll blog
-- Common issues that you might encounter while using Jekyll
-- Importing from Wordpress, using your own domain name, and blogging in your favorite editor
-- Theming in Jekyll, with Liquid templating examples
-- A quick look at Jekyll 2.0’s new features, including Sass/Coffeescript support and Collections
+  * 2020-07-14: [Computer Virus](drafts/computer-virus)
 
-## Jekyll Now Features
+  * 2020-05-25: ["The Viral Medium"](drafts/viral-medium) (submission to Re:Enlightenment conference)
 
-✓ Command-line free _fork-first workflow_, using GitHub.com to create, customize and post to your blog  
-✓ Fully responsive and mobile optimized base theme (**[Theme Demo](http://jekyllnow.com)**)  
-✓ Sass/Coffeescript support using Jekyll 2.0  
-✓ Free hosting on your GitHub Pages user site  
-✓ Markdown blogging  
-✓ Syntax highlighting  
-✓ Disqus commenting  
-✓ Google Analytics integration  
-✓ SVG social icons for your footer  
-✓ 3 http requests, including your avatar  
+### Graphs
+Occasionally I post graphs and brief summary results to Twitter of my DH work as it proceeds.
 
-✘ No installing dependencies
-✘ No need to set up local development  
-✘ No configuring plugins  
-✘ No need to spend time on theming  
-✘ More time to code other things ... wait ✓!  
+  * 2020-03-14: [Tracing types of semantic change](https://twitter.com/quadrismegistus/status/1238796150272122880)
 
-## Questions?
+  * 2020-03-06: [Measuring anthropomorphism](https://twitter.com/quadrismegistus/status/1235614699145826304)
 
-[Open an Issue](https://github.com/barryclark/jekyll-now/issues/new) and let's chat!
+  * 2020-02-24: [Posted talk to King's College as scroll-based page](https://twitter.com/quadrismegistus/status/1231914513164832768)
 
-## Other forkable themes
+  * 2020-01-29: [A linguistic map of the canon](https://twitter.com/quadrismegistus/status/1222560503144296450)
 
-You can use the [Quick Start](https://github.com/barryclark/jekyll-now#quick-start) workflow with other themes that are set up to be forked too! Here are some of my favorites:
+  * 2020-01-16: [Clarissa under the microscope](https://twitter.com/quadrismegistus/status/1217809468316168194)
 
-- [Hyde](https://github.com/poole/hyde) by MDO
-- [Lanyon](https://github.com/poole/lanyon) by MDO
-- [mojombo.github.io](https://github.com/mojombo/mojombo.github.io) by Tom Preston-Werner
-- [Left](https://github.com/holman/left) by Zach Holman
-- [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) by Michael Rose
-- [Skinny Bones](https://github.com/mmistakes/skinny-bones-jekyll) by Michael Rose
+  * 2019-11-18: [Academic job numbers in English literature (updated)](https://twitter.com/quadrismegistus/status/1217809468316168194)
 
-## Credits
+  * 2019-10-13: [Academic job numbers in English literature](https://twitter.com/quadrismegistus/status/1183433276658274304)
 
-- [Jekyll](https://github.com/jekyll/jekyll) - Thanks to its creators, contributors and maintainers.
-- [SVG icons](https://github.com/neilorangepeel/Free-Social-Icons) - Thanks, Neil Orange Peel. They're beautiful.
-- [Solarized Light Pygments](https://gist.github.com/edwardhotchkiss/2005058) - Thanks, Edward.
-- [Joel Glovier](http://joelglovier.com/writing/) - Great Jekyll articles. I used Joel's feed.xml in this repository.
-- [David Furnes](https://github.com/dfurnes), [Jon Uy](https://github.com/jonuy), [Luke Patton](https://github.com/lkpttn) - Thanks for the design/code reviews.
-- [Bart Kiers](https://github.com/bkiers), [Florian Simon](https://github.com/vermluh), [Henry Stanley](https://github.com/henryaj), [Hun Jae Lee](https://github.com/hunjaelee), [Javier Cejudo](https://github.com/javiercejudo), [Peter Etelej](https://github.com/etelej), [Ben Abbott](https://github.com/jaminscript), [Ray Nicholus](https://github.com/rnicholus), [Erin Grand](https://github.com/eringrand), [Léo Colombaro](https://github.com/LeoColomb), [Dean Attali](https://github.com/daattali), [Clayton Errington](https://github.com/cjerrington), [Colton Fitzgerald](https://github.com/coltonfitzgerald), [Trace Mayer](https://github.com/sunnankar) - Thanks for your [fantastic contributions](https://github.com/barryclark/jekyll-now/commits/master) to the project!
+  * 2019-08-28: [Figure 1 of my dissertation](https://twitter.com/quadrismegistus/status/1166515794055815168)
 
-## Contributing
+  * 2019-02-07: [Measuring personification](https://twitter.com/quadrismegistus/status/1093630109863403521)
 
-Issues and Pull Requests are greatly appreciated. If you've never contributed to an open source project before I'm more than happy to walk you through how to create a pull request.
+  * 2018-11-05: [Agency Index](https://twitter.com/quadrismegistus/status/1059305496211931136)
 
-You can start by [opening an issue](https://github.com/barryclark/jekyll-now/issues/new) describing the problem that you're looking to resolve and we'll go from there.
+  * 2018-07-12: [Character space in Sense and Sensibility](https://twitter.com/quadrismegistus/status/1017526110051942400)
 
-I want to keep Jekyll Now as minimal as possible. Every line of code should be one that's useful to 90% of the people using it. Please bear that in mind when submitting feature requests. If it's not something that most people will use, it probably won't get merged. :guardsman:
+  * 2018-04-17: [Anti-metricality](https://twitter.com/quadrismegistus/status/986025832660389890)
+
+  * 2018-01-30: [Abstraction vs. judgment](https://twitter.com/quadrismegistus/status/958237374680522752)
+
+  * 2018-01-23: [Computational Keywords](https://twitter.com/quadrismegistus/status/955857511176744960)
+
+  * 2017-11-06: [Abstraction vs. agency](https://twitter.com/quadrismegistus/status/927620289604632577)
+
+  * 2017-09-26: [Sociography of the 18th century print market](https://twitter.com/quadrismegistus/status/912747794347077632)
+
+  * 2017-07-28: [Transformation of 'labour'](https://twitter.com/quadrismegistus/status/890791583066447872)
+
+  * 2017-07-13: [Understanding OCR errors](https://twitter.com/quadrismegistus/status/885326014607314945)
+
+  * 2017-07-03: [Most reprinted 18th century texts](https://twitter.com/quadrismegistus/status/881961427933683712)
+
+  * 2017-06-23: [Corpus vs. bibliography](https://twitter.com/quadrismegistus/status/878326876283879425)
+
+  * 2017-06-15: [Exponential rise of print market in 18th century](https://twitter.com/quadrismegistus/status/875431247664693248)
+
+  * 2017-04-28: [Computational model takes standardized test](https://twitter.com/quadrismegistus/status/857763794965200897)
+
+  * 2017-03-26: [World literary trends (part 2)](https://twitter.com/quadrismegistus/status/846105045238112256)  
+
+  * 2017-03-25: [World literary trends (part 1)](https://twitter.com/quadrismegistus/status/845490026523734016)
+
+  * 2017-12-18: [ELIZA's descendants](https://twitter.com/quadrismegistus/status/810297451500421121)
+
+  * 2016-09-15: [Semantic networks](https://twitter.com/quadrismegistus/status/776474009533763584)
+
+  * 2016-06-16: [Semantic fields in vector space](https://twitter.com/quadrismegistus/status/743267734188785664)
+
+  * 2016-06-15: [Diachronic semantic networks](https://twitter.com/quadrismegistus/status/743267734188785664)
+
+  * 2014-06-09: [Reading at meso-scale with Moby-Dick](https://twitter.com/quadrismegistus/status/476080285113532417)
+
+
+## Other resources
+
+### Tools
+
+  * [Prosodic](https://github.com/quadrismegistus/prosodic): A metrical-phonological parser, written in Python. For English and Finnish, with flexible language support.
+
+  * [Poesy](https://github.com/quadrismegistus/poesy): Tools for poetic analysis (stanzaic, metrical, and rhyme forms), written in Python.
+
+  * [LLTK](https://github.com/quadrismegistus/lltk): Literary Language Toolkit (LLTK): corpora, models, and tools for the digital humanities, in Python.
+
+  * [Slingshot](https://github.com/quadrismegistus/slingshot): Python wrapper for MPI to "slingshot" a small Python or R function against the Goliath of Big Data.
+
+
+
+### Teaching
+
+  * [Literary Text Mining](http://github.com/quadrismegistus/literarytextmining)
+
+
+### CV
+
+  * See [here](assets/CV-Heuser-2022-V5.pdf)

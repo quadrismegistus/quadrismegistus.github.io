@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56798055-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-56798055-1');
+
+      var SLIDES = ["slides/networkdiagram3.png", "slides/MFW20001.png", "slides/POS1.png", "slides/MFW-2000-Sing-Noun-by-AbsConc1.png", "slides/2000AbsNoun-2.png", "slides/Close-to-Sensibility-in-2D-2.png", "slides/Close-to-Sensibility-in-Vector3.png", "slides/networkdiagram-sensibility.png", "slides/newnet-global-uncolored.png", "slides/newnet-global-colored.png", "slides/region-overlay.png", "slides/hatred-overlay.png", "slides/passion-overlay4.png", "slides/BC_example_scores.png", "slides/global4.png", "slides/despotism4.png", "slides/despotism4-faded2.png", "slides/resentment4.png", "slides/anxiety4.png", "slides/anxiety-resentment2.png", "slides/sensibility4.png", "slides/gpath-global.png", "slides/gpath-sensibility.png", "slides/paths-sensibility-all.png", "slides/paths-sensibility-morality.png", "slides/paths-sensibility-weakness.png", "slides/gpath-anxiety.png", "slides/paths-anxiety-all2.png", "slides/paths-anxiety-tenderness.png", "slides/mfw2000-virtuevice.png", "slides/Screen-Shot-2016-09-25-at-10.08.09-AM.png", "slides/nexttime-ep4-2.png"];
+    </script>
+
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Abstraction: A Literary History</title>
+    <meta name="description" content="Scrollama: Sticky Side Example" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/assets/story.css" />
+    <style>
+	
+    </style>
+  </head>
+
+  <body>
+<main>
+  <nav>
+    <a href="/">← Ryan Heuser</a>
+  </nav>
+
+
+    <main>
+      <section id="intro">
+        <h1 class="intro__hed">Semantic Networks</h1>
+        <p class="intro__dek">
+          The fourth episode of <a href="/word-vectors">Word Vectors in the Eighteenth Century.</a>
+        </p>
+      </section>
+
+      <section id="scrolly">
+        <article>
+            <div class="step" data-step="1">
+                <div class="item_title">0. Introduction</div>
+                <p class="item_content"><excerpt:encoded><span style="font-size: 14px"><em>This is a "slideshow essay." To advance, use the arrow keys, or click the arrows that appear when hovering over this slide.</em></span>
+<p class="p1">Last time on <i>Word Vectors in the Eighteenth Century, </i>we saw how semantic fields (i.e.<i> </i>meaningful groups of words) cluster together meaningfully in the semantic vector-space. But how can we turn the tables on that process, and instead <i>find </i>meaningful groups of words <i>from </i>their clustering in the vector space? In particular, I want to ask (selfishly, in the interests of my dissertation): how can we use word vectors to find meaningful groups of <i>abstract </i>words?</p></excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="2">
+                <div class="item_title">1A. t-SNE or not t-SNE?</div>
+                <p class="item_content"><excerpt:encoded>One way to find meaningful groups of words from their vector positions would be to visually explore them when plotted onto two dimensions. This is what the <a href="https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding"><span class="s1">t-SNE dimensionality reduction algorithm</span></a> does; its output on the most frequent 2,000 words in the corpus is displayed here. But, as we start exploring this graph of semantic distances between words, we immediately run into some problems...</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="3">
+                <div class="item_title">1B. Vector-distance is not necessarily semantic distance</div>
+                <p class="item_content"><excerpt:encoded>The first problem is visualized here. Words are colored by part of speech: nouns in blue, verbs in orange, adjectives in green, and adverbs in red. As you can see, the vector-distances between words are strongly influenced by part of speech. Distance here is primarily grammatical or syntactic, and only secondarily semantic.</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="4">
+                <div class="item_title">1C. Vector-space of singular nouns</div>
+                <p class="item_content"><excerpt:encoded>If we control for part-of-speech, and instead plot the vector-distances between the 2,000 most frequent <i>singular nouns</i>, distance becomes more semantic. Colored here by the vector of abstractness we made <a href="http://ryanheuser.org/word-vectors-3/" target="_blank">last time</a>, <i>V(Abstract-Concrete)</i>—ranging from dark red (the most concrete words) to dark green (the most abstract words)—we can see how this semantic distinction is in large part responsible for the distances in the figure. Without knowing anything about our vector, the 2,000 most frequent singular nouns break down across a semantic spectrum from concreteness to abstractness.</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="5">
+                <div class="item_title">1D. Vector-space of abstract singular nouns</div>
+                <p class="item_content"><excerpt:encoded>So, it's definitely helpful to know that our vector of abstractness plays a big role in organizing the vector-positions of singular nouns. But, since I'm interested in finding meaningful groups of <i>abstract </i>words, here I've redrawn the t-SNE figure for the 2,000 most frequent <i>abstract </i>singular nouns, in order to allow their own semantic geography to emerge.¹ However, even though these distances are largely semantic and interesting, there are <i>still </i>problems with using these t-SNE visualizations to find groups of meaningful words...
+<p class="p1"><span style="font-size: 12px">1. A word is "abstract" if its vector points toward abstractness along V(Abstract-Concrete)—that is, its cosine similarity is greater than zero.</span></p></excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="6">
+                <div class="item_title">1E. Distance from “sensibility” in t-SNE</div>
+                <p class="item_content"><excerpt:encoded>Take, for example, the word "sensibility." In this figure, words are colored by their distance from "sensibility" in this graph—closest to farthest, red to blue. Labeled are some of the words surrounding "sensibility." This all looks fine, except...</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="7">
+                <div class="item_title">1F. Distance from “sensibility” in the vector-space</div>
+                <p class="item_content"><excerpt:encoded>...if we recolor the words for their distance from "sensibility" <i>in the vector-space, </i>then a different set of related words emerge. The words "anguish," "weakness," "feeling," "sentiment" are actually quite close to "sensibility" in the vector-space, but quite far from "sensibility" in this graph. Why? Because t-SNE has an impossible task: to compress the high dimensionality of the vector-space onto two dimensions.</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="8">
+                <div class="item_title">2A. Why semantic networks?</div>
+                <p class="item_content"><excerpt:encoded>This is one reason that semantic <i>networks </i>become interesting. Here is "sensibility" in a network, connected to the words close to it in the vector-space; every other word in the network is also connected to its vector-neighbors. Networks usefully approach distance from a "monadic" perspective, measuring distance relative to each node or word—which liberates them from t-SNE's impossible task of projecting all the distances between the words onto a single two-dimensional plane. For example, unlike before, the words "vivacity" and "anguish" are now connected to sensibility; but at the same time, the fact that they appear in different regions of the network encodes the fact that these words are more typically connected to words in a different region of the semantic space.</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="9">
+                <div class="item_title">2B. Semantic network of abstract singular nouns</div>
+                <p class="item_content"><excerpt:encoded>For the remainder of this post, I'll be talking about a single network. Its nodes are the most frequent 2,000 abstract singular nouns in the corpus.¹ The edges are the strongest 4,000 associations between those 2,000 words—that is, the shortest 4,000 word-to-word distances in the vector-space.² Finally, displayed here is only the "giant component" of the network: effectively, the largest island of connections in the network. We'll focus on this big island, which has 1,432 nodes and 3,818 edges.
+<p class="p1"><span style="font-size: 12px">1. Eighteenth-Century Collections Online, "Literature and Language," 1700-1799 (1.9 billion words).</span>
+<span style="font-size: 12px">2. After playing with many ways to make these networks (a particular cosine similarity cut-off, etc.), I think defining a semantic network's "size" (# of edges) as a factor of its "order" (# of nodes) is an elegant and comparable way of making these networks. Although 4,000 connections may seem like a lot, it's only 0.2% of the roughly 2 million connections that are possible between the 2,000 words, and the cosine similarities are never less than 0.5. </span></p></excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="10">
+                <div class="item_title">2C. Network communities</div>
+                <p class="item_content"><excerpt:encoded>Let's return to our original question: how can we find meaningful groups of abstract words? Networks provide a solution: community detection. This is the network colored by community, where communities were demarcated by a "modularity" network algorithm. The algorithm is similar to k-means clustering, but it determines the number of clusters by trying to maximize <i>intra</i>-cluster edges over <i>inter</i>-cluster edges. We'll start looking at and interpreting these communities in a moment.</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="11">
+                <div class="item_title">2D. Zooming in</div>
+                <p class="item_content"><excerpt:encoded>But first, let's look at how semantic networks afford two ways of describing a word's relationship to its community. For example, let's zoom into this region of the network for a second, and focus on three network communities: in light green, in mauve, and in Miami blue-green.</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="12">
+                <div class="item_title">2E. “Hub” abstractions</div>
+                <p class="item_content"><excerpt:encoded>Let's look at the word "hatred." In the network, it's primarily connected to words <i>within </i>its network community—that is, within its blue-green cluster of other negative-aggressive affects, like "indignation," "disgust," and "contempt." In a sense, then, "hatred" acts as a "hub" with respect to its community. As a hub, "hatred" stitches its own community together more than it connects that community to others. We can operationalize a word's hub-ness as the number of intra-cluster edges it has, minus the number of its inter-cluster edges.</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="13">
+                <div class="item_title">2F. “Bridge” abstractions</div>
+                <p class="item_content"><excerpt:encoded>By contrast, "passion" acts as a "bridge" with respect to its community. "Passion" bridges its community of negative affects (e.g. "resentment") to a community of positive affects (e.g. "tenderness"). One can have "<i>tenderness</i> and passion"—or be "prone to anger, passion, and <i>resentment</i>." The polysemy of "passion" pivots between, and bridges, these semantic contexts.</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="14">
+                <div class="item_title">2G. Operationalizing bridge-ness as betweenness centrality</div>
+                <p class="item_content"><excerpt:encoded>To measure the bridge-ness of a node, we can measure its betweenness centrality. The betweenness centrality (BC) of a node is how often it's passed through on the (shortest) way between each pair of nodes. In this figure, node #4 has the highest BC: 15 shortest-paths between nodes pass through it. Why? Because it acts as a bridge between the community on the left of the graph, and the community on the right.</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="15">
+                <div class="item_title">3A. Interpreting communities of abstract words</div>
+                <p class="item_content"><excerpt:encoded>So, we've seen how networks allow us to represent vector-distances relative to each word, find communities of words, and locate words that act as hubs and bridges with respect to their community. With that information, let's look now at the four most centrally-located communities of abstract words in the network. In this and the following graphs, nodes are sized by their betweenness centrality, and colored by their network community.</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="16">
+                <div class="item_title">3B. Community #1: “Vice and Injustice”</div>
+                <p class="item_content"><excerpt:encoded>With 150 words, the community I've labeled "Vice and Injustice" is the largest in the network. Its hubs (top five words by number of <i>intra</i>- minus <i>inter</i>-community edges) and bridges (top five words by betweenness centrality) are below.
+<p class="p1"><span style="font-size: 14px"><i>Hubs:</i> folly (28), impiety (25), perfidy (19), wickedness (17), debauchery (17)</span>
+<span style="font-size: 14px"><i>Bridges:</i> despotism (4.0% [of node-to-node shortest-paths pass through it]), injustice (3.8%), obstinacy (3.6%), folly (2.6%), weakness (2.3%)</span></p>
+<p class="p1">As a hub, "folly" connects to 2 words outside its community, but 30 within it, including words from "cowardice" to "temerity," "dullness" to "levity." "Folly" and the other hubs reveal how this community is <i>internally</i> constituted as a general cluster of negatively-valued behaviors—or, effectively, "vices." But, as bridges, "injustice," "tyranny," and "despotism" bring this cluster of vices into contact with a community I've labeled "Political Systems," with words like "government," "establishment," and "power."</p></excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="17">
+                <div class="item_title">3C. “Vice and Injustice” and John Locke</div>
+                <p class="item_content"><excerpt:encoded>Interestingly, articulating both moral-personal and social-political vices is exactly what Locke thought abstract words most accomplished. For Locke, human actions can be articulated only by abstract words—crucially, "without which, Laws could be but ill made, or Vice and Disorder repressed." What does it mean, then, that the largest community of abstract nouns is a collection of behaviors that <i>ought to be repressed?</i> Is this a neo-empiricist demonstration of Locke's empiricist theory of abstraction? Locke thought that, because abstract words are made arbitrarily by the mind, their existence to describe certain behaviors and not others reflects the degree to which a culture is invested in certain behaviors, and not others. To rephrase the question: what does it mean that the most invested-in and specified semantic community in this network articulates, even selects, behaviors to socially repress?</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="18">
+                <div class="item_title">3D. Community #2: “Ugly Feelings toward Other”</div>
+                <p class="item_content"><excerpt:encoded><span style="font-size: 14px"><i>Hubs: </i>hatred (20), resentment (17), reproach (14), aversion (12), rancour (10)</span>
+<span style="font-size: 14px"><i>Bridges: </i>partiality (4.6%), resentment (2.2%), passion (2.1%), censure (2.0%), prejudice (1.7%)</span>
+<p class="p1">Moving slightly to the southeast, we stay within the semantics of negative value, but move from behavior to affect. I've labeled this community of 79 words "Ugly Feelings" after Sianne Ngai's classic study in affect theory, <i>Ugly Feelings</i> (2005). But these words are not just ugly feelings: many of them direct that negative affect toward another person. "Resentment," "hatred," "reproach," "prejudice," are all quasi-affective states, but are also affective <i>reactions</i> to others' behavior. "Partiality" and "passion" bridge this cluster to positive affects, connecting to words like "fondness" and "kindness."</p></excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="19">
+                <div class="item_title">3E. Community #3: “Ugly Feelings toward Self”</div>
+                <p class="item_content"><excerpt:encoded><span style="font-size: 14px"><i>Hubs: </i>anxiety (14), confusion (13), anguish (13), consternation (12), disturbance (11)</span>
+<span style="font-size: 14px"><i>Bridges: </i>anxiety (3.7%), tumult (2.1%), anguish (2.1%), disappointment (2.1%), rapture (2.1%)</span>
+<p class="p1">Moving slightly east, we find another community of negative affects. How do these words form a distinct community? My guess is that these are <i>self-directed </i>negative affects. For Freud, anxiety is fear without an object. Unlike "hatred" or "resentment," which as states of anger often have a person for their object, affects like "anxiety" and "anguish" are less specified in their direction. However, this non-specificity allows them to connect to other affective communities: as we'll see later on, the bridge between "anxiety" and "tenderness" is structurally important to the overall network.</p></excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="20">
+                <div class="item_title">3F. Why two communities of “Ugly Feelings”?</div>
+                <p class="item_content"><excerpt:encoded>The cleaving of negative emotions into two separate communities raises an interesting question. Does this bifurcation arise from anything more than an inherent semantic contrast? For instance, might it also arise from contrasting gendered associations? As personified by Lady Louisa in Burney's <i>Evelina </i>(1778), women were thought to have "weak nerves" in the period, experiencing seemingly unaccountable anxiety; Wollstonecraft critiqued women who "feign a sickly delicacy" in order to "gain the affections of a virtuous man." We'll return to this question later on.</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="21">
+                <div class="item_title">3G. Community #4: “Virtue and Sensibility”</div>
+                <p class="item_content"><excerpt:encoded><span style="font-size: 14px"><i>Hubs: </i>generosity (34), benevolence (31), probity (29), sincerity (27), humanity (27)</span>
+<span style="font-size: 14px"><i>Bridges: </i>sensibility (5.1%), tenderness (4.8%), ingenuity (4.0%), understanding (3.5%), wisdom (2.6%)</span>
+<p class="p1">Moving to the northeast, we reach a community of 124 words I've labeled "Virtue and Sensibility." It is, effectively, a huge cluster of virtues: "generosity," "benevolence," "civility," "kindness," "humanity," etc. However, another community of "virtues" is just to the north of this one, with words like "propriety," "regularity," and "correctness." The difference? The key word for this community here is "sensibility." <i>The </i>buzz-word of the mid-to-late 18C, "sensibility" framed morality in terms of an affective sensitivity—a "moral sentiment" as Adam Smith would call it. So too do many of the words in this community. Tenderness, kindness, sincerity, goodness are not just moral behaviors, but behaviors with a shared affective overtone: what we might call the affective aura of sensibility.</p></excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="22">
+                <div class="item_title">4A. The centrality of “sensibility” to the semantic network</div>
+                <p class="item_content"><excerpt:encoded>In the overall semantic network, the word with the highest betweenness centrality—the word most necessary to pass through when traversing the entire network—is "sensibility." This is quite remarkable, because immediately legible. In addition to conflating morality and sentiment, "sensibility" was polysemous in the period in other ways as well, meaning "power of sensation or perception"; "mental perception"; "emotional consciousness"; "quickness and acuteness of apprehension or feeling"; and (in the 18C and 19C) "capacity for refined emotion" (OED). It was also routinely parodied, critiqued, and associated with women and femininity.</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="23">
+                <div class="item_title">4B. Bridges from “sensibility”</div>
+                <p class="item_content"><excerpt:encoded><em><span style="font-size: 14px">In this and the subsequent networks, the edges are sized by the number of shortest-paths passing along them.</span></em>
+<p class="p1">The fact that "sensibility" acts as the single most structurally important bridge for traversing the network is an index of its semantic and cultural polysemy. The association between "sensibility" and "understanding," for instance, is a bridge often traveled when traversing the network; as is the association between "sensibility" and "weakness." But why?</p></excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="24">
+                <div class="item_title">4C. Paths through “sensibility”</div>
+                <p class="item_content"><excerpt:encoded><span style="font-size: 14px"><i>This network was created from all the shortest-paths that pass through "sensibility." The edges are, again, sized by the number of shortest-paths traversing them. From any given node in this graph, its path back up to "sensibility" at the center is its shortest path to "sensibility."</i></span>
+<p class="p1">Although this network was made from the shortest-paths passing <i>through </i>sensibility, not <i>to</i> it, we can't tell from this figure where any given path continues onto after it passes through "sensibility." Instead, what we <i>can</i> see are the ways in which whole communities of abstractions route themselves through "sensibility" toward some destination.</p></excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="25">
+                <div class="item_title">4D. Paths from “Morality and System”</div>
+                <p class="item_content"><excerpt:encoded>If we highlight all the words from a community I've called "Morality and System," we can see how a large cluster of them route themselves through "sensibility" by way of its association with "understanding." These tools of Enlightenment thought ("reasoning", "hypothesis," "principle", etc) are connected, at a distance, to the discourse of sensibility through the bridge provided by one of sensibility's many senses, related to understanding: "acuteness of apprehension" (OED). In one passage from the corpus, a character is "certain that quick sensibility is inseparable from a ready understanding." Inseparable, indeed: but they're not only inseparable: their association is <i>instrumental </i>to the semantic network of eighteenth-century abstractions.</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="26">
+                <div class="item_title">4E. Paths from “Vice and Injustice”</div>
+                <p class="item_content"><excerpt:encoded>Meanwhile, on the other side of the moral spectrum, we can see how a large cluster of words from the "Vice and Injustice" community route themselves through "sensibility" by way of its association with "weakness." To me this suggests that the (betweenness) centrality of "sensibility" is not simply owing to its <i>semantic </i>polysemy. "Weakness," after all, is not one of the meanings of "sensibility." What we see instead is sensibility's <i>cultural </i>polysemy, the way in which its moral valence toggled in the period. Through its association with "weakness"—particularly with the "weaker" sex—sensibility was as morally suspect as it was associated with "humanity" and "morality." As Wollstonecraft writes, exposing that association: "despising that weak elegancy of mind, exquisite <i>sensibility</i>, and sweet docility of manners, supposed to be the sexual characteristics of the <i>weaker</i> vessel, I wish to show that elegance is inferior to virtue" (emphasis mine).</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="27">
+                <div class="item_title">4F. Bridges from “anxiety”</div>
+                <p class="item_content"><excerpt:encoded>Arguably, however, we already knew that the discourse of sensibility was a kind of meeting-point for a range of other cultural/semantic domains (emotions, moral behaviors, mental capacities, even Smithian economic models, etc). But this network's <i>operationalization </i>of the concept of the "meeting-point" reveals the ways in which such a phenomenon was not at all unique to the discourse of sensibility. The word "anxiety," for instance, is the ninth most central word in the network. Which paths through the network does it make possible?</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="28">
+                <div class="item_title">4G. Paths through “anxiety”</div>
+                <p class="item_content"><excerpt:encoded>Looking at this network made up of the shortest-paths passing through "anxiety," we can see how central the bridge between "anxiety" and "tenderness" is to the network. Through "tenderness," a whole range of abstractions from the "Virtue and Sensibility" community reach "anxiety." Likewise, a whole range of "Ugly Feelings toward Self" are routed to each other, and to "tenderness," through "anxiety." What are the literary manifestations of this bridge?</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="29">
+                <div class="item_title">4H. “Tenderness” and “anxiety” as literary bridge</div>
+                <p class="item_content"><excerpt:encoded>If we look at passages where tenderness and anxiety appear together, we tend to find passages like: "Emily gazed long on the plane-tree, and ... at the remembrance of [Valancourt] ... a mingled sensation of esteem, <i>tenderness</i> and <i>anxiety</i> rose in her breast" (Radcliffe, <i>Mysteries of Udolpho</i>, 1794).<span class="s1"> "</span>Mingled" sensations, in the late-century Gothic romance: paradoxical mixtures of tenderness—a sympathetic reaching-toward—and anxiety—a fearful reaching-back. Perhaps, then, the<i> </i>instrumental bridge between tenderness and anxiety <i>in the network</i> might reveal itself here as also <i>literarily </i>instrumental to the means by which the Gothic heroine comes to represent the affective paradoxes of late-century female subjectivity.</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="30">
+                <div class="item_title">5A. Review</div>
+                <p class="item_content"><excerpt:encoded>To review: we saw how semantic networks allow us to represent and explore the vector-distances between individual words. We used the vector between concreteness and abstractness developed in Episode 3 to find the 2,000 most frequent abstract singular nouns—singular nouns, because by controlling for part-of-speech, vector-distance is more likely to be semantic than syntactic. With these 2,000 words as nodes, we drew edges for the 4,000 strongest associations between them, and then used a community detection algorithm to find communities of abstract nouns in the network. Exploring these clusters as a network allowed us to see how some words, like "hatred," act as hubs with respect to their community; others, like "passion," as bridges to other communities. We interpreted some of these communities and the bridges between them.</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="31">
+                <div class="item_title">5B. Discussion</div>
+                <p class="item_content"><excerpt:encoded>What <i>are </i>semantic networks? Are they more than a convenient way of exploring semantic relationships in the vector-space? I think so. Networks capture something intuitive about the <i>associative</i> way in which we relate ideas—an associationism that, incidentally, derives historically from the empiricism of Berkeley and Hume. Two words, even if not quite synonyms of each other, need only be associated for them to be "stored" in a similar space in the brain, whether human or artificial. These networks, built from such associations, might be thought of as networks of "slant synonymy": an apt metaphor, given that words are linked only if the <i>angle </i>between their semantic vectors is not too big. Our experiments here, with hubs and bridges and betweenness centrality, also bring out the way in which certain words might be central or crucial to that process of association—especially within specific syntactic-semantic domains like abstract singular nouns. Like word vectors themselves, the methodological framework of semantic networks makes visible historically-situated structures and configurations of words and meanings.</excerpt:encoded></p>
+            </div>
+        
+
+
+            <div class="step" data-step="32">
+                <div class="item_title">5C. Next time</div>
+                <p class="item_content"><excerpt:encoded>Next time, on <i>Word Vectors in the Eighteenth Century, </i>we'll move away from semantic networks to a different method of exploring word vectors, one inspired by David Hume's style of argumentation through analogy. It will focus on correlating different vector-contrasts, which amounts to a method of, effectively, distant-reading, and discovering, analogies implicit within eighteenth-century literature. Until then... stay tuned!</excerpt:encoded></p>
+            </div>
+        </article>
+
+        <figure>
+          <p><img src="slides/networkdiagram3.png" /></p>
+        </figure>
+      </section>
+
+      <section id="outro"></section>
+    </main>
+
+    <!-- <div class='debug'></div> -->
+    <script src="/assets/jquery-3.4.1.min.js"></script>
+    <script src="/assets/d3.min.js"></script>
+    <script src="/assets/intersection-observer.js"></script>
+    <script src="/assets/stickyfill.min.js"></script>
+    <script src="/assets/scrollama.min.js"></script>
+    <script src="/assets/story.js"></script>
+
+  </body>
+</html>
