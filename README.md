@@ -6,7 +6,7 @@
 * profiles: [CDH](https://www.cdh.cam.ac.uk/about/people/dr-ryan-heuser/); [GitHub](https://github.com/quadrismegistus); [Google Scholar](https://scholar.google.com/citations?user=EEy82P4AAAAJ)
 
 ## About me
-I am Assistant Professor of Digital Humanities in the Cambridge Digital Humanities program at the University of Cambridge. I am a literary historian and computational humanist with fifteen years of experience in researching and teaching in the digital humanities.
+I am Assistant Professor of Digital Humanities at the University of Cambridge, where I teach for [Cambridge Digital Humanities](http://www.cdh.cam.ac.uk/) and the Faculty of English. I am a literary historian and computational humanist with fifteen years of experience in researching and teaching in the digital humanities.
 
 My research and pedagogy span topics from the history and theory of DH to its methodological groundings in data science and visualization, natural language processing, network theory, machine learning, and large language models. My work focuses on computational approaches to prosody and rhythm, literary and intellectual history, and the history and impact of artificial intelligence on language.
 
