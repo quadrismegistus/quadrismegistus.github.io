@@ -1,7 +1,4 @@
-# Dr. Ryan Heuser
-
-<img src="assets/blueshirtpic-small.jpg" width="200" height="200" style="border:1px solid black; float: left; margin-right:10px;" />
-
+<img src="assets/blueshirtpic-small.jpg" width="200" height="200" style="border:1px solid black; float: left; margin:0; margin-right:10px;" />
 I am Assistant Professor of Digital Humanities at the University of Cambridge, where I teach for [Cambridge Digital Humanities](https://www.cdh.cam.ac.uk/about/people/dr-ryan-heuser/) and the [Faculty of English](https://www.english.cam.ac.uk/people/Ryan.Heuser). I am a literary historian and computational humanist with over fifteen years’ experience in researching and teaching in the digital humanities.
 
 My work applies computational methods to cultural history while conversely bringing the critical methods of cultural studies to bear on computation. I have written on topics from the [‘generative aesthetics’ of large language models](https://culturalanalytics.org/article/id/1036/) to [computational models of poetic rhythm](https://journals.linguisticsociety.org/proceedings/index.php/amphonology/article/view/3679) and the [degree of linguistic ‘abstraction’ in literary](/talks/kingscollege2020/) and [intellectual history](https://www.cambridge.org/core/books/explorations-in-the-digital-history-of-ideas/computing-koselleck-modelling-semantic-revolutions-17201960/1ED34828C706CB5A7882E0A825C6F72F).

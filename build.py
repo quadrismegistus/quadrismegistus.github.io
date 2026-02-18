@@ -27,14 +27,14 @@ def read_title(readme_path, fallback):
         for line in f:
             stripped = line.strip()
             if stripped.startswith("# "):
-                return stripped[2:].strip()
+                return "Ryan Heuser - " + stripped[2:].strip()
     return fallback
 
 
 def fallback_title(rel_path):
     if not rel_path:
-        return "Home"
-    return rel_path.split("/")[-1].replace("-", " ").replace("_", " ").title()
+        return "Ryan Heuser"
+    return "Ryan Heuser - " + rel_path.split("/")[-1].replace("-", " ").replace("_", " ").title()
 
 
 def page_href(rel_path):

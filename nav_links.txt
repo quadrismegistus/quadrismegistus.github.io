@@ -1,6 +1,6 @@
 # One link per line: relative_path|Label
 # Use an empty path for the root page.
-|Home
+|Ryan Heuser
 projects|Projects
 publications|Publications
 graphs|Graphs
