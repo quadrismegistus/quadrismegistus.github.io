@@ -14,6 +14,8 @@
 
 * "[Mapping the Emotions of London in Fiction, 1700-1900: A Crowdsourcing Experiment](https://www.taylorfrancis.com/chapters/edit/10.4324/9781315592596-3/mapping-emotions-london-fiction-1700%E2%80%931900-ryan-heuser-mark-algee-hewitt-annalise-lockhart-erik-steiner-van-tran)." _Literary Mapping in the Digital Age_. Ed. David Cooper, Chris Donaldson, and Patricia Murrieta-Flores. Ashgate. 2016. (Co-authored with Mark Algee-Hewitt, Van Tran, Annalise Lockhart, and Erik Steiner).
 
+* “[Phonological and Metrical Variation across Genres](https://journals.linguisticsociety.org/proceedings/index.php/amphonology/article/view/3679)”. _Proceedings of the 2015 Annual Meeting on Phonology_ (2016). (Co-authored with Arto Anttila).
+
 * "[Learning to Read Data: Bringing out the Humanistic in the Digital Humanities](https://www.jstor.org/stable/10.2979/victorianstudies.54.1.79)." _Victorian Studies_ 54.1 (2011): 79-86. (Co-authored with Long Le-Khac).
 
 Reprinted in [_Canon/Archive: Studies in Quantitative Formalism from the Stanford Literary Lab_](https://shop.nplusonemag.com/products/canon-archive), ed. Franco Moretti (New York: n+1, 2017):
