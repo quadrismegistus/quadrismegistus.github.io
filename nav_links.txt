@@ -1,0 +1,9 @@
+# One link per line: relative_path|Label
+# Use an empty path for the root page.
+|Home
+projects|Projects
+publications|Publications
+graphs|Graphs
+tools|Tools
+teaching|Teaching
+cv|CV

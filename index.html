@@ -2,48 +2,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Ryan Heuser</title>
 
     <style type='text/css'>
+        :root {
+            --fg: #1b1b1b;
+            --muted: #666;
+            --line: #e5e5e5;
+            --bg: #fff;
+            --accent: #111;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family:'Baskerville', 'Libre Baskerville','Courier New', Courier, monospace;
-            /* text-align:center; */
-            font-size:1.25em;
-            line-height: 1.5em;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--fg);
+            background: var(--bg);
         }
-        img {
+
+        #layout {
+            width: min(1160px, 96vw);
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            display: grid;
+            grid-template-columns: 120px minmax(0, 1fr);
+            gap: 2.5rem;
+        }
+
+        #sidebar {
+            /* border-right: 1px solid var(--line); */
+            padding-right: 1.25rem;
+            position: sticky;
+            top: 1.25rem;
+            height: fit-content;
+        }
+
+        #sidebar h2 {
+            margin: 0 0 0.75rem 0;
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        #sidebar ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #sidebar li {
+            margin: 0 0 0.45rem 0;
+            line-height: 1.25;
+        }
+
+        #sidebar a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        #sidebar a:hover {
+            border-bottom-color: var(--fg);
+        }
+
+        #sidebar a.active {
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        #sidebar .nav-group {
+            margin-top: 0.6rem;
+        }
+
+        #sidebar .nav-group-label {
             display: block;
-            margin: 0 auto;
-            width: 200px;
+            margin: 0.25rem 0 0.4rem 0;
+            font-size: 0.82rem;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: var(--muted);
         }
-        h1 { text-align: center;}
+
+        #sidebar .nav-group ul {
+            margin: 0 0 0 0.7rem;
+            padding: 0 0 0 0.75rem;
+            border-left: 1px solid var(--line);
+        }
+
+        #sidebar .nav-group li {
+            margin: 0 0 0.35rem 0;
+        }
+
         #content {
-            max-width:800px;
-            margin: 0 auto;
+            min-width: 0;
+            max-width: 760px;
         }
-    
-        p { text-align: justify }
-        li {
-        margin: 0;
-        padding: 0;
-        line-height:1em;
-    }
-    
-        </style>
-    <title>Ryan Heuser</title>
+
+        #content p {
+            margin: 0 0 1rem 0;
+        }
+
+        #content ul,
+        #content ol {
+            margin: 0 0 1rem 1.25rem;
+            padding: 0;
+        }
+
+        #content li {
+            margin: 0 0 0.3rem 0;
+        }
+
+        #content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #content h1,
+        #content h2,
+        #content h3 {
+            line-height: 1.25;
+            margin-top: 1.35em;
+            margin-bottom: 0.5em;
+        }
+
+        #content h1 {
+            margin-top: 0;
+        }
+
+        @media (max-width: 860px) {
+            #layout {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding-top: 1.2rem;
+            }
+
+            #sidebar {
+                position: static;
+                border-right: 0;
+                border-bottom: 1px solid var(--line);
+                padding-right: 0;
+                padding-bottom: 0.75rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div id="content">
-        <h1 id="dr.-ryan-heuser">Dr. Ryan Heuser</h1>
-<p><img src="assets/blueshirtpic-small.jpg" width="200" height="200" style="border:1px solid black" /></p>
-<ul>
-<li>email: <a href="mailto:rj416@cam.ac.uk">rj416@cam.ac.uk</a></li>
-<li>profiles: <a
-href="https://www.cdh.cam.ac.uk/about/people/dr-ryan-heuser/">CDH</a>;
-<a href="https://github.com/quadrismegistus">GitHub</a>; <a
-href="https://scholar.google.com/citations?user=EEy82P4AAAAJ">Google
-Scholar</a></li>
+    <div id="layout">
+        <aside id="sidebar">
+            <ul>
+  <li><a class="active" href="/">Home</a></li>
+  <li><a href="/projects/">Projects</a></li>
+  <li><a href="/publications/">Publications</a></li>
+  <li><a href="/graphs/">Graphs</a></li>
+  <li><a href="/tools/">Tools</a></li>
+  <li><a href="/teaching/">Teaching</a></li>
+  <li><a href="/cv/">CV</a></li>
 </ul>
-<h2 id="about-me">About me</h2>
+        </aside>
+        <main id="content">
+            <h1 id="dr.-ryan-heuser">Dr. Ryan Heuser</h1>
+<p><img src="assets/blueshirtpic-small.jpg" width="200" height="200" style="border:1px solid black; float: left; margin-right:10px;" /></p>
 <p>I am Assistant Professor of Digital Humanities at the University of
 Cambridge, where I teach for <a
 href="http://www.cdh.cam.ac.uk/">Cambridge Digital Humanities</a> and
@@ -64,288 +189,16 @@ students in English literature and Practical Criticism, taught workshops
 in the Center for Digital Humanities, and helped to review and establish
 its MPhil program. From 2022-2024 I was Research Software Engineer in
 Princeton’s Center for Digital Humanities.</p>
-<p>You can also find me on <a
+<p>You can also find me at <a
+href="https://www.english.cam.ac.uk/people/Ryan.Heuser">Cambridge</a>,
+<a
 href="https://www.cdh.cam.ac.uk/about/people/dr-ryan-heuser/">CDH</a>,
 <a href="http://github.com/quadrismegistus">Github</a>, <a
 href="https://scholar.google.com/citations?user=EEy82P4AAAAJ">Google
 Scholar</a>, or by email at <a
 href="mailto:rj416@cam.ac.uk">rj416@cam.ac.uk</a>.</p>
-<h2 id="projects">Projects</h2>
-<h3 id="generative-humanities">Generative Humanities</h3>
-<p>Ongoing research project beginning from the conviction that, just as
-digital humanities became necessary in order to theorize the rising
-digitisation practices in the 1980s and ’90s, a ‘generative humanities’
-has become necessary to theorize rising generative AI practices in the
-2020s. A first research article is forthcoming in October 2025:
-‘Generative Formalism: Measuring Formal Stuckness in AI Verse’ (Journal
-of Cultural Analytics, special issue on Computational Formalism
-forthcoming Oct 2025). It theorizes a generative formalism, practicing
-it in a comparative distant reading of historical and generative poetic
-corpora, which identifies a persistent ‘formal stuckness’ on strict
-rhyme and meter in AI verse – a kind of formal gravition recombining
-historical cultural production for its own computational-aesthetic ends.
-The project is currently transforming into a collaborative grant
-proposal on ‘slop,’ extending the analysis of formal stuckness from
-poetry to prose, art, music, and video.</p>
-<h3 id="abstraction-a-literary-history"><em>Abstraction: A Literary
-History</em></h3>
-<p>My first book project, <em>Abstraction: A Literary History</em>,
-traces a slow-moving rise and fall in abstract language across centuries
-of literary history. Mixing close and distant reading, the book uncovers
-how these changes in literary semantics mediate changes in social
-organization. I focus on three literary forms of abstract language:
-‘abstract style’, in the syntactic symmetries and semantic formulae of
-the periodical essay; ‘abstract persons’, in the personified
-abstractions of the mid-century ode; and ‘abstract realism’, in the
-“tell, don’t show” narration of the early realist novel. Through this
-history and framework, the book also aims to recuperate abstraction as
-both a method and an object of literary study.</p>
-<ul>
-<li>2020-02-18: <a href="talks/kingscollege2020">“Abstract Realism”</a>
-(visual summary of the chapter on fiction)</li>
-</ul>
-<h3 id="antimetricality">Antimetricality</h3>
-<p>I am working with Arto Anttila and Paul Kiparsky, metrical
-phonologists at Stanford, to design tools to evaluate the
-‘antimetricality’ of a text: the degree to which its stress patterns
-depart from any known metrical pattern. Such measurements of metrical
-‘tension’ or ‘ambiguity’ have a history: prose most distances itself
-rhythmically from verse at the height of the eighteenth century. We have
-a pre-print of a paper available <a
-href="https://web.stanford.edu/~kiparsky/Papers/Antimetricality-Draft-2018-04-20.pdf">here</a>.</p>
-<ul>
-<li><p>2018-04-20: <a
-href="https://web.stanford.edu/~kiparsky/Papers/Antimetricality-Draft-2018-04-20.pdf">“The
-Rise and Fall of Antimetricality”</a></p></li>
-<li><p>Code: <a
-href="http://github.com/quadrismegistus/prosodic">Prosodic</a> (<a
-href="http://prosodic.stanford.edu">web demo</a>)</p></li>
-</ul>
-<h2 id="publications">Publications</h2>
-<ul>
-<li><p>“Generative Formalism: Measuring Formal Stuckness in AI Verse.”
-<em>Journal of Cultural Analytics</em>, special issue on Computational
-Formalism. Forthcoming Oct 2025.</p></li>
-<li><p>“<a
-href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5409144">Computational
-Hermeneutics: Evaluating Generative AI as a Cultural Technology</a>.”
-SSRN, 1 Aug 2025. (Co-authored with Cody Kommers et al).</p></li>
-<li><p>“<a
-href="https://www.cambridge.org/core/books/explorations-in-the-digital-history-of-ideas/computing-koselleck-modelling-semantic-revolutions-17201960/1ED34828C706CB5A7882E0A825C6F72F">Computing
-Koselleck: Modeling Semantic Revolutions, 1720-1960</a>.”
-<em>Explorations in the Digital History of Ideas</em>. Ed. Peter de
-Bolla. Cambridge University Press. 2024.</p></li>
-<li><p>“<a
-href="https://www.cambridge.org/core/books/explorations-in-the-digital-history-of-ideas/enlightenment-entanglements-of-improvement-and-growth/0ABFB8132441552EE42D6A3AD32A439F">Enlightenment
-Entanglements of Improvement and Growth</a>.” <em>Explorations in the
-Digital History of Ideas</em>. Ed. Peter de Bolla. Cambridge University
-Press. 2024. (Co-authored with Peter de Bolla and Mark
-Algee-Hewitt).</p></li>
-<li><p>“<a
-href="https://newleftreview.org/issues/ii101/articles/stanford-literary-lab-mapping-london-s-emotions">Mapping
-London’s Emotions</a>.” <em>New Left Review</em> 101 (2016): 63-91.
-(Co-authored with Franco Moretti and Erik Steiner).</p></li>
-<li><p>“<a
-href="https://www.taylorfrancis.com/chapters/edit/10.4324/9781315592596-3/mapping-emotions-london-fiction-1700%E2%80%931900-ryan-heuser-mark-algee-hewitt-annalise-lockhart-erik-steiner-van-tran">Mapping
-the Emotions of London in Fiction, 1700-1900: A Crowdsourcing
-Experiment</a>.” <em>Literary Mapping in the Digital Age</em>. Ed. David
-Cooper, Chris Donaldson, and Patricia Murrieta-Flores. Ashgate. 2016.
-(Co-authored with Mark Algee-Hewitt, Van Tran, Annalise Lockhart, and
-Erik Steiner).</p></li>
-<li><p>“<a
-href="https://www.jstor.org/stable/10.2979/victorianstudies.54.1.79">Learning
-to Read Data: Bringing out the Humanistic in the Digital
-Humanities</a>.” <em>Victorian Studies</em> 54.1 (2011): 79-86.
-(Co-authored with Long Le-Khac).</p></li>
-</ul>
-<p>Reprinted in <a
-href="https://shop.nplusonemag.com/products/canon-archive"><em>Canon/Archive:
-Studies in Quantitative Formalism from the Stanford Literary
-Lab</em></a>, ed. Franco Moretti (New York: n+1, 2017):</p>
-<ul>
-<li><p>“<a
-href="https://litlab.stanford.edu/LiteraryLabPamphlet13.pdf">The
-Emotions of London</a>.” Stanford Literary Lab 13 (2016). (Co-authored
-with Franco Moretti and Erik Steiner).</p></li>
-<li><p>“<a
-href="https://litlab.stanford.edu/LiteraryLabPamphlet11.pdf">Canon/Archive:
-Large-scale Dynamics in the Literary Field</a>.” Stanford Literary Lab
-11 (2016). (Co-authored with Mark Algee-Hewitt, Sarah Allison, Marissa
-Gemma, Franco Moretti, and Hannah Walser).</p></li>
-<li><p>“<a
-href="https://litlab.stanford.edu/LiteraryLabPamphlet10.pdf">On
-Paragraphs: Scale, Themes, and Narrative Form</a>).” Stanford Literary
-Lab 10 (2015). (Co-authored with Mark Algee-Hewitt and Franco
-Moretti).</p></li>
-<li><p>“<a
-href="https://litlab.stanford.edu/LiteraryLabPamphlet5.pdf">Style at the
-Scale of the Sentence</a>.” Stanford Literary Lab 5 (2013). (Co-authored
-with Sarah Allison, Marissa Gemma, Franco Moretti, Amir Tevel, and Irena
-Yamboliev).</p></li>
-<li><p>“<a href="https://litlab.stanford.edu/LiteraryLabPamphlet4.pdf">A
-Quantitative Literary History of 2,958 Nineteenth-Century British
-Novels: The Semantic Cohort Method</a>.” Stanford Literary Lab 4 (2012).
-(Co-authored with Long Le-Khac).</p></li>
-<li><p>“<a
-href="https://litlab.stanford.edu/LiteraryLabPamphlet1.pdf">Quantitative
-Formalism: an Experiment</a>.” Stanford Literary Lab 1 (2011).
-(Co-authored with Sarah Allison, Matthew Jockers, Franco Moretti, and
-Michael Witmore).</p></li>
-</ul>
-<h2 id="archive">Archive</h2>
-<h3 id="word-vectors-in-the-eighteenth-century">Word Vectors in the
-Eighteenth Century</h3>
-<p>This page is meant as a set of links and resources related to my work
-using word vectors to study eighteenth-century literature. This work
-asks the question: how can new vector-based models of semantics reveal
-the historicity of specific configurations of meaning in
-eighteenth-century literature? Most of this work is published serially
-as blog posts, linked below. The later of these are “slideshow
-essays”-experiments with the forms of visual rhetoric that work so well
-in the digital humanities-rather than traditional blog posts. There is
-also a video of a talk I’ve given about this work. Lastly, I’ve uploaded
-several word2vec models I’m using, trained on a corpus of
-eighteenth-century literature; and linked to some relevant code (more
-code will be coming soon).</p>
-<ul>
-<li><p>2016-04-14: <a href="word-vectors-1">Part 1.
-Concepts</a></p></li>
-<li><p>2016-06-01: <a href="word-vectors-2">Part 2. Methods</a></p></li>
-<li><p>2016-09-10: <a href="word-vectors-3">Part 3. From Fields to
-Vectors</a></p></li>
-<li><p>2016-09-25: <a href="word-vectors-4">Part 4. Semantic
-Networks</a></p></li>
-<li><p><a href="word-vectors">Other resources, appendices, and
-models</a></p></li>
-</ul>
-<h3 id="graphs">Graphs</h3>
-<ul>
-<li><p>2020-03-14: <a
-href="https://twitter.com/quadrismegistus/status/1238796150272122880">Tracing
-types of semantic change</a></p></li>
-<li><p>2020-03-06: <a
-href="https://twitter.com/quadrismegistus/status/1235614699145826304">Measuring
-anthropomorphism</a></p></li>
-<li><p>2020-02-24: <a
-href="https://twitter.com/quadrismegistus/status/1231914513164832768">Posted
-talk to King’s College as scroll-based page</a></p></li>
-<li><p>2020-01-29: <a
-href="https://twitter.com/quadrismegistus/status/1222560503144296450">A
-linguistic map of the canon</a></p></li>
-<li><p>2020-01-16: <a
-href="https://twitter.com/quadrismegistus/status/1217809468316168194">Clarissa
-under the microscope</a></p></li>
-<li><p>2019-11-18: <a
-href="https://twitter.com/quadrismegistus/status/1217809468316168194">Academic
-job numbers in English literature (updated)</a></p></li>
-<li><p>2019-10-13: <a
-href="https://twitter.com/quadrismegistus/status/1183433276658274304">Academic
-job numbers in English literature</a></p></li>
-<li><p>2019-08-28: <a
-href="https://twitter.com/quadrismegistus/status/1166515794055815168">Figure
-1 of my dissertation</a></p></li>
-<li><p>2019-02-07: <a
-href="https://twitter.com/quadrismegistus/status/1093630109863403521">Measuring
-personification</a></p></li>
-<li><p>2018-11-05: <a
-href="https://twitter.com/quadrismegistus/status/1059305496211931136">Agency
-Index</a></p></li>
-<li><p>2018-07-12: <a
-href="https://twitter.com/quadrismegistus/status/1017526110051942400">Character
-space in Sense and Sensibility</a></p></li>
-<li><p>2018-04-17: <a
-href="https://twitter.com/quadrismegistus/status/986025832660389890">Anti-metricality</a></p></li>
-<li><p>2018-01-30: <a
-href="https://twitter.com/quadrismegistus/status/958237374680522752">Abstraction
-vs. judgment</a></p></li>
-<li><p>2018-01-23: <a
-href="https://twitter.com/quadrismegistus/status/955857511176744960">Computational
-Keywords</a></p></li>
-<li><p>2017-11-06: <a
-href="https://twitter.com/quadrismegistus/status/927620289604632577">Abstraction
-vs. agency</a></p></li>
-<li><p>2017-09-26: <a
-href="https://twitter.com/quadrismegistus/status/912747794347077632">Sociography
-of the 18th century print market</a></p></li>
-<li><p>2017-07-28: <a
-href="https://twitter.com/quadrismegistus/status/890791583066447872">Transformation
-of ‘labour’</a></p></li>
-<li><p>2017-07-13: <a
-href="https://twitter.com/quadrismegistus/status/885326014607314945">Understanding
-OCR errors</a></p></li>
-<li><p>2017-07-03: <a
-href="https://twitter.com/quadrismegistus/status/881961427933683712">Most
-reprinted 18th century texts</a></p></li>
-<li><p>2017-06-23: <a
-href="https://twitter.com/quadrismegistus/status/878326876283879425">Corpus
-vs. bibliography</a></p></li>
-<li><p>2017-06-15: <a
-href="https://twitter.com/quadrismegistus/status/875431247664693248">Exponential
-rise of print market in 18th century</a></p></li>
-<li><p>2017-04-28: <a
-href="https://twitter.com/quadrismegistus/status/857763794965200897">Computational
-model takes standardized test</a></p></li>
-<li><p>2017-03-26: <a
-href="https://twitter.com/quadrismegistus/status/846105045238112256">World
-literary trends (part 2)</a></p></li>
-<li><p>2017-03-25: <a
-href="https://twitter.com/quadrismegistus/status/845490026523734016">World
-literary trends (part 1)</a></p></li>
-<li><p>2017-12-18: <a
-href="https://twitter.com/quadrismegistus/status/810297451500421121">ELIZA’s
-descendants</a></p></li>
-<li><p>2016-09-15: <a
-href="https://twitter.com/quadrismegistus/status/776474009533763584">Semantic
-networks</a></p></li>
-<li><p>2016-06-16: <a
-href="https://twitter.com/quadrismegistus/status/743267734188785664">Semantic
-fields in vector space</a></p></li>
-<li><p>2016-06-15: <a
-href="https://twitter.com/quadrismegistus/status/743267734188785664">Diachronic
-semantic networks</a></p></li>
-<li><p>2014-06-09: <a
-href="https://twitter.com/quadrismegistus/status/476080285113532417">Reading
-at meso-scale with Moby-Dick</a></p></li>
-</ul>
-<h3 id="tools">Tools</h3>
-<ul>
-<li><p><a
-href="https://github.com/quadrismegistus/prosodic">Prosodic</a>: A
-metrical-phonological parser, written in Python. For English and
-Finnish, with flexible language support.</p></li>
-<li><p><a href="https://github.com/quadrismegistus/poesy">Poesy</a>:
-Tools for poetic analysis (stanzaic, metrical, and rhyme forms), written
-in Python.</p></li>
-<li><p><a href="https://github.com/quadrismegistus/lltk">LLTK</a>:
-Literary Language Toolkit (LLTK): corpora, models, and tools for the
-digital humanities, in Python.</p></li>
-<li><p><a
-href="https://github.com/quadrismegistus/slingshot">Slingshot</a>:
-Python wrapper for MPI to “slingshot” a Python or R function across a
-large dataset.</p></li>
-<li><p><a
-href="https://github.com/quadrismegistus/hashstash">HashStash</a>: Easy
-file-based store for caching arbitrary data</p></li>
-</ul>
-<h3 id="teaching">Teaching</h3>
-<ul>
-<li>‘Distant Reading’, MPhil seminar in Digital Humanities, U
-Cambridge</li>
-<li>‘Generative AI: Theory and Practice’, MPhil seminar in Digital
-Humanities, U Cambridge</li>
-<li>‘Critical Technical Practice’, MPhil lectures in Digital Humanities,
-U Cambridge</li>
-<li>‘Practical Criticism and Critical Practice’, BA in English, King’s
-College, U Cambridge</li>
-<li>‘Ballad, Sonnet, Lyric, Line’, PhD seminar in English, Princeton U
-(with Meredith Martin)</li>
-<li>‘Literary Text Mining’, BA in English, Stanford U</li>
-</ul>
-<h3 id="cv">CV</h3>
-<ul>
-<li>See <a href="assets/HEUSER-CV-2025-Aug.pdf">here</a></li>
-</ul>
 
+        </main>
     </div>
 </body>
 

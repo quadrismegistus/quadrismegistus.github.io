@@ -1,0 +1,252 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications</title>
+
+    <style type='text/css'>
+        :root {
+            --fg: #1b1b1b;
+            --muted: #666;
+            --line: #e5e5e5;
+            --bg: #fff;
+            --accent: #111;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family:'Baskerville', 'Libre Baskerville','Courier New', Courier, monospace;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--fg);
+            background: var(--bg);
+        }
+
+        #layout {
+            width: min(1160px, 96vw);
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            display: grid;
+            grid-template-columns: 120px minmax(0, 1fr);
+            gap: 2.5rem;
+        }
+
+        #sidebar {
+            /* border-right: 1px solid var(--line); */
+            padding-right: 1.25rem;
+            position: sticky;
+            top: 1.25rem;
+            height: fit-content;
+        }
+
+        #sidebar h2 {
+            margin: 0 0 0.75rem 0;
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        #sidebar ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #sidebar li {
+            margin: 0 0 0.45rem 0;
+            line-height: 1.25;
+        }
+
+        #sidebar a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        #sidebar a:hover {
+            border-bottom-color: var(--fg);
+        }
+
+        #sidebar a.active {
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        #sidebar .nav-group {
+            margin-top: 0.6rem;
+        }
+
+        #sidebar .nav-group-label {
+            display: block;
+            margin: 0.25rem 0 0.4rem 0;
+            font-size: 0.82rem;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        #sidebar .nav-group ul {
+            margin: 0 0 0 0.7rem;
+            padding: 0 0 0 0.75rem;
+            border-left: 1px solid var(--line);
+        }
+
+        #sidebar .nav-group li {
+            margin: 0 0 0.35rem 0;
+        }
+
+        #content {
+            min-width: 0;
+            max-width: 760px;
+        }
+
+        #content p {
+            margin: 0 0 1rem 0;
+        }
+
+        #content ul,
+        #content ol {
+            margin: 0 0 1rem 1.25rem;
+            padding: 0;
+        }
+
+        #content li {
+            margin: 0 0 0.3rem 0;
+        }
+
+        #content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #content h1,
+        #content h2,
+        #content h3 {
+            line-height: 1.25;
+            margin-top: 1.35em;
+            margin-bottom: 0.5em;
+        }
+
+        #content h1 {
+            margin-top: 0;
+        }
+
+        @media (max-width: 860px) {
+            #layout {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding-top: 1.2rem;
+            }
+
+            #sidebar {
+                position: static;
+                border-right: 0;
+                border-bottom: 1px solid var(--line);
+                padding-right: 0;
+                padding-bottom: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="layout">
+        <aside id="sidebar">
+            <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/projects/">Projects</a></li>
+  <li><a class="active" href="/publications/">Publications</a></li>
+  <li><a href="/graphs/">Graphs</a></li>
+  <li><a href="/tools/">Tools</a></li>
+  <li><a href="/teaching/">Teaching</a></li>
+  <li><a href="/cv/">CV</a></li>
+</ul>
+        </aside>
+        <main id="content">
+            <h1 id="publications">Publications</h1>
+<ul>
+<li><p>“<a
+href="https://anthology.ach.org/volumes/vol0003/cultural-collapse-toward-generative-formalism-for/">Cultural
+Collapse: Toward a Generative Formalism for AI Cultural Production</a>.”
+<em>Anthology of Computers and the Humanities</em> 3 (2025).</p></li>
+<li><p>“<a
+href="https://culturalanalytics.org/article/id/1036/">Generative
+Aesthetics: On formal stuckness in AI verse</a>.” <em>Journal of
+Cultural Analytics</em> 10.3 (2025), special issue on Computational
+Formalism.</p></li>
+<li><p>“<a
+href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5409144">Computational
+Hermeneutics: Evaluating Generative AI as a Cultural Technology</a>.”
+SSRN, 1 Aug 2025. (Co-authored with Cody Kommers et al).</p></li>
+<li><p>“<a
+href="https://www.cambridge.org/core/books/explorations-in-the-digital-history-of-ideas/computing-koselleck-modelling-semantic-revolutions-17201960/1ED34828C706CB5A7882E0A825C6F72F">Computing
+Koselleck: Modeling Semantic Revolutions, 1720-1960</a>.”
+<em>Explorations in the Digital History of Ideas</em>. Ed. Peter de
+Bolla. Cambridge University Press. 2024.</p></li>
+<li><p>“<a
+href="https://www.cambridge.org/core/books/explorations-in-the-digital-history-of-ideas/enlightenment-entanglements-of-improvement-and-growth/0ABFB8132441552EE42D6A3AD32A439F">Enlightenment
+Entanglements of Improvement and Growth</a>.” <em>Explorations in the
+Digital History of Ideas</em>. Ed. Peter de Bolla. Cambridge University
+Press. 2024. (Co-authored with Peter de Bolla and Mark
+Algee-Hewitt).</p></li>
+<li><p>“<a
+href="https://newleftreview.org/issues/ii101/articles/stanford-literary-lab-mapping-london-s-emotions">Mapping
+London’s Emotions</a>.” <em>New Left Review</em> 101 (2016): 63-91.
+(Co-authored with Franco Moretti and Erik Steiner).</p></li>
+<li><p>“<a
+href="https://www.taylorfrancis.com/chapters/edit/10.4324/9781315592596-3/mapping-emotions-london-fiction-1700%E2%80%931900-ryan-heuser-mark-algee-hewitt-annalise-lockhart-erik-steiner-van-tran">Mapping
+the Emotions of London in Fiction, 1700-1900: A Crowdsourcing
+Experiment</a>.” <em>Literary Mapping in the Digital Age</em>. Ed. David
+Cooper, Chris Donaldson, and Patricia Murrieta-Flores. Ashgate. 2016.
+(Co-authored with Mark Algee-Hewitt, Van Tran, Annalise Lockhart, and
+Erik Steiner).</p></li>
+<li><p>“<a
+href="https://www.jstor.org/stable/10.2979/victorianstudies.54.1.79">Learning
+to Read Data: Bringing out the Humanistic in the Digital
+Humanities</a>.” <em>Victorian Studies</em> 54.1 (2011): 79-86.
+(Co-authored with Long Le-Khac).</p></li>
+</ul>
+<p>Reprinted in <a
+href="https://shop.nplusonemag.com/products/canon-archive"><em>Canon/Archive:
+Studies in Quantitative Formalism from the Stanford Literary
+Lab</em></a>, ed. Franco Moretti (New York: n+1, 2017):</p>
+<ul>
+<li><p>“<a
+href="https://litlab.stanford.edu/LiteraryLabPamphlet13.pdf">The
+Emotions of London</a>.” Stanford Literary Lab 13 (2016). (Co-authored
+with Franco Moretti and Erik Steiner).</p></li>
+<li><p>“<a
+href="https://litlab.stanford.edu/LiteraryLabPamphlet11.pdf">Canon/Archive:
+Large-scale Dynamics in the Literary Field</a>.” Stanford Literary Lab
+11 (2016). (Co-authored with Mark Algee-Hewitt, Sarah Allison, Marissa
+Gemma, Franco Moretti, and Hannah Walser).</p></li>
+<li><p>“<a
+href="https://litlab.stanford.edu/LiteraryLabPamphlet10.pdf">On
+Paragraphs: Scale, Themes, and Narrative Form</a>).” Stanford Literary
+Lab 10 (2015). (Co-authored with Mark Algee-Hewitt and Franco
+Moretti).</p></li>
+<li><p>“<a
+href="https://litlab.stanford.edu/LiteraryLabPamphlet5.pdf">Style at the
+Scale of the Sentence</a>.” Stanford Literary Lab 5 (2013). (Co-authored
+with Sarah Allison, Marissa Gemma, Franco Moretti, Amir Tevel, and Irena
+Yamboliev).</p></li>
+<li><p>“<a href="https://litlab.stanford.edu/LiteraryLabPamphlet4.pdf">A
+Quantitative Literary History of 2,958 Nineteenth-Century British
+Novels: The Semantic Cohort Method</a>.” Stanford Literary Lab 4 (2012).
+(Co-authored with Long Le-Khac).</p></li>
+<li><p>“<a
+href="https://litlab.stanford.edu/LiteraryLabPamphlet1.pdf">Quantitative
+Formalism: an Experiment</a>.” Stanford Literary Lab 1 (2011).
+(Co-authored with Sarah Allison, Matthew Jockers, Franco Moretti, and
+Michael Witmore).</p></li>
+</ul>
+
+        </main>
+    </div>
+</body>
+
+</html>

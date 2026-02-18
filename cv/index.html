@@ -2,192 +2,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
 
     <style type='text/css'>
+        :root {
+            --fg: #1b1b1b;
+            --muted: #666;
+            --line: #e5e5e5;
+            --bg: #fff;
+            --accent: #111;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family:'Baskerville', 'Libre Baskerville','Courier New', Courier, monospace;
-            /* text-align:center; */
-            font-size:1.25em;
-            line-height: 1.5em;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--fg);
+            background: var(--bg);
         }
-        img {
+
+        #layout {
+            width: min(1160px, 96vw);
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            display: grid;
+            grid-template-columns: 120px minmax(0, 1fr);
+            gap: 2.5rem;
+        }
+
+        #sidebar {
+            /* border-right: 1px solid var(--line); */
+            padding-right: 1.25rem;
+            position: sticky;
+            top: 1.25rem;
+            height: fit-content;
+        }
+
+        #sidebar h2 {
+            margin: 0 0 0.75rem 0;
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        #sidebar ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #sidebar li {
+            margin: 0 0 0.45rem 0;
+            line-height: 1.25;
+        }
+
+        #sidebar a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        #sidebar a:hover {
+            border-bottom-color: var(--fg);
+        }
+
+        #sidebar a.active {
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        #sidebar .nav-group {
+            margin-top: 0.6rem;
+        }
+
+        #sidebar .nav-group-label {
             display: block;
-            margin: 0 auto;
-            width: 200px;
+            margin: 0.25rem 0 0.4rem 0;
+            font-size: 0.82rem;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: var(--muted);
         }
-        h1 { text-align: center;}
+
+        #sidebar .nav-group ul {
+            margin: 0 0 0 0.7rem;
+            padding: 0 0 0 0.75rem;
+            border-left: 1px solid var(--line);
+        }
+
+        #sidebar .nav-group li {
+            margin: 0 0 0.35rem 0;
+        }
+
         #content {
-            max-width:800px;
-            margin: 0 auto;
+            min-width: 0;
+            max-width: 760px;
         }
-    
-        p { text-align: justify }
-        li {
-        margin: 0;
-        padding: 0;
-        line-height:1em;
-    }
-    
-        </style>
-    <title>Ryan Heuser</title>
+
+        #content p {
+            margin: 0 0 1rem 0;
+        }
+
+        #content ul,
+        #content ol {
+            margin: 0 0 1rem 1.25rem;
+            padding: 0;
+        }
+
+        #content li {
+            margin: 0 0 0.3rem 0;
+        }
+
+        #content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #content h1,
+        #content h2,
+        #content h3 {
+            line-height: 1.25;
+            margin-top: 1.35em;
+            margin-bottom: 0.5em;
+        }
+
+        #content h1 {
+            margin-top: 0;
+        }
+
+        @media (max-width: 860px) {
+            #layout {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding-top: 1.2rem;
+            }
+
+            #sidebar {
+                position: static;
+                border-right: 0;
+                border-bottom: 1px solid var(--line);
+                padding-right: 0;
+                padding-bottom: 0.75rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div id="content">
-        <h1 id="cv">CV</h1>
-<h2 id="contact">Contact</h2>
-<ul>
-<li>Junior Research Fellow, King’s College, Cambridge</li>
-<li>King’s College, King’s Parade, Cambridge, UK CB2 1ST</li>
-<li>rj416@cam.ac.uk</li>
+    <div id="layout">
+        <aside id="sidebar">
+            <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/projects/">Projects</a></li>
+  <li><a href="/publications/">Publications</a></li>
+  <li><a href="/graphs/">Graphs</a></li>
+  <li><a href="/tools/">Tools</a></li>
+  <li><a href="/teaching/">Teaching</a></li>
+  <li><a class="active" href="/cv/">CV</a></li>
 </ul>
-<h2 id="education">Education</h2>
-<ul>
-<li>Ph.D in English, Stanford University (September 2019)
-<ul>
-<li>Dissertation: <em>Abstraction: A Literary History</em></li>
-<li>Committee: John Bender, Mark Algee-Hewitt, Mark Greif</li>
-</ul></li>
-<li>M.A. in English, Stanford University (June 2013)</li>
-<li>B.A. in English (<em>summa cum laude</em>), University of Florida
-(May 2008)</li>
-</ul>
-<h2 id="articles">Articles</h2>
-<ul>
-<li>(with Franco Moretti and Erik Steiner). “<a
-href="https://newleftreview.org/II/101/stanford-literary-lab-mapping-london-s-emotions">Mapping
-London’s Emotions</a>.” <em>New Left Review</em> 101 (2016): 63-91.</li>
-<li>(with Arto Anttila). “<a
-href="http://journals.linguisticsociety.org/proceedings/index.php/amphonology/article/view/3679">Phonological
-and Metrical Variation across Genres</a>.” <em>Proceedings of the Annual
-Meeting on Phonology</em> 3 (2016). Web. Linguistic Society of America.
-Washington D.C. 2015.</li>
-<li>(with Long Le-Khac). “<a
-href="https://www.academia.edu/9318474/Learning_to_Read_Data_Bringing_out_the_Humanistic_in_the_Digital_Humanities">Learning
-to Read Data: Bringing out the Humanistic in the Digital
-Humanities</a>.” <em>Victorian Studies</em> 54.1 (2011): 79-86.</li>
-</ul>
-<h2 id="book-chapters">Book chapters</h2>
-<ul>
-<li>(with Mark Algee-Hewitt, Van Tran, Annalise Lockhart, and Erik
-Steiner). “Mapping the Emotions of London in Fiction, 1700-1900: A
-Crowdsourcing Experiment.” <em>Literary Mapping in the Digital Age</em>.
-Ed. David Cooper, Chris Donaldson, and Patricia Murrieta-Flores.
-Ashgate. 2016. Digital Research in the Arts and Humanities.</li>
-</ul>
-<h2 id="literary-lab-pamphlets">Literary Lab pamphlets</h2>
-<ul>
-<li>(with Franco Moretti and Erik Steiner). “<a
-href="http://litlab.stanford.edu/LiteraryLabPamphlet13.pdf">The Emotions
-of London</a>.” <em>Stanford Literary Lab</em> 13 (2016) [reprinted in
-<em>Canon/Archive</em>].</li>
-<li>(with Mark Algee-Hewitt, Sarah Allison, Marissa Gemma, Franco
-Moretti, and Hannah Walser). “<a
-href="http://litlab.stanford.edu/LiteraryLabPamphlet11.pdf">Canon/Archive:
-Large-scale Dynamics in the Literary Field</a>.” <em>Stanford Literary
-Lab</em> 11 (2016) [reprinted in <em>Canon/Archive</em>].</li>
-<li>(with Mark Algee-Hewitt and Franco Moretti. “<a
-href="http://litlab.stanford.edu/LiteraryLabPamphlet10.pdf">On
-Paragraphs: Scale, Themes, and Narrative Form</a>.” <em>Stanford
-Literary Lab</em> 10 (2015) [reprinted in <em>Canon/Archive</em>].</li>
-<li>(with Sarah Allison, Marissa Gemma, Franco Moretti, Amir Tevel, and
-Irena Yamboliev). “<a
-href="http://litlab.stanford.edu/LiteraryLabPamphlet5.pdf">Style at the
-Scale of the Sentence</a>.” <em>Stanford Literary Lab</em> 5 (2013)
-[reprinted in <em>Canon/Archive</em>].</li>
-<li>(with Long Le-Khac). “<a
-href="http://litlab.stanford.edu/LiteraryLabPamphlet4.pdf">A
-Quantitative Literary History of 2,958 Nineteenth-Century British
-Novels: The Semantic Cohort Method</a>.” <em>Stanford Literary Lab</em>
-4 (2012) [reprinted in <em>Canon/Archive</em>].</li>
-<li>(with Sarah Allison, Matthew Jockers, Franco Moretti, and Michael
-Witmore). “<a
-href="http://litlab.stanford.edu/LiteraryLabPamphlet1.pdf">Quantitative
-Formalism: An Experiment</a>.” <em>Stanford Literary Lab</em> 1 (2011)
-[reprinted in <em>Canon/Archive</em>].</li>
-</ul>
-<h2 id="invited-talks">Invited talks</h2>
-<ul>
-<li>“Computational Keywords: Historical Semantics and Cultural History,
-1660-1830.” University of Trier. Trier, Germany. 2018.</li>
-<li>“<a href="http://dhlab.yale.edu/heuser/">Computational Keywords:
-Abstractions of Value, 1750-1850</a>.” Yale DHLab. New Haven. 2018.</li>
-<li>“Word Vectors in the Eighteenth-Century.” Institute for Pure and
-Applied Mathematics: Workshop IV: Mathematical Analysis of Cultural
-Expressive Forms: Text Data. Los Angeles. 2016.</li>
-<li>“Affect and Space as Mediating Technologies: Reflections from and on
-the ‘Emotions of London’ Literary Lab Project.” Cultural Analytics.
-Chicago. 2015.</li>
-</ul>
-<h2 id="conference-presentations">Conference presentations</h2>
-<ul>
-<li>“The Rise and Fall of Antimetricality.” Bridging Gaps, Creating
-Links: The Qualitative-Quantitative Interface in the Study of
-Literature. Padua, Italy. 2018.</li>
-<li>“<a href="https://dh2017.adho.org/abstracts/582/582.pdf">Word
-Vectors in the Eighteenth Century</a>.” Digital Humanities. Montreal.
-2017.</li>
-<li>“Word Vectors in the Eighteenth-Century: Associationism, Analogy,
-and Computationalism.” 2017 Annual Meeting of the Western Society for
-Eighteenth-Century Studies (WSECS). Santa Barbara. 2017.</li>
-<li>“ELIZA, Virtual Therapist: or, Notes toward a Virtual Humanities.”
-Modern Language Association. Philadelphia. 2017.</li>
-<li>(with Marissa Gemma). “<a
-href="http://dh2016.adho.org/abstracts/394">Building Blocks of Fiction:
-Literary Lexical Bundles, 1700-1900</a>.” Digital Humanities. Krakow.
-2016.</li>
-<li>“<a href="/virtual-poetics/">Virtual Poetics: A
-Thought-Experiment</a>.” SyncDH. Santa Barbara. 2015.</li>
-<li>(with Mark Algee-Hewitt and John Bender). “<a
-href="http://dh2015.org/abstracts/xml/HEUSER_Ryan_James_Knowledge_Networks__Juxtaposed_/HEUSER_Ryan_James_Knowledge_Networks__Juxtaposed__Disci.html">Knowledge
-Networks, Juxtaposed: Disciplinarity in the Encyclopédie and
-Wikipedia</a>.” Digital Humanities. Sydney. 2015.</li>
-<li>(with Mark Algee-Hewitt, Van Tran, Annalise Lockhart, and Erik
-Steiner). “<a
-href="http://dh2015.org/abstracts/xml/HEUSER_Ryan_James_Mapping_the_Emotions_of_London_/HEUSER_Ryan_James_Mapping_the_Emotions_of_London_in_Fic.html">Mapping
-the Emotions of London in Fiction, 1700-1900: A Crowdsourcing
-Experiment</a>.” Digital Humanities. Sydney. 2015.</li>
-<li>(with Mark Algee-Hewitt, Maria Kraxenberger, J.D. Porter, Jonathan
-Sensenbaugh, and Justin Tackett). “<a
-href="http://dharchive.org/paper/DH2014/Paper-788.xml">Transhistorical
-Poetry Project Phase II: Metrical Form</a>.” Digital Humanities.
-Lausanne. 2014.</li>
-<li>(with Mark Algee-Hewitt, Laura Eidem, Ryan Heuser, Anita Law, and
-Tanya Llewellyn). “<a
-href="http://dharchive.org/paper/DH2014/Paper-472.xml">The Cryptic
-Novel: A Computational Taxonomy of the Eighteenth-Century Literary
-Field</a>.” Digital Humanities. Lausanne. 2014.</li>
-</ul>
-<h2 id="honors-and-awards">Honors and awards</h2>
-<ul>
-<li><a href="https://adho.org/awards/paul-fortier-prize">Paul Fortier
-Prize</a>, Alliance of Digital Humanities. 2017.</li>
-<li>Alden Dissertation Prize, Stanford English. 2020.</li>
-</ul>
-<h2 id="press-coverage">Press coverage</h2>
-<ul>
-<li>“<a
-href="https://www.nytimes.com/2017/10/30/arts/moretti-stanford-literary-lab-graphs.html">The
-Book Crunchers</a>.” New York Times. 2017.</li>
-<li>“<a
-href="http://www.publicbooks.org/the-stanford-literary-labs-narrative/">The
-Stanford Literary Lab’s Narrative</a>.” New York Times. 2017.</li>
-<li>“<a
-href="http://mentalfloss.com/article/94013/researchers-map-emotions-fictional-london">Why
-the London of British Literature Barely Changed for 200 Years</a>.”
-Atlas Obscura. 2017.</li>
-<li>“<a
-href="http://mentalfloss.com/article/94013/researchers-map-emotions-fictional-london">Researchers
-Map the Emotions of Fictional London</a>.” Mental Floss. 2017.</li>
-<li>“<a
-href="http://www.smithsonianmag.com/innovation/stanford-researchers-map-feelings-associated-with-different-parts-london-180962753/">Stanford
-Researchers Map the Feelings Associated With Different Parts of
-London</a>.” Smithsonian Magazine. 2017.</li>
-<li>“<a
-href="https://www.nytimes.com/2015/04/14/books/stanford-literary-lab-maps-emotions-in-victorian-london.html">Stanford
-Literary Lab Maps ‘Emotions in Victorian London’</a>.” New York Times.
-2015.</li>
-</ul>
+        </aside>
+        <main id="content">
+            <h1 id="cv">CV</h1>
+<p>See here for <a href="/assets/HEUSER-CV-2026-02.pdf">CV</a> (updated
+Feb 2026).</p>
 
+        </main>
     </div>
 </body>
 

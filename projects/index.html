@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Vectors in the Eighteenth Century</title>
+    <title>Projects</title>
 
     <style type='text/css'>
         :root {
@@ -158,7 +158,7 @@
         <aside id="sidebar">
             <ul>
   <li><a href="/">Home</a></li>
-  <li><a href="/projects/">Projects</a></li>
+  <li><a class="active" href="/projects/">Projects</a></li>
   <li><a href="/publications/">Publications</a></li>
   <li><a href="/graphs/">Graphs</a></li>
   <li><a href="/tools/">Tools</a></li>
@@ -167,59 +167,67 @@
 </ul>
         </aside>
         <main id="content">
-            <h1 id="word-vectors-in-the-eighteenth-century">Word Vectors in the
-Eighteenth Century</h1>
-<h2 id="word-vectors">Word Vectors</h2>
-<p>This page is meant as a set of links and resources related to my work
-using word vectors to study eighteenth-century literature. This work
-asks the question: how can new vector-based models of semantics reveal
-the historicity of specific configurations of meaning in
-eighteenth-century literature? Most of this work is published serially
-as blog posts, linked below. The later of these are “slideshow
-essays”-experiments with the forms of visual rhetoric that work so well
-in the digital humanities-rather than traditional blog posts. There is
-also a video of a talk I’ve given about this work. Lastly, I’ve uploaded
-several word2vec models I’m using, trained on a corpus of
-eighteenth-century literature; and linked to some relevant code (more
-code will be coming soon).</p>
-<h3 id="posts">Posts</h3>
+            <h1 id="projects">Projects</h1>
+<h3 id="generative-humanities">Generative Humanities</h3>
+<p>Ongoing research project beginning from the conviction that, just as
+digital humanities became necessary in order to theorize the rising
+digitisation practices in the 1980s and ‘90s, a ’generative humanities’
+has become necessary to theorize rising generative AI practices in the
+2020s. A first research article is forthcoming in October 2025:
+‘Generative Formalism: Measuring Formal Stuckness in AI Verse’ (Journal
+of Cultural Analytics, special issue on Computational Formalism
+forthcoming Oct 2025). It theorizes a generative formalism, practicing
+it in a comparative distant reading of historical and generative poetic
+corpora, which identifies a persistent ‘formal stuckness’ on strict
+rhyme and meter in AI verse - a kind of formal gravition recombining
+historical cultural production for its own computational-aesthetic ends.
+The project is currently transforming into a collaborative grant
+proposal on ‘slop,’ extending the analysis of formal stuckness from
+poetry to prose, art, music, and video.</p>
+<h3 id="abstraction-a-literary-history"><em>Abstraction: A Literary
+History</em></h3>
+<p>My first book project, <em>Abstraction: A Literary History</em>,
+traces a slow-moving rise and fall in abstract language across centuries
+of literary history. Mixing close and distant reading, the book uncovers
+how these changes in literary semantics mediate changes in social
+organization. I focus on three literary forms of abstract language:
+‘abstract style’, in the syntactic symmetries and semantic formulae of
+the periodical essay; ‘abstract persons’, in the personified
+abstractions of the mid-century ode; and ‘abstract realism’, in the
+“tell, don’t show” narration of the early realist novel. Through this
+history and framework, the book also aims to recuperate abstraction as
+both a method and an object of literary study.</p>
 <ul>
-<li><a href="/word-vectors-1">Episode 1: Concepts</a> (14 Apr 2016)</li>
-<li><a href="/word-vectors-2">Episode 2: Methods</a> (1 Jun 2016)</li>
-<li><a href="/word-vectors-3">Episode 3: From Fields to Vectors</a> (10
-Sep 2016)</li>
-<li><a href="/word-vectors-4">Episode 4: Semantic Networks</a> (25 Sep
-2016)</li>
+<li>2020-02-18: <a href="../talks/kingscollege2020">“Abstract
+Realism”</a> (visual summary of the chapter on fiction)</li>
 </ul>
-<h3 id="video">Video</h3>
+<h3 id="antimetricality">Antimetricality</h3>
+<p>I am working with Arto Anttila and Paul Kiparsky, metrical
+phonologists at Stanford, to design tools to evaluate the
+‘antimetricality’ of a text: the degree to which its stress patterns
+depart from any known metrical pattern. Such measurements of metrical
+‘tension’ or ‘ambiguity’ have a history: prose most distances itself
+rhythmically from verse at the height of the eighteenth century. We have
+a pre-print of a paper available <a
+href="https://web.stanford.edu/~kiparsky/Papers/Antimetricality-Draft-2018-04-20.pdf">here</a>.</p>
 <ul>
-<li><a
-href="http://helper.ipam.ucla.edu/wowzavideo.aspx?vfn=13284_480.mp4&amp;vfd=CA2016">Presentation
-at IPAM in UCLA</a> (25 May 2016)</li>
+<li>2018-04-20: <a
+href="https://web.stanford.edu/~kiparsky/Papers/Antimetricality-Draft-2018-04-20.pdf">“The
+Rise and Fall of Antimetricality”</a></li>
+<li>Code: <a
+href="http://github.com/quadrismegistus/prosodic">Prosodic</a> (<a
+href="http://prosodic.stanford.edu">web demo</a>)</li>
 </ul>
-<h3 id="appendices">Appendices</h3>
+<h3 id="word-vectors-in-the-eighteenth-century">Word Vectors in the
+Eighteenth Century</h3>
 <ul>
-<li>“<a href="/word2vec-vs-the-mat">Would Word2Vec get into grad school?
-Evaluating Word2Vec against the Miller Analogies Test</a>”</li>
-</ul>
-<h3 id="models">Models</h3>
-<ul>
-<li><a
-href="https://archive.org/details/word-vectors-18c-word2vec-models-across-20-year-periods">Word2Vec
-Models for Twenty-year Periods of 18C (ECCO, “Literature and Language,”
-1700-99)</a> (150 million words each; skip-gram size of 10 words)</li>
-</ul>
-<h3 id="code">Code</h3>
-<ul>
-<li><a href="/word2vec-vs-the-mat#code">Code to evaluate a word2vec
-model against the Miller Analogies Test</a></li>
-<li><a
-href="https://gist.github.com/quadrismegistus/eb2360026afce4ef4e57872146369091">Code
-to produce a semantic network from a gensim word2vec model</a></li>
-<li><a
-href="https://gist.github.com/quadrismegistus/09a93e219a6ffc4f216fb85235535faf">Code
-for aligning two gensim word2vec models using Procrustes matrix
-alignment</a></li>
+<li>Project hub: <a href="../word-vectors">Word Vectors in the
+Eighteenth Century</a></li>
+<li>Episode 1: <a href="../word-vectors-1">Concepts</a></li>
+<li>Episode 2: <a href="../word-vectors-2">Methods</a></li>
+<li>Episode 3: <a href="../word-vectors-3">From Fields to
+Vectors</a></li>
+<li>Episode 4: <a href="../word-vectors-4">Semantic Networks</a></li>
 </ul>
 
         </main>
