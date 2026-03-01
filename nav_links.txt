@@ -4,6 +4,6 @@
 projects|Projects
 publications|Publications
 graphs|Graphs
-tools|Tools
+code|Code
 teaching|Teaching
 cv|CV
