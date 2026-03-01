@@ -1,10 +1,10 @@
 # Publications
 
+* "[Computational Hermeneutics: Evaluating Generative AI as a Cultural Technology](https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2026.1753041)." _Frontiers in Artificial Intelligence_, 26 February 2026. (Co-authored with Cody Kommers et al).
+
 * “[Cultural Collapse: Toward a Generative Formalism for AI Cultural Production](https://anthology.ach.org/volumes/vol0003/cultural-collapse-toward-generative-formalism-for/).” _Anthology of Computers and the Humanities_ 3 (2025).
 
 * "[Generative Aesthetics: On formal stuckness in AI verse](https://culturalanalytics.org/article/id/1036/)." _Journal of Cultural Analytics_ 10.3 (2025), special issue on Computational Formalism.
-
-* "[Computational Hermeneutics: Evaluating Generative AI as a Cultural Technology](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5409144)." SSRN, 1 Aug 2025. (Co-authored with Cody Kommers et al).
 
 * "[Computing Koselleck: Modeling Semantic Revolutions, 1720-1960](https://www.cambridge.org/core/books/explorations-in-the-digital-history-of-ideas/computing-koselleck-modelling-semantic-revolutions-17201960/1ED34828C706CB5A7882E0A825C6F72F)." _Explorations in the Digital History of Ideas_. Ed. Peter de Bolla. Cambridge University Press. 2024.
 

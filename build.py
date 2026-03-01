@@ -3,7 +3,8 @@ import html
 import os
 import subprocess
 
-ROOT = os.path.dirname(__file__)
+# ROOT = os.path.dirname(__file__)
+ROOT = "."
 THEME_PATH = os.path.join(ROOT, "theme.html")
 NAV_LINKS_PATH = os.path.join(ROOT, "nav_links.txt")
 
@@ -99,13 +100,15 @@ def render_markdown(page_root):
 
 
 pages = discover_pages()
+print(pages)
 nav_links = load_nav_links()
+print(nav_links)
 titles = {}
 
 for rel_path in pages:
     readme = os.path.join(ROOT, rel_path, "README.md") if rel_path else os.path.join(ROOT, "README.md")
     titles[rel_path] = read_title(readme, fallback_title(rel_path))
-
+print(titles)
 for rel_path in pages:
     page_root = os.path.join(ROOT, rel_path) if rel_path else ROOT
     content = render_markdown(page_root)
