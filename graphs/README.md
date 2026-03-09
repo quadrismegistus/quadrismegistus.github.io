@@ -1,5 +1,6 @@
 # Graphs
 
+* 2026-02-20: [Psychoanalyzing “displacement” in large language models](https://bsky.app/profile/ryanheuser.com/post/3mgkxsr3jlk2o)
 * 2026-02-20: [AI completions of historical poems bias emotion toward positivity and away from arousal](https://bsky.app/profile/ryanheuser.com/post/3mfccqpa25s2j)
 * 2026-01-02: [Analytic philosophy can be distinguished from literary criticism via syntax alone](https://bsky.app/profile/ryanheuser.com/post/3mbfolkvrmk2z)
 * 2025-12-18: [The usage of "reading" doubles in literary studies, 1920-2020](https://bsky.app/profile/ryanheuser.com/post/3mab7b5p73k2o)

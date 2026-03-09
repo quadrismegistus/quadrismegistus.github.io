@@ -1,3 +1,3 @@
 # CV
 
-See here for [CV](/assets/HEUSER-CV-2026-02.pdf) (updated Feb 2026).
+See here for [CV](/assets/HEUSER-CV-2026-03.pdf) (updated March 2026).
