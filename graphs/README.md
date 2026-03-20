@@ -1,6 +1,6 @@
 # Graphs
 
-* 2026-02-20: [Linguistic concreteness over Richardson's Pamela](https://bsky.app/profile/did:plc:llsfba2zryavs4uunglknwie/post/3mhinbalmks2x)
+* 2026-03-20: [Linguistic concreteness over Richardson's Pamela](https://bsky.app/profile/did:plc:llsfba2zryavs4uunglknwie/post/3mhinbalmks2x)
 * 2026-02-20: [Psychoanalyzing “displacement” in large language models](https://bsky.app/profile/ryanheuser.com/post/3mgkxsr3jlk2o)
 * 2026-02-20: [AI completions of historical poems bias emotion toward positivity and away from arousal](https://bsky.app/profile/ryanheuser.com/post/3mfccqpa25s2j)
 * 2026-01-02: [Analytic philosophy can be distinguished from literary criticism via syntax alone](https://bsky.app/profile/ryanheuser.com/post/3mbfolkvrmk2z)
