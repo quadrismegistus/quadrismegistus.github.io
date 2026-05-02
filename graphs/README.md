@@ -1,5 +1,7 @@
 # Graphs
 
+* 2026-04-27: [Story-time elapsed vs. space traversed in fiction, 1550-2020](https://bsky.app/profile/ryanheuser.com/post/3mkpqdbsz3227)
+* 2026-04-27: [Ian Watt was right: the rise of realistic names in fiction](https://bsky.app/profile/ryanheuser.com/post/3mkhp2wrrlc2q)
 * 2026-03-20: [Linguistic concreteness over Richardson's Pamela](https://bsky.app/profile/did:plc:llsfba2zryavs4uunglknwie/post/3mhinbalmks2x)
 * 2026-02-20: [Psychoanalyzing “displacement” in large language models](https://bsky.app/profile/ryanheuser.com/post/3mgkxsr3jlk2o)
 * 2026-02-20: [AI completions of historical poems bias emotion toward positivity and away from arousal](https://bsky.app/profile/ryanheuser.com/post/3mfccqpa25s2j)
