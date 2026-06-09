@@ -1,5 +1,9 @@
 # Graphs
 
+* 2026-06-09: [Aligned models coach individuals to be more deferential to authority](https://bsky.app/profile/ryanheuser.com/post/3mnu5e3pn6c2s)
+* 2026-05-29: [Finnegans Wake has extremely high Shannon entropy; frontier models extremely low](https://bsky.app/profile/ryanheuser.com/post/3mmypwhyae225)
+* 2026-05-16: [Aligned models have less information/entropy than Shannon measured for English](https://bsky.app/profile/ryanheuser.com/post/3mly2ds3w2k2p)
+* 2026-05-09: [Aligned models cannot dream: drift vs surprisal across models and genres](https://bsky.app/profile/ryanheuser.com/post/3mlggabm5g22d)
 * 2026-04-27: [Story-time elapsed vs. space traversed in fiction, 1550-2020](https://bsky.app/profile/ryanheuser.com/post/3mkpqdbsz3227)
 * 2026-04-27: [Ian Watt was right: the rise of realistic names in fiction](https://bsky.app/profile/ryanheuser.com/post/3mkhp2wrrlc2q)
 * 2026-03-20: [Linguistic concreteness over Richardson's Pamela](https://bsky.app/profile/did:plc:llsfba2zryavs4uunglknwie/post/3mhinbalmks2x)
