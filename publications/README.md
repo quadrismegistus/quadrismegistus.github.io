@@ -1,8 +1,10 @@
 # Publications
 
+* "[Ordinary Style Philosophy](https://www.rivisteweb.it/doi/10.30460/120543)." _Paradigmi: Rivista di critica filosofica_, Jan-Apr 2026. (Co-authored with Jonathan Ettel).
+
 * "[Computational Hermeneutics: Evaluating Generative AI as a Cultural Technology](https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2026.1753041)." _Frontiers in Artificial Intelligence_, 26 February 2026. (Co-authored with Cody Kommers et al).
 
-* “[Cultural Collapse: Toward a Generative Formalism for AI Cultural Production](https://anthology.ach.org/volumes/vol0003/cultural-collapse-toward-generative-formalism-for/).” _Anthology of Computers and the Humanities_ 3 (2025).
+* "[Cultural Collapse: Toward a Generative Formalism for AI Cultural Production](https://anthology.ach.org/volumes/vol0003/cultural-collapse-toward-generative-formalism-for/)." _Anthology of Computers and the Humanities_ 3 (2025).
 
 * "[Generative Aesthetics: On formal stuckness in AI verse](https://culturalanalytics.org/article/id/1036/)." _Journal of Cultural Analytics_ 10.3 (2025), special issue on Computational Formalism.
 
